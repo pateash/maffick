@@ -181,89 +181,6 @@ a:focus {
   pointer-events: none;
 }
 
-/* Icons */
-.icon {
-  display: block;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 0 auto;
-  fill: currentColor;
-}
-
-.message-mobile {
-  font-size: 0.85em;
-  display: none;
-  width: 100%;
-  padding: 0.5em;
-  text-align: center;
-  background: #ff3d53;
-}
-
-/* Header */
-.codrops-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  padding: 1.5em 1.5em 4em;
-  text-align: left;
-}
-
-.codrops-header__title {
-  font-size: 1.15em;
-  margin: 0;
-  padding: 0 0.5em;
-}
-
-.codrops-header__tagline {
-  font-size: 0.85em;
-  width: 100%;
-  margin: 0;
-  color: #b0adad;
-}
-
-.codrops-header__tagline::before {
-  content: '> ';
-}
-
-.github {
-  font-size: 0.85em;
-  font-weight: bold;
-  margin: 0 0 0 auto;
-}
-
-/* Top Navigation Style */
-.codrops-links {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.codrops-links::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 1px;
-  height: 60%;
-  background: #b0adad;
-  transform: rotate3d(0, 0, 1, 22.5deg);
-}
-
-.codrops-icon {
-  display: inline-block;
-  margin: 0.25em 0 0.25em 0.25em;
-  padding: 0.35em 0 0.35em 0.35em;
-}
-
-.codrops-icon:first-child {
-  margin: 0.25em 0.25em 0.25em 0;
-  padding: 0.35em 0.35em 0.35em 0;
-}
-
 /* Content */
 .content {
   position: relative;
@@ -434,21 +351,6 @@ a:focus {
 
 /* Individual effects */
 
-/* Vega */
-.grid--effect-vega .column {
-  opacity: 1;
-}
-
-/* Castor */
-.grid--effect-castor .stack__figure,
-.grid--effect-castor .stack__deco {
-  transform-origin: 50% 50%;
-}
-
-.grid--effect-castor .column {
-  opacity: 1;
-}
-
 /* Hamal */
 .grid--effect-hamal {
   perspective: none;
@@ -458,126 +360,6 @@ a:focus {
   opacity: 1;
 }
 
-/* polaris */
-.grid--effect-polaris {
-  perspective-origin: 100% -100%;
-}
-
-.grid--effect-polaris .column {
-  opacity: 1;
-}
-
-/* Alphard */
-.grid--effect-alphard {
-  perspective: none;
-}
-
-.grid--effect-alphard .column {
-  opacity: 1;
-}
-
-.grid--effect-alphard .stack__figure,
-.grid--effect-alphard .stack__deco {
-  transform-origin: 50% 150%;
-}
-
-/* Altair */
-.grid--effect-altair {
-  perspective-origin: 50% -50%;
-}
-
-.grid--effect-altair .column {
-  opacity: 1;
-}
-
-.grid--effect-altair .stack__figure,
-.grid--effect-altair .stack__deco {
-  transform-origin: 50% 100%;
-}
-
-/* rigel */
-.grid--effect-rigel {
-  perspective-origin: 50% 100%;
-}
-
-.grid--effect-rigel .column {
-  opacity: 1;
-}
-
-/* Canopus */
-.grid--effect-canopus {
-  perspective-origin: 50% 0%;
-}
-
-.grid--effect-canopus .column {
-  opacity: 1;
-}
-
-.grid--effect-canopus .stack__figure,
-.grid--effect-canopus .stack__deco {
-  transform-origin: 50% 100%;
-}
-
-/* pollux */
-.grid--effect-pollux {
-  perspective: 1000px;
-  perspective-origin: 50% -70%;
-}
-
-.grid--effect-pollux .column {
-  opacity: 1;
-}
-
-.grid--effect-pollux .stack__figure,
-.grid--effect-pollux .stack__deco {
-  transform-origin: 50% 50%;
-}
-
-.grid--effect-pollux .grid__item-caption > .grid__item-title {
-  transform-origin: 50% -200%;
-}
-
-/* deneb */
-.grid--effect-deneb {
-  perspective: none;
-}
-
-.grid--effect-deneb .stack__figure,
-.grid--effect-deneb .stack__deco {
-  transform-origin: 50% 50%;
-}
-
-.grid--effect-deneb .grid__item-caption > .column {
-  transform-origin: 50% -200%;
-}
-
-/* Related demos */
-.content.content--related {
-  font-weight: bold;
-  justify-content: center;
-  min-height: 0;
-  padding-bottom: 10em;
-  text-align: center;
-  background: #5d5d66;
-}
-
-.content--related a {
-  color: #b0adad;
-}
-
-.content--related a:hover,
-.content--related a:focus {
-  color: #fff;
-}
-
-.content--related p:first-child {
-  padding: 6em 0 2em;
-}
-
-.content--related p {
-  width: 100%;
-  color: #37373e;
-}
 
 .media-item {
   font-size: 0.85em;
@@ -602,21 +384,6 @@ a:focus {
   font-size: 1em;
   margin: 0;
   padding: 0.5em;
-}
-
-@media screen and (max-width: 42em) {
-  .codrops-header {
-    display: block;
-    text-align: center;
-  }
-  .github {
-    width: 100%;
-    margin: 0;
-    padding: 0.5em 0;
-  }
-  .message-mobile {
-    display: block;
-  }
 }
 
 </style>
