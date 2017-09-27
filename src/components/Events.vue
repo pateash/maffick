@@ -78,17 +78,141 @@
         </a>
       </div>
     </section>
+    <div style="background-color: white;">
+      <div class="button-group">
+        <button v-for="(val, key) in option.getFilterData" class="button" :class="[key===filterOption? 'is-checked' : '']" @click="filter(key)">{{key}}
+        </button>
+      </div>
+      <isotope ref="cpt" :options='option' :list="events" @filter="filterOption=arguments[0]">
+        <div v-for="event in events" :key="event.id">
+          {{event.event_name}}
+        </div>
+      </isotope>
+    </div>
   </div>
 
 </template>
 
 <script>
   import HamalFx from '../anim';
+  import isotope from 'vueisotope';
 
   export default {
     name: 'Events',
-    mounted() {
-      console.log('component has been created', document);
+    components: {
+      isotope
+    },
+    data() {
+      return {
+        events: [],
+        filterOption: "show all",
+        option: {
+          getFilterData: {
+            "show all": function () {
+              return true;
+            },
+            "Pajero": function (el) {
+              console.log(el);
+              return el['category'] === 'Pajero';
+            }
+          }
+        },
+      }
+    },
+    methods: {
+      filter: function(key) {
+        this.$refs.cpt.filter(key);
+      }
+    },
+    created(){
+      console.log('comp has been created');
+      let data = [
+        {
+        "id": 1,
+        "event_name": "Hatity",
+        "category": "Challenger"
+      }, {
+        "id": 2,
+        "event_name": "Andalax",
+        "category": "Cobalt SS"
+      }, {
+        "id": 3,
+        "event_name": "Treeflex",
+        "category": "Optima"
+      }, {
+        "id": 4,
+        "event_name": "Lotlux",
+        "category": "RAV4"
+      }, {
+        "id": 5,
+        "event_name": "Otcom",
+        "category": "Continental GT"
+      }, {
+        "id": 6,
+        "event_name": "Temp",
+        "category": "Mystique"
+      }, {
+        "id": 7,
+        "event_name": "Rank",
+        "category": "Tempo"
+      }, {
+        "id": 8,
+        "event_name": "Zoolab",
+        "category": "Endeavor"
+      }, {
+        "id": 9,
+        "event_name": "Lotstring",
+        "category": "Grand Vitara"
+      }, {
+        "id": 10,
+        "event_name": "Zathin",
+        "category": "Thunderbird"
+      }, {
+        "id": 11,
+        "event_name": "Stronghold",
+        "category": "Optima"
+      }, {
+        "id": 12,
+        "event_name": "Kanlam",
+        "category": "CR-V"
+      }, {
+        "id": 13,
+        "event_name": "Toughjoyfax",
+        "category": "MPV"
+      }, {
+        "id": 14,
+        "event_name": "Fintone",
+        "category": "Golf"
+      }, {
+        "id": 15,
+        "event_name": "Job",
+        "category": "Pajero"
+      }, {
+        "id": 16,
+        "event_name": "Duobam",
+        "category": "Blazer"
+      }, {
+        "id": 17,
+        "event_name": "Vagram",
+        "category": "Prelude"
+      }, {
+        "id": 18,
+        "event_name": "Otcom",
+        "category": "Pajero"
+      }, {
+        "id": 19,
+        "event_name": "Alpha",
+        "category": "E-Series"
+      }, {
+        "id": 20,
+        "event_name": "Voyatouch",
+        "category": "Pajero"
+      }];
+      this.events.push(...data);
+      console.log('data', this.events);
+    },
+    mounted(){
+      console.log('component has been createddd', document);
 
 
       [].slice.call(document.querySelectorAll('.grid--effect-hamal > .grid__item')).forEach(function(stackEl) {
