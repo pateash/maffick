@@ -1,13 +1,13 @@
 <template>
   <div class="banner">
-    <div class="container techno">
-      <div class="content">
+    <div class="techno-container techno">
+      <div class="techno-content">
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
           <h1 class="main-title">TECHNO <span class="thin">SEARCH</span></h1>
         </div>
       </div>
-    </div><!-- /container -->
+    </div><!-- /techno-container -->
   </div>
 </template>
 
@@ -25,9 +25,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-  *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
-  .clearfix:before, .clearfix:after { content: ''; display: table; }
-  .clearfix:after { clear: both; }
+  /**, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }*/
+  /*.clearfix:before, .clearfix:after { content: ''; display: table; }*/
+  /*.clearfix:after { clear: both; }*/
 
   .banner {
     background: #fff;
@@ -38,10 +38,8 @@
     font-family: 'Raleway', Calibri, Arial, sans-serif;
   }
 
-
-
   /* Header */
-  .banner .container {
+  .banner .techno-container {
     padding: 0;
   }
 

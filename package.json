@@ -17,6 +17,7 @@
     "animejs": "^2.1.0",
     "masonry-layout": "^4.2.0",
     "vue": "^2.4.2",
+    "vue-images-loaded": "^1.1.2",
     "vue-router": "^2.7.0",
     "vue-spinner": "^1.0.2",
     "vueisotope": "^3.1.0"

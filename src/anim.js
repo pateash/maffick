@@ -13,7 +13,7 @@ function StackFx(el) {
   this.DOM.img = this.DOM.stack.querySelector('.stack__figure > .stack__img');
   this.DOM.caption = this.DOM.el.querySelector('.grid__item-caption');
   this.DOM.title = this.DOM.caption.querySelector('.grid__item-title');
-  this.DOM.columns = {left: this.DOM.caption.querySelector('.column--left'), right: this.DOM.caption.querySelector('.column--right')};
+  this.DOM.columns = {left: this.DOM.caption.querySelector('.ev-column--left'), right: this.DOM.caption.querySelector('.ev-column--right')};
 }
 
 StackFx.prototype._removeAnimeTargets = function() {

@@ -1,8 +1,8 @@
 <template>
   <div class="events">
     <h1 class="text-secondary">Events</h1>
-    <section class="content">
-      <h2 class="content__title">Events</h2>
+    <section class="ev-content">
+      <h2 class="ev-content__title">Events</h2>
       <div class="grid grid--effect-hamal">
         <a href="#" class="grid__item grid__item--c1">
           <div class="stack">
@@ -16,16 +16,16 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">anaerobic</h3>
-            <div class="column column--left">
-              <span class="column__text">Period</span>
-              <span class="column__text">Subjects</span>
-              <span class="column__text">Result</span>
-            </div>
-            <div class="column column--right">
-              <span class="column__text">2045</span>
-              <span class="column__text">133456</span>
-              <span class="column__text">Positive</span>
-            </div>
+            <!--<div class="ev-column ev-column&#45;&#45;left">-->
+              <!--<span class="ev-column__text">Period</span>-->
+              <!--<span class="ev-column__text">Subjects</span>-->
+              <!--<span class="ev-column__text">Result</span>-->
+            <!--</div>-->
+            <!--<div class="ev-column ev-column&#45;&#45;right">-->
+              <!--<span class="ev-column__text">2045</span>-->
+              <!--<span class="ev-column__text">133456</span>-->
+              <!--<span class="ev-column__text">Positive</span>-->
+            <!--</div>-->
           </div>
         </a>
         <a href="#" class="grid__item grid__item--c2">
@@ -40,16 +40,16 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">exothermic</h3>
-            <div class="column column--left">
-              <span class="column__text">Period</span>
-              <span class="column__text">Subjects</span>
-              <span class="column__text">Result</span>
-            </div>
-            <div class="column column--right">
-              <span class="column__text">2045</span>
-              <span class="column__text">133456</span>
-              <span class="column__text">Positive</span>
-            </div>
+            <!--<div class="ev-column ev-column&#45;&#45;left">-->
+              <!--<span class="ev-column__text">Period</span>-->
+              <!--<span class="ev-column__text">Subjects</span>-->
+              <!--<span class="ev-column__text">Result</span>-->
+            <!--</div>-->
+            <!--<div class="ev-column ev-column&#45;&#45;right">-->
+              <!--<span class="ev-column__text">2045</span>-->
+              <!--<span class="ev-column__text">133456</span>-->
+              <!--<span class="ev-column__text">Positive</span>-->
+            <!--</div>-->
           </div>
         </a>
         <a href="#" class="grid__item grid__item--c3">
@@ -64,16 +64,16 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">diatomic</h3>
-            <div class="column column--left">
-              <span class="column__text">Period</span>
-              <span class="column__text">Subjects</span>
-              <span class="column__text">Result</span>
-            </div>
-            <div class="column column--right">
-              <span class="column__text">2045</span>
-              <span class="column__text">133456</span>
-              <span class="column__text">Positive</span>
-            </div>
+            <!--<div class="ev-column ev-column&#45;&#45;left">-->
+              <!--<span class="ev-column__text">Period</span>-->
+              <!--<span class="ev-column__text">Subjects</span>-->
+              <!--<span class="ev-column__text">Result</span>-->
+            <!--</div>-->
+            <!--<div class="ev-column ev-column&#45;&#45;right">-->
+              <!--<span class="ev-column__text">2045</span>-->
+              <!--<span class="ev-column__text">133456</span>-->
+              <!--<span class="ev-column__text">Positive</span>-->
+            <!--</div>-->
           </div>
         </a>
       </div>
@@ -222,7 +222,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   h1, h2 {
     font-weight: normal;
   }
@@ -246,14 +246,6 @@
   /*for the animation*/
   .events {
     background-color: #2c3e50;
-  }
-
-
-  *,
-  *::after,
-  *::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
   }
 
   body {
@@ -285,7 +277,7 @@
   }
 
   /* Content */
-  .content {
+  .ev-content {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -293,15 +285,15 @@
     padding: 0 0 1em;
   }
 
-  .content:not(:first-child) {
+  .ev-content:not(:first-child) {
     padding: 4em 0;
   }
 
-  .content.content--padded {
+  .ev-content.ev-content--padded {
     padding: 4em 0 8em;
   }
 
-  .content__title {
+  .ev-content__title {
     font-size: 0.85em;
     position: absolute;
     top: 18%;
@@ -424,31 +416,31 @@
     color: #fff;
   }
 
-  .column {
+  .ev-column {
     width: 50%;
     padding: 0 0.5em;
     opacity: 0;
   }
 
-  .column--left {
+  .ev-column--left {
     text-align: right;
   }
 
-  .column--right {
+  .ev-column--right {
     text-align: left;
   }
 
-  .column__text {
+  .ev-column__text {
     font-size: 0.85em;
     display: block;
     color: #fff;
   }
 
-  .column--left .column__text {
+  .ev-column--left .ev-column__text {
     font-weight: bold;
   }
 
-  .column--right .column__text {
+  .ev-column--right .ev-column__text {
     color: #b0adad;
   }
 
@@ -459,34 +451,34 @@
     perspective: none;
   }
 
-  .grid--effect-hamal .column {
+  .grid--effect-hamal .ev-column {
     opacity: 1;
   }
 
 
-  .media-item {
-    font-size: 0.85em;
-    display: inline-block;
-    padding: 1em 2vw;
-    vertical-align: top;
-    transition: color 0.3s;
-  }
+  /*.media-item {*/
+    /*font-size: 0.85em;*/
+    /*display: inline-block;*/
+    /*padding: 1em 2vw;*/
+    /*vertical-align: top;*/
+    /*transition: color 0.3s;*/
+  /*}*/
 
-  .media-item__img {
-    max-width: 100%;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-  }
+  /*.media-item__img {*/
+    /*max-width: 100%;*/
+    /*opacity: 0.6;*/
+    /*transition: opacity 0.3s;*/
+  /*}*/
 
-  .media-item:hover .media-item__img,
-  .media-item:focus .media-item__img {
-    opacity: 1;
-  }
+  /*.media-item:hover .media-item__img,*/
+  /*.media-item:focus .media-item__img {*/
+    /*opacity: 1;*/
+  /*}*/
 
-  .media-item__title {
-    font-size: 1em;
-    margin: 0;
-    padding: 0.5em;
-  }
+  /*.media-item__title {*/
+    /*font-size: 1em;*/
+    /*margin: 0;*/
+    /*padding: 0.5em;*/
+  /*}*/
 
 </style>
