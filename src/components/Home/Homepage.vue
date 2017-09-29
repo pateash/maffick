@@ -49,7 +49,7 @@
     </section><!-- cd-section -->
 
     <section id="section2" class="cd-section">
-      <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+      <about></about>
     </section><!-- cd-section -->
 
     <section id="section3" class="cd-section">
@@ -72,12 +72,14 @@
 
 <script>
   import SmoothScroll from 'smooth-scroll';
-  import Banner from '@/components/Banner';
+  import Banner from '@/components/Home/Banner';
+  import About from '@/components/Home/About';
 
   export default {
     name: 'Homepage',
     components: {
-      Banner
+      Banner,
+      About
     },
     mounted() {
       let contentSections = document.querySelectorAll('.cd-section'),
@@ -301,7 +303,7 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 2;
   }
   .no-touch #cd-vertical-nav li {
     text-align: right;
@@ -377,7 +379,7 @@
   /* Touch devices */
   .touch .cd-nav-trigger {
     display: block;
-    z-index: 2;
+    z-index: 10001;
     position: fixed;
     bottom: 30px;
     right: 5%;
@@ -420,7 +422,7 @@
 
   .touch #cd-vertical-nav {
     position: fixed;
-    z-index: 1;
+    z-index: 10000;
     right: 5%;
     bottom: 30px;
     width: 90%;

@@ -7,14 +7,12 @@
 </template>
 
 <script>
-  import Events from '@/components/Events'
-  import Banner from '@/components/Banner'
+//  import Events from '@/components/Events'
   import Homepage from '@/components/Home/Homepage'
   export default {
     name: 'Home',
     components: {
-      Events,
-      Banner,
+//      Events,
       Homepage
     }
   };

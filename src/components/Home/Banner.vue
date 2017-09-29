@@ -16,7 +16,7 @@
 
 <script>
 //  import Tweenlite from ''
-  import BannerAnim from '../banner-anim';
+  import BannerAnim from '../../banner-anim';
   export default {
     name: 'Banner',
     mounted() {
@@ -57,7 +57,7 @@
   }
 
   .techno .large-header {
-    background-image: url('../assets/demo-1-bg.jpg');
+    background-image: url('../../assets/demo-1-bg.jpg');
   }
 
   .main-title {
