@@ -17,13 +17,13 @@
         <li>
           <a href="#section3" data-number="3">
             <span class="cd-dot"></span>
-            <span class="cd-label">Features</span>
+            <span class="cd-label">Events</span>
           </a>
         </li>
         <li>
           <a href="#section4" data-number="4">
             <span class="cd-dot"></span>
-            <span class="cd-label">Portfolio</span>
+            <span class="cd-label">Pronites</span>
           </a>
         </li>
         <li>
@@ -48,7 +48,7 @@
       <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
     </section><!-- cd-section -->
 
-    <section id="section2" class="cd-section">
+    <section id="section2" class="cd-section tc-about-section">
       <about></about>
     </section><!-- cd-section -->
 
@@ -189,7 +189,7 @@
     font-size: 100%;
     font-family: "Ubuntu", sans-serif;
     color: #3e3947;
-    background-color: white;
+    /*background-color: white;*/
   }
 
   body, html {
@@ -513,5 +513,15 @@
   .cd-scroll-down {
     z-index: 9999;
   }
-
+  .tc-about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16222A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #section2 {
+    /*background: none!important;*/
+  }
 </style>

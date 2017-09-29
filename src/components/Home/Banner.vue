@@ -53,6 +53,7 @@
     overflow: hidden;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     z-index: 1;
   }
 
