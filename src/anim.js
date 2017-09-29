@@ -133,3 +133,8 @@ HamalFx.prototype._out = function() {
 };
 
 window.HamalFx = HamalFx;
+
+
+
+
+
