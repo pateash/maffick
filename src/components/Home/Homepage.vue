@@ -238,7 +238,7 @@
   .cd-section:nth-of-type(even) p {
     color: #bda3ad;
   }
-  .cd-section h1, .cd-section p {
+  .cd-section > h1, .cd-section > p {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -253,22 +253,22 @@
     max-width: 768px;
     text-align: center;
   }
-  .cd-section h1 {
+  .cd-section > h1 {
     color: white;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 20px;
     font-size: 1.25rem;
   }
-  .cd-section p {
+  .cd-section > p {
     line-height: 1.6;
   }
   @media only screen and (min-width: 768px) {
-    .cd-section h1 {
+    .cd-section > h1 {
       font-size: 30px;
       font-size: 1.875rem;
     }
-    .cd-section p {
+    .cd-section > p {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 2;

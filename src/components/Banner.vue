@@ -4,7 +4,10 @@
       <div class="techno-content">
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
-          <h1 class="main-title">TECHNO <span class="thin">SEARCH</span></h1>
+          <div class="main-title">
+            <h1 class="">TECHNO <span class="thin">SEARCH</span></h1>
+            <h1 class="dates"><span class="thin">OCTOBER</span> 12-15</h1>
+          </div>
         </div>
       </div>
     </div><!-- /techno-container -->
@@ -67,6 +70,14 @@
     left: 50%;
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
+  }
+
+  .main-title h1 {
+    font-size: 1em;
+    margin: 0;
+  }
+  .main-title .dates {
+    font-size: 40px;
   }
 
   .techno .main-title {
