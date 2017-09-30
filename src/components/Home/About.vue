@@ -2,15 +2,17 @@
   <div class="tc-about">
     <p class="tc-about-text">
       The Wait is finally Over! <br>
-      NIT Bhopal proudly brings you the latest instalment of <br>Central's India's Largest Technical Fest!
-      Technosearch'17
+      <span class="underline--magical">NIT Bhopal</span> proudly brings you the latest instalment of <br>Central's India's Largest Technical Fest!
+      <span class="underline--magical">TECHNOSEARCH'17</span>
     </p>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'About'
+    name: 'About',
+    mounted() {
+    }
   };
 </script>
 
@@ -20,7 +22,19 @@
   padding: 5%;
 }
   .tc-about-text {
-    font-family: 'Arvo', Serif;
+    font-family: 'MerriWeather', Serif;
     font-size: 40px;
+    font-weight: bold;
   }
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+  background-size: 100% 88%;
+}
 </style>

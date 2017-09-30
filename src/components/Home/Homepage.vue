@@ -53,7 +53,7 @@
     </section><!-- cd-section -->
 
     <section id="section3" class="cd-section">
-      <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+      <events></events>
     </section><!-- cd-section -->
 
     <section id="section4" class="cd-section">
@@ -74,12 +74,14 @@
   import SmoothScroll from 'smooth-scroll';
   import Banner from '@/components/Home/Banner';
   import About from '@/components/Home/About';
+  import Events from '@/components/Home/Events';
 
   export default {
     name: 'Homepage',
     components: {
       Banner,
-      About
+      About,
+      Events
     },
     mounted() {
       let contentSections = document.querySelectorAll('.cd-section'),
@@ -523,5 +525,9 @@
   }
   #section2 {
     /*background: none!important;*/
+  }
+
+  #section3 {
+    background-color: #212121;
   }
 </style>

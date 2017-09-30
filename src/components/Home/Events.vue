@@ -1,10 +1,10 @@
 <template>
-  <div class="events">
+  <!--<div class="events">
     <h1 class="text-secondary">Events</h1>
     <section class="ev-content">
       <h2 class="ev-content__title">Events</h2>
-      <div class="grid grid--effect-hamal">
-        <a href="#" class="grid__item grid__item--c1">
+      <div class="grid grid&#45;&#45;effect-hamal">
+        <a href="#" class="grid__item grid__item&#45;&#45;c1">
           <div class="stack">
             <div class="stack__deco"></div>
             <div class="stack__deco"></div>
@@ -16,19 +16,19 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">anaerobic</h3>
-            <!--<div class="ev-column ev-column&#45;&#45;left">-->
-              <!--<span class="ev-column__text">Period</span>-->
-              <!--<span class="ev-column__text">Subjects</span>-->
-              <!--<span class="ev-column__text">Result</span>-->
-            <!--</div>-->
-            <!--<div class="ev-column ev-column&#45;&#45;right">-->
-              <!--<span class="ev-column__text">2045</span>-->
-              <!--<span class="ev-column__text">133456</span>-->
-              <!--<span class="ev-column__text">Positive</span>-->
-            <!--</div>-->
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
           </div>
         </a>
-        <a href="#" class="grid__item grid__item--c2">
+        <a href="#" class="grid__item grid__item&#45;&#45;c2">
           <div class="stack">
             <div class="stack__deco"></div>
             <div class="stack__deco"></div>
@@ -40,19 +40,19 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">exothermic</h3>
-            <!--<div class="ev-column ev-column&#45;&#45;left">-->
-              <!--<span class="ev-column__text">Period</span>-->
-              <!--<span class="ev-column__text">Subjects</span>-->
-              <!--<span class="ev-column__text">Result</span>-->
-            <!--</div>-->
-            <!--<div class="ev-column ev-column&#45;&#45;right">-->
-              <!--<span class="ev-column__text">2045</span>-->
-              <!--<span class="ev-column__text">133456</span>-->
-              <!--<span class="ev-column__text">Positive</span>-->
-            <!--</div>-->
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
           </div>
         </a>
-        <a href="#" class="grid__item grid__item--c3">
+        <a href="#" class="grid__item grid__item&#45;&#45;c3">
           <div class="stack">
             <div class="stack__deco"></div>
             <div class="stack__deco"></div>
@@ -64,16 +64,16 @@
           </div>
           <div class="grid__item-caption">
             <h3 class="grid__item-title">diatomic</h3>
-            <!--<div class="ev-column ev-column&#45;&#45;left">-->
-              <!--<span class="ev-column__text">Period</span>-->
-              <!--<span class="ev-column__text">Subjects</span>-->
-              <!--<span class="ev-column__text">Result</span>-->
-            <!--</div>-->
-            <!--<div class="ev-column ev-column&#45;&#45;right">-->
-              <!--<span class="ev-column__text">2045</span>-->
-              <!--<span class="ev-column__text">133456</span>-->
-              <!--<span class="ev-column__text">Positive</span>-->
-            <!--</div>-->
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
+            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
+              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
+            &lt;!&ndash;</div>&ndash;&gt;
           </div>
         </a>
       </div>
@@ -89,12 +89,43 @@
         </div>
       </isotope>
     </div>
+  </div>-->
+
+  <div class="events">
+    <div class="events-heading">
+      <h1>More than 50+ EVENTS</h1>
+    </div>
+    <figure class="tc-event red"><img :src="imageUrl" alt="Technosearch"/>
+      <figcaption>
+        <h2><span>COMPETITIONS</span></h2>
+      </figcaption><a href="#"></a>
+    </figure>
+    <figure class="tc-event green"><img :src="imageUrl" alt="Technosearch"/>
+      <figcaption>
+        <h2><span>INFORMALS</span></h2>
+      </figcaption><a href="#"></a>
+    </figure>
+    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figcaption>
+        <h2><span>WORKSHOPS</span></h2>
+      </figcaption><a href="#"></a>
+    </figure>
+    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figcaption>
+        <h2><span>LECTURES</span></h2>
+      </figcaption><a href="#"></a>
+    </figure>
+    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figcaption>
+        <h2><span>EXHIBITIONS</span></h2>
+      </figcaption><a href="#"></a>
+    </figure>
   </div>
 
 </template>
 
 <script>
-  import HamalFx from '../anim';
+  import HamalFx from '../../anim';
   import isotope from 'vueisotope';
 
   export default {
@@ -117,6 +148,7 @@
             }
           }
         },
+        'imageUrl': 'https://www2.warwick.ac.uk/fac/sci/maths/gallery/lecture.jpg?maxWidth=362&maxHeight=261'
       }
     },
     methods: {
@@ -481,4 +513,141 @@
     /*padding: 0.5em;*/
   /*}*/
 
+
+
+
+
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+  figure.tc-event {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+    margin: 10px 5px;
+    min-width: 220px;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+
+  figure.tc-event * {
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+  }
+
+  figure.tc-event img {
+    opacity: 0.25;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  figure.tc-event figcaption {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
+    transform: rotate(0deg) translateY(-50%) scale(1);
+    -webkit-transform-origin: center 0;
+    transform-origin: center 0;
+  }
+
+  figure.tc-event figcaption h2 {
+    top: 50%;
+    letter-spacing: -1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  figure.tc-event figcaption h2 span {
+    font-weight: 800;
+  }
+
+  figure.tc-event figcaption:before,
+  figure.tc-event figcaption:after {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    display: block;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+  }
+
+  figure.tc-event figcaption:before {
+    left: 0;
+    top: 0;
+  }
+
+  figure.tc-event figcaption:after {
+    bottom: 0;
+    right: 0;
+  }
+
+  figure.tc-event.blue {
+    background: #091b27;
+  }
+
+  figure.tc-event.red {
+    background: #2e0e0a;
+  }
+
+  figure.tc-event.yellow {
+    background: #4f3204;
+  }
+
+  figure.tc-event.green {
+    background: #061c10;
+  }
+
+  figure.tc-event.navy {
+    background: #000000;
+  }
+
+  figure.tc-event a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  figure.tc-event:hover img,
+  figure.tc-event.hover img {
+    opacity: 1;
+  }
+
+  figure.tc-event:hover figcaption,
+  figure.tc-event.hover figcaption {
+    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
+    transform: rotate(-45deg) translateY(-50%) scale(0.9);
+  }
+
+  figure.tc-event:hover figcaption:before,
+  figure.tc-event.hover figcaption:before,
+  figure.tc-event:hover figcaption:after,
+  figure.tc-event.hover figcaption:after {
+    width: 200%;
+  }
+
+  /* Demo purposes only */
+  .events {
+    background-color: #212121;
+    text-align: center;
+  }
+  .events-heading h1 {
+    font-size: 40px;
+    font-family: 'MerriWeather', serif;
+    font-weight: bold;
+    color: lightgray;
+  }
 </style>
