@@ -125,7 +125,7 @@
   }
   /* Demo purposes only */
   body {
-    background-color: #212121;
+    /*background-color: #212121;*/
   }
 
 </style>

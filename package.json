@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "animejs": "^2.1.0",
+    "axios": "^0.16.2",
     "masonry-layout": "^4.2.0",
     "smooth-scroll": "^12.1.5",
     "vue": "^2.4.2",

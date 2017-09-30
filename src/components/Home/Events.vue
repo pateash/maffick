@@ -98,27 +98,27 @@
     <figure class="tc-event red"><img :src="imageUrl" alt="Technosearch"/>
       <figcaption>
         <h2><span>COMPETITIONS</span></h2>
-      </figcaption><a href="#"></a>
+      </figcaption><router-link to="/events/competitions"></router-link>
     </figure>
     <figure class="tc-event green"><img :src="imageUrl" alt="Technosearch"/>
       <figcaption>
         <h2><span>INFORMALS</span></h2>
-      </figcaption><a href="#"></a>
+      </figcaption><router-link to="/events/informals"></router-link>
     </figure>
     <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
       <figcaption>
         <h2><span>WORKSHOPS</span></h2>
-      </figcaption><a href="#"></a>
+      </figcaption><router-link to="/events/workshops"></router-link>
     </figure>
     <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
       <figcaption>
         <h2><span>LECTURES</span></h2>
-      </figcaption><a href="#"></a>
+      </figcaption><router-link to="/events/lectures"></router-link>
     </figure>
     <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
       <figcaption>
         <h2><span>EXHIBITIONS</span></h2>
-      </figcaption><a href="#"></a>
+      </figcaption><router-link to="/events/exhibitions"></router-link>
     </figure>
   </div>
 
@@ -568,7 +568,9 @@
   }
 
   figure.tc-event figcaption h2 span {
-    font-weight: 800;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 26px;
   }
 
   figure.tc-event figcaption:before,

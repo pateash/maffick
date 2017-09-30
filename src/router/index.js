@@ -15,7 +15,7 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/events',
+      path: '/events/:category',
       name: 'Events',
       component: EventList
     },
