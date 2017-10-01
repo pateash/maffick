@@ -57,7 +57,7 @@
     </section><!-- cd-section -->
 
     <section id="section4" class="cd-section">
-      <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+      <pronites></pronites>
     </section><!-- cd-section -->
 
     <section id="section5" class="cd-section">
@@ -65,7 +65,7 @@
     </section><!-- cd-section -->
 
     <section id="section6" class="cd-section">
-      <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+      <contact></contact>
     </section><!-- cd-section -->
   </span>
 </template>
@@ -75,13 +75,17 @@
   import Banner from '@/components/Home/Banner';
   import About from '@/components/Home/About';
   import Events from '@/components/Home/Events';
+  import Pronites from '@/components/Home/Pronites';
+  import Contact from '@/components/Home/Contact';
 
   export default {
     name: 'Homepage',
     components: {
       Banner,
       About,
-      Events
+      Events,
+      Pronites,
+      Contact
     },
     mounted() {
       let contentSections = document.querySelectorAll('.cd-section'),
@@ -376,6 +380,8 @@
     -ms-transform-origin: 100% 50%;
     -o-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
+
+    text-transform: uppercase;
   }
 
   /* Touch devices */
@@ -527,6 +533,7 @@
     box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
   }
 
+  /* Events */
   #section3 {
     /*background-color: #212121;*/
     /*background: #310404 url(../../assets/red_texture.jpg) repeat top left;*/
@@ -535,6 +542,10 @@
     display: flex;
     align-items: center;
     box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+  }
 
+  /* Pronites */
+  #section4 {
+    padding:0;
   }
 </style>
