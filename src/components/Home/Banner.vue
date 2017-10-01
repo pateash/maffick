@@ -4,7 +4,7 @@
       <div class="techno-content">
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
-          <div class="main-title">
+          <div class="main-title text-focus-in">
             <h1 class="">TECHNO <span class="thin">SEARCH</span></h1>
             <h1 class="dates"><span class="thin">OCTOBER</span> 12-15</h1>
           </div>
@@ -58,7 +58,7 @@
   }
 
   .techno .large-header {
-    background-image: url('../../assets/demo-1-bg.jpg');
+    background-image: url('../../assets/intro.jpg');
   }
 
   .main-title {
@@ -76,7 +76,38 @@
   .main-title h1 {
     font-size: 1em;
     margin: 0;
+
   }
+  .text-focus-in {
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+
   .main-title .dates {
     font-size: 40px;
   }
