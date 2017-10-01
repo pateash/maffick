@@ -1,131 +1,41 @@
 <template>
-  <!--<div class="events">
-    <h1 class="text-secondary">Events</h1>
-    <section class="ev-content">
-      <h2 class="ev-content__title">Events</h2>
-      <div class="grid grid&#45;&#45;effect-hamal">
-        <a href="#" class="grid__item grid__item&#45;&#45;c1">
-          <div class="stack">
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__figure">
-              <img class="stack__img" src="../assets/1.png" alt="Image" />
-            </div>
-          </div>
-          <div class="grid__item-caption">
-            <h3 class="grid__item-title">anaerobic</h3>
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-          </div>
-        </a>
-        <a href="#" class="grid__item grid__item&#45;&#45;c2">
-          <div class="stack">
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__figure">
-              <img class="stack__img" src="../assets/2.png" alt="Image" />
-            </div>
-          </div>
-          <div class="grid__item-caption">
-            <h3 class="grid__item-title">exothermic</h3>
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-          </div>
-        </a>
-        <a href="#" class="grid__item grid__item&#45;&#45;c3">
-          <div class="stack">
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__deco"></div>
-            <div class="stack__figure">
-              <img class="stack__img" src="../assets/3.png" alt="Image" />
-            </div>
-          </div>
-          <div class="grid__item-caption">
-            <h3 class="grid__item-title">diatomic</h3>
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;left">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Period</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Subjects</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Result</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-            &lt;!&ndash;<div class="ev-column ev-column&#45;&#45;right">&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">2045</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">133456</span>&ndash;&gt;
-              &lt;!&ndash;<span class="ev-column__text">Positive</span>&ndash;&gt;
-            &lt;!&ndash;</div>&ndash;&gt;
-          </div>
-        </a>
-      </div>
-    </section>
-    <div style="background-color: white;">
-      <div class="button-group">
-        <button v-for="(val, key) in option.getFilterData" class="button" :class="[key===filterOption? 'is-checked' : '']" @click="filter(key)">{{key}}
-        </button>
-      </div>
-      <isotope ref="cpt" :options='option' :list="events" @filter="filterOption=arguments[0]">
-        <div v-for="event in events" :key="event.id">
-          {{event.event_name}}
-        </div>
-      </isotope>
-    </div>
-  </div>-->
-
   <div class="events">
     <div class="events-heading">
       <h1>More than 50+ EVENTS</h1>
     </div>
-    <figure class="tc-event red"><img :src="imageUrl" alt="Technosearch"/>
-      <figcaption>
-        <h2><span>COMPETITIONS</span></h2>
-      </figcaption><router-link to="/events/competitions"></router-link>
-    </figure>
-    <figure class="tc-event green"><img :src="imageUrl" alt="Technosearch"/>
-      <figcaption>
-        <h2><span>INFORMALS</span></h2>
-      </figcaption><router-link to="/events/informals"></router-link>
-    </figure>
-    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
-      <figcaption>
-        <h2><span>WORKSHOPS</span></h2>
-      </figcaption><router-link to="/events/workshops"></router-link>
-    </figure>
-    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
-      <figcaption>
-        <h2><span>LECTURES</span></h2>
-      </figcaption><router-link to="/events/lectures"></router-link>
-    </figure>
-    <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
-      <figcaption>
-        <h2><span>EXHIBITIONS</span></h2>
-      </figcaption><router-link to="/events/exhibitions"></router-link>
-    </figure>
+    <div class="events-container">
+      <figure class="tc-event red"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>COMPETITIONS</span></h2>
+        </figcaption><router-link to="/events/competitions"></router-link>
+      </figure>
+      <figure class="tc-event green"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>INFORMALS</span></h2>
+        </figcaption><router-link to="/events/informals"></router-link>
+      </figure>
+      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>WORKSHOPS</span></h2>
+        </figcaption><router-link to="/events/workshops"></router-link>
+      </figure>
+      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>LECTURES</span></h2>
+        </figcaption><router-link to="/events/lectures"></router-link>
+      </figure>
+      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>EXHIBITIONS</span></h2>
+        </figcaption><router-link to="/events/exhibitions"></router-link>
+      </figure>
+    </div>
   </div>
 
 </template>
 
 <script>
-  import HamalFx from '../../anim';
+//  import HamalFx from '../../anim';
   import isotope from 'vueisotope';
 
   export default {
@@ -246,276 +156,28 @@
     mounted(){
       console.log('component has been createddd', document);
 
-
-      [].slice.call(document.querySelectorAll('.grid--effect-hamal > .grid__item')).forEach(function(stackEl) {
-        new HamalFx(stackEl);
-      });
+//
+//      [].slice.call(document.querySelectorAll('.grid--effect-hamal > .grid__item')).forEach(function(stackEl) {
+//        new HamalFx(stackEl);
+//      });
     },
   };
 </script>
 
 <style scoped>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-
 
   /*for the animation*/
   .events {
-    background-color: #2c3e50;
+    /*background-color: #2c3e50;*/
+    /*display: flex;*/
+    /*align-items: center;*/
   }
+  .events-heading {
 
-  body {
-    font-family: 'Overpass Mono', monospace;
-    color: #edecf2;
-    background: #37373e;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
+  .events-container {
 
-  a {
-    text-decoration: none;
-    color: #ff3d53;
-    outline: none;
-    transition: color 0.2s;
   }
-
-  a:hover,
-  a:focus {
-    color: #fff;
-  }
-
-  .hidden {
-    position: absolute;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-  }
-
-  /* Content */
-  .ev-content {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 0 1em;
-  }
-
-  .ev-content:not(:first-child) {
-    padding: 4em 0;
-  }
-
-  .ev-content.ev-content--padded {
-    padding: 4em 0 8em;
-  }
-
-  .ev-content__title {
-    font-size: 0.85em;
-    position: absolute;
-    top: 18%;
-    left: 2em;
-    width: 5em;
-    margin: 0.75em 0;
-    color: #b0adad;
-  }
-
-  /* Grid */
-  .grid {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 7em;
-    perspective: 800px;
-    perspective-origin: 50% 100%;
-  }
-
-  .grid__item {
-    position: relative;
-    display: block;
-    flex: none;
-    width: 250px;
-    margin: 1.5em 2vw;
-    cursor: default;
-    transform-style: preserve-3d;
-  }
-
-  .grid__item:hover,
-  .grid__item:focus {
-    outline: none;
-  }
-
-  .grid__item--c1,
-  .grid__item--c1:hover,
-  .grid__item--c1:focus {
-    color: #52649e;
-  }
-
-  .grid__item--c2,
-  .grid__item--c2:hover,
-  .grid__item--c2:focus {
-    color: #ee7074;
-  }
-
-  .grid__item--c3,
-  .grid__item--c3:hover,
-  .grid__item--c3:focus {
-    color: #f7f295;
-  }
-
-  .stack {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    transform-style: preserve-3d;
-  }
-
-  .stack__deco {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: currentColor;
-    transform-origin: 50% 100%;
-  }
-
-  .stack__deco:first-child {
-    opacity: 0.2;
-  }
-
-  .stack__deco:nth-child(2) {
-    opacity: 0.4;
-  }
-
-  .stack__deco:nth-child(3) {
-    opacity: 0.6;
-  }
-
-  .stack__deco:nth-child(4) {
-    opacity: 0.8;
-  }
-
-  .stack__figure {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-origin: 50% 100%;
-  }
-
-  .stack__img {
-    position: relative;
-    display: block;
-    flex: none;
-  }
-
-  .grid__item-caption {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    transform-style: preserve-3d;
-  }
-
-  .grid__item-title {
-    font-size: 1.15em;
-    width: 100%;
-    margin: 1em 0;
-    text-align: left;
-    color: #fff;
-  }
-
-  .ev-column {
-    width: 50%;
-    padding: 0 0.5em;
-    opacity: 0;
-  }
-
-  .ev-column--left {
-    text-align: right;
-  }
-
-  .ev-column--right {
-    text-align: left;
-  }
-
-  .ev-column__text {
-    font-size: 0.85em;
-    display: block;
-    color: #fff;
-  }
-
-  .ev-column--left .ev-column__text {
-    font-weight: bold;
-  }
-
-  .ev-column--right .ev-column__text {
-    color: #b0adad;
-  }
-
-  /* Individual effects */
-
-  /* Hamal */
-  .grid--effect-hamal {
-    perspective: none;
-  }
-
-  .grid--effect-hamal .ev-column {
-    opacity: 1;
-  }
-
-
-  /*.media-item {*/
-    /*font-size: 0.85em;*/
-    /*display: inline-block;*/
-    /*padding: 1em 2vw;*/
-    /*vertical-align: top;*/
-    /*transition: color 0.3s;*/
-  /*}*/
-
-  /*.media-item__img {*/
-    /*max-width: 100%;*/
-    /*opacity: 0.6;*/
-    /*transition: opacity 0.3s;*/
-  /*}*/
-
-  /*.media-item:hover .media-item__img,*/
-  /*.media-item:focus .media-item__img {*/
-    /*opacity: 1;*/
-  /*}*/
-
-  /*.media-item__title {*/
-    /*font-size: 1em;*/
-    /*margin: 0;*/
-    /*padding: 0.5em;*/
-  /*}*/
-
-
-
-
 
   @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
   figure.tc-event {
@@ -641,15 +303,31 @@
     width: 200%;
   }
 
-  /* Demo purposes only */
   .events {
-    background-color: #212121;
+    /*background-color: #212121;*/
     text-align: center;
   }
   .events-heading h1 {
     font-size: 40px;
     font-family: 'MerriWeather', serif;
     font-weight: bold;
-    color: lightgray;
+    color: #E5D4B7;
+    margin-bottom: 20px;
+
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+    /*text-shadow: 0 1px 0 #ccc,*/
+    /*0 2px 0 #c9c9c9,*/
+    /*0 3px 0 #bbb,*/
+    /*0 4px 0 #b9b9b9,*/
+    /*0 5px 0 #aaa,*/
+    /*0 6px 1px rgba(0,0,0,.1),*/
+    /*0 0 5px rgba(0,0,0,.1),*/
+    /*0 1px 3px rgba(0,0,0,.3),*/
+    /*0 3px 5px rgba(0,0,0,.2),*/
+    /*0 5px 10px rgba(0,0,0,.25),*/
+    /*0 10px 10px rgba(0,0,0,.2),*/
+    /*0 20px 20px rgba(0,0,0,.15);*/
   }
 </style>
