@@ -27,6 +27,12 @@
     font-weight: bold;
   }
 
+  @media only screen and (max-width: 500px) {
+    .tc-about-text {
+      font-size: 24px;
+    }
+  }
+
 .underline--magical {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   background-repeat: no-repeat;

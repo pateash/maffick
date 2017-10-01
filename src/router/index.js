@@ -3,7 +3,9 @@ import Router from 'vue-router';
 // import Hello from '@/components/Hello';
 import Home from '@/components/Home';
 import Team from '@/components/Team/Team';
-import EventList from '@/components/Events/EventList';
+import Sponsors from '@/components/Sponsors/Sponsors';
+// import EventList from '@/components/Events/EventList';
+const EventList = () => import('@/components/Events/EventList');
 
 Vue.use(Router);
 
@@ -23,6 +25,11 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: Team
+    },
+    {
+      path: '/sponsors',
+      name: 'Sponsors',
+      component: Sponsors
     }
   ],
 });
