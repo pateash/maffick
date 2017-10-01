@@ -4,10 +4,10 @@
       <router-link to="/">TECHNO SEARCH'17</router-link>
       <h1>{{$route.params.category}} Events</h1>
       <nav>
-        <a href="http://tympanus.net/Blueprints/FullWidthTabs/" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
+        <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
         <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-        <a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
-        <a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the archive</span></a>
+        <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
+        <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
       </nav>
     </header>
     <div id="grid-gallery" class="grid-gallery">
@@ -26,11 +26,14 @@
         <ul>
           <li v-for="event in events" :key="event.id">
             <figure>
+              <img :src="event.avatar_url" alt="img01"/>
               <figcaption>
                 <h3>{{event.login}}</h3>
                 <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
               </figcaption>
-              <img :src="event.avatar_url" alt="img01"/>
             </figure>
           </li>
         </ul>
@@ -99,16 +102,16 @@
 <style>
   /* General Blueprint Style */
   @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-  /*@font-face {*/
-    /*font-family: 'bpicons';*/
-    /*src:url('../fonts/bpicons/bpicons.eot');*/
-    /*src:url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),*/
-    /*url('../fonts/bpicons/bpicons.woff') format('woff'),*/
-    /*url('../fonts/bpicons/bpicons.ttf') format('truetype'),*/
-    /*url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-  /*} !* Made with http://icomoon.io/ *!*/
+  @font-face {
+    font-family: 'bpicons';
+    src:url('../../../static/fonts/bpicons/bpicons.eot');
+    src:url('../../../static/fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),
+    url('../../../static/fonts/bpicons/bpicons.woff') format('woff'),
+    url('../../../static/fonts/bpicons/bpicons.ttf') format('truetype'),
+    url('../../../static/fonts/bpicons/bpicons.svg#bpicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  } /* Made with http://icomoon.io/ */
 
   *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
   body, html { font-size: 100%; padding: 0; margin: 0;}
@@ -436,8 +439,8 @@
     width: 100%;
     height: 100%;
     background: #fff;
-    border: 50px solid #fff;
-    overflow: hidden;
+    border: 40px solid #fff;
+    overflow: scroll;
   }
 
   .slideshow figcaption {
@@ -590,70 +593,31 @@
     }
   }
 
+  .icon-data-arrow-back {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iIAogICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAJPGcgaWQ9ImFycm93LWJhY2siPjxwYXRoIGQ9Ik0yMCwxMUg3LjhsNS42LTUuNkwxMiw0bC04LDhsOCw4bDEuNC0xLjRMNy44LDEzSDIwVjExeiIvPjwvZz4KPC9zdmc+Cgo=)!important;
+  }
+  .tc-back-btn {
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*background-color: #fff;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 5px 5px;*/
+    /*padding: 6px;*/
+    /*cursor: pointer;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+    /*margin: 8px;*/
+    /*border: 0;*/
 
-  /*  JS Dropdown */
-  .js-Dropdown {
-    display: inline-block;
-    font: 400 14px sans-serif;
-    position: relative;
-    width: 20em;
-  }
-  .js-Dropdown-title {
-    background: #ffffff;
-    /*border: 1px groove #a5a5a5;*/
-    border: none;
-    box-sizing: border-box;
-    cursor: pointer;
-    font: 400 14px sans-serif;
-    height: 3em;
-    padding: .5em;
-    position: relative;
-    text-align: left;
-    width: 100%;
-  }
-  .js-Dropdown-title:after {
-    border-color: #a5a5a5 transparent transparent transparent;
-    border-style: solid;
-    border-width: 10px 12px;
-    content: "";
-    display: block;
-    height: 0;
-    position: absolute;
-    right: 1em;
-    top: 45%;
-    width: 0;
-  }
-  .js-Dropdown-list {
-    background: #fff;
-    border-left: 1px solid #a5a5a5;
-    border-right: 1px solid #a5a5a5;
-    box-sizing: border-box;
-    display: none;
-    height: 0;
-    list-style: none;
-    margin: 0;
-    opacity: 0;
-    padding: 0;
-    position: absolute;
-    transition: .2s linear;
-    width: 100%;
-    z-index: 999;
-  }
-  .js-Dropdown-list.is-open {
-    display: block;
-    height: auto;
-    opacity: 1;
-  }
-  .js-Dropdown-list li {
-    border-bottom: 1px solid #a5a5a5;
-    cursor: pointer;
-    padding: 1em .5em;
-  }
-  .js-Dropdown-list li:hover {
-    background-color: #fff5e9;
-  }
-  .js-Dropdown-list li.is-selected {
-    background-color: #ffdfb6;
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*text-align: left;*/
+    /*width: 2.5em;*/
+    /*height: 2.5em;*/
+    /*background: #fff;*/
+    /*border-radius: 50%;*/
+    /*margin: 0 0.1em;*/
+    /*border: 4px solid #47a3da;*/
   }
 
 </style>
