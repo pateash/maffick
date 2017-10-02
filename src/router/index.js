@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import VueAnalytics from 'vue-analytics';
 // import Hello from '@/components/Hello';
 import Home from '@/components/Home';
 import Team from '@/components/Team/Team';
@@ -11,7 +12,7 @@ const Gallery = () => import('@/components/Gallery/Gallery');
 
 Vue.use(Router);
 
-export default new Router({
+const technoRouter = new Router({
   routes: [
     {
       path: '/',
@@ -49,3 +50,9 @@ export default new Router({
     }
   ],
 });
+
+Vue.use(VueAnalytics, {
+  id: 'UA-51356287-2',
+  technoRouter
+})
+export default technoRouter;
