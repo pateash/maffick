@@ -1,0 +1,131 @@
+<template>
+  <div class="tc-team">
+    <team-card v-for="member in team" :name="member.name" :image="member.imageUrl" :role="member.role" :key="member.id"></team-card>
+  </div>
+</template>
+
+<script>
+  import TeamCard from '@/components/Team/TeamCard';
+  export default {
+    name: 'Team',
+    components: {
+      TeamCard
+    },
+    data() {
+      return {
+        team: []
+      }
+    },
+    created() {
+      let data = [
+        {
+          id: 1,
+          name: 'Manohar Lakkoju',
+          role: 'Web Developer',
+          imageUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample7.jpg'
+        },{
+          id: 2,
+          name: 'Ashish Patel',
+          role: 'Web Developer',
+          imageUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample7.jpg'
+        },{
+          id: 3,
+          name: 'Darsh Tiwari',
+          role: 'Secretary',
+          imageUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample7.jpg'
+        }
+      ]
+      this.team.push(...data)
+    }
+  };
+</script>
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+  .tc-team-img {
+    font-family: 'Open Sans', Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.4em;
+    background-color: #141414;
+  }
+  .tc-team-img * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  .tc-team-img .background {
+    width: 100%;
+    vertical-align: top;
+    opacity: 0.2;
+    -webkit-filter: grayscale(100%) blur(10px);
+    filter: grayscale(100%) blur(10px);
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .tc-team-img figcaption {
+    width: 100%;
+    padding: 15px 25px;
+    position: absolute;
+    left: 0;
+    top: 62%;
+  }
+  .tc-team-img .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    max-width: 150px;
+    opacity: 1;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate(-50%, 30%);
+    transform: translate(-50%, 30%);
+  }
+  .tc-team-img h3 {
+    margin: 0 0 5px;
+    font-weight: 400;
+  }
+  .tc-team-img h3 span {
+    display: block;
+    font-size: 0.6em;
+    color: #f39c12;
+    opacity: 0.75;
+  }
+  .tc-team-img i {
+    padding: 10px 5px;
+    display: inline-block;
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+    opacity: 0.65;
+  }
+  .tc-team-img a {
+    text-decoration: none;
+  }
+  .tc-team-img i:hover {
+    opacity: 1;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .tc-team-img:hover .background,
+  .tc-team-img.hover .background {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  /* Demo purposes only */
+  body {
+    /*background-color: #212121;*/
+  }
+
+</style>

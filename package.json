@@ -15,9 +15,17 @@
   },
   "dependencies": {
     "animejs": "^2.1.0",
+    "axios": "^0.16.2",
+    "masonry-layout": "^4.2.0",
+    "scrollreveal": "^3.3.6",
+    "smooth-scroll": "^12.1.5",
     "vue": "^2.4.2",
+    "vue-agile": "^0.2.6",
+    "vue-analytics": "^5.1.1",
+    "vue-images-loaded": "^1.1.2",
     "vue-router": "^2.7.0",
-    "vue-spinner": "^1.0.2"
+    "vue-spinner": "^1.0.2",
+    "vueisotope": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
