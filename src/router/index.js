@@ -58,7 +58,7 @@ const technoRouter = new Router({
 });
 
 Vue.use(VueAnalytics, {
-  id: 'UA-51356287-2',
-  technoRouter
+    id: 'UA-51356287-2',
+    technoRouter
 })
 export default technoRouter;
