@@ -9,6 +9,7 @@ import Sponsors from '@/components/Sponsors/Sponsors';
 const EventList = () => import('@/components/Events/EventList');
 const Register = () => import('@/components/Register/Register');
 const Gallery = () => import('@/components/Gallery/Gallery');
+const Pronites = () => import('@/components/Pronites/Pronites');
 
 Vue.use(Router);
 
@@ -43,6 +44,11 @@ const technoRouter = new Router({
       path: '/gallery',
       name: 'Gallery',
       component: Gallery
+    },
+    {
+      path: '/pronites',
+      name: 'Pronites',
+      component: Pronites
     },
     {
       path: '*',
