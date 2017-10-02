@@ -55,10 +55,11 @@
     background-position: center center;
     background-attachment: fixed;
     z-index: 1;
+    height: 100vh;
   }
 
   .techno .large-header {
-    background-image: url('../../assets/intro.jpg');
+    background-image: url('../../assets/demo-1-bg.jpg');
   }
 
   .main-title {

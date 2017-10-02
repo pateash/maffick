@@ -50,10 +50,12 @@
 
     <section id="section2" class="cd-section tc-about-section">
       <about></about>
+      <a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
     </section><!-- cd-section -->
 
     <section id="section3" class="cd-section">
       <events></events>
+      <a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>
     </section><!-- cd-section -->
 
     <section id="section4" class="cd-section">
@@ -100,20 +102,29 @@
 
       //smooth scroll to the section
       navigationItems.forEach(item => {
-        console.log(item)
+//        console.log(item)
         item.addEventListener('click', navButtonClicked)
       });
 
       //smooth scroll to second section
       // careful of multiple items with query selector
-      document.querySelector('.cd-scroll-down').addEventListener('click', function(event) {
-        event.preventDefault();
-        smoothScroll(this.hash);
-      })
+      const scrolls = document.querySelectorAll('.cd-scroll-down');
+      if(scrolls) {
+        scrolls.forEach(scroll => {
+          scroll.addEventListener('click', function(event) {
+            event.preventDefault();
+            smoothScroll(this.hash);
+          })
+        })
+      }
+//      document.querySelector('.cd-scroll-down').addEventListener('click', function(event) {
+//        event.preventDefault();
+//        smoothScroll(this.hash);
+//      })
 
       //open-close navigation on touch devices
       const trigger = document.querySelector('.touch .cd-nav-trigger');
-      console.log({ trigger })
+//      console.log({ trigger })
       if (trigger) {
         trigger.addEventListener('click', function() {
           document.querySelector('.touch #cd-vertical-nav').classList.toggle('open');
@@ -123,7 +134,7 @@
 
       //close navigation on touch devices when selectin an elemnt from the list
       const x = document.querySelector('.touch #cd-vertical-nav a');
-      console.log({ x })
+//      console.log({ x })
       if (x) {
         x.addEventListener('click', function() {
           document.querySelector('.touch #cd-vertical-nav').classList.remove('open');
@@ -160,7 +171,7 @@
 
       function smoothScroll(target) {
         const scroll = new SmoothScroll();
-        console.log(scroll)
+//        console.log(scroll)
         let anchor = document.querySelector(target);
         scroll.animateScroll(anchor);
       }
