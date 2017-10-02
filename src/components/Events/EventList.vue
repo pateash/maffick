@@ -2,7 +2,22 @@
   <div class="container">
     <header class="clearfix">
       <router-link to="/">TECHNO SEARCH'17</router-link>
-      <h1>{{$route.params.category}} Events</h1>
+
+      <!--Event dropdown-->
+
+      <div class="field">
+
+        <div class="control">
+          <label>Event Category</label>
+          <div class="select">
+            <select v-model="currentCategory" @change="updateEventData">
+              <option :value="category.name" v-for="category in categories">{{category.name}} </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!--end of dropdown-->
       <nav>
         <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
         <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
@@ -17,7 +32,7 @@
           <li v-for="event in events" :key="event.id">
             <figure>
               <img :src="event.avatar_url" alt="img01"/>
-              <figcaption><h3>{{event.login}}</h3><p>Chillwave hoodie ea gentrify aute sriracha consequat.</p></figcaption>
+              <figcaption><h3>{{event.name}}</h3></figcaption>
             </figure>
           </li>
         </ul>
@@ -26,13 +41,11 @@
         <ul>
           <li v-for="event in events" :key="event.id">
             <figure>
-              <img :src="event.avatar_url" alt="img01"/>
+              <img :src="event.avatar_url" :alt="event.name"/>
               <figcaption>
-                <h3>{{event.login}}</h3>
-                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
-                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
-                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
-                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard anim quis, ullamco craft beer.</p>
+                <h3>{{event.name}}</h3>
+                <h2>Description</h2>
+                <p>{{event.description}}</p>
               </figcaption>
             </figure>
           </li>
@@ -49,53 +62,58 @@
 </template>
 
 <script>
-  import CBPGridGallery from './gridGallery';
-  import axios from 'axios';
-//  import imagesLoaded from 'vue-images-loaded'
-  export default {
-    name: 'EventList',
-    data() {
-      return {
-        eventsAll: [],
-        events: []
-      }
-    },
-    created() {
-      axios.get('https://api.github.com/users')
-        .then((response) => {
-//          console.log(response);
-//          console.log({this: this, data: response.data})
-          this.events.push(...response.data);
-//          console.log(this.events);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    },
-    updated() {
-      console.log('comp updated');
-      console.log('in updated',this.events.length)
-      if(CBPGridGallery !== undefined) {
-        if(this.events.length !== 0) {
-          let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-          console.log(x||'', 'cbp yo', this.events.length)
-        }
-        console.log(this.events.length)
-      }
-    },
-    mounted() {
-      console.log('event list mounted')
+    import CBPGridGallery from './gridGallery';
+    import axios from 'axios';
+    //  import imagesLoaded from 'vue-images-loaded'
+    export default {
+        name: 'EventList',
+        data() {
+            return {
+                eventsAll: [],
+                events: [],
+                categories:[],
+                currentCategory:this.$route.params.category //will be modeled with dropdown
+            }
+        },
+        methods:{
+            updateEventData(){
+                this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
+            }
+        },
+        created() {
 
-//      if(CBPGridGallery !== undefined) {
-//        if(this.events.length !== 0) {
-//          let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-//          console.log(x||'', 'cbp yo', this.events.length)
-//        }
-//        console.log(this.events.length)
-//      }
+            let urlbase = "http://34.236.39.39/api/";
+            //get categories
+            axios.get(urlbase+"categories")
+                .then((response)=> {
+                    this.categories=response.data.data;//last data was part of our api
+                })
+                .catch(function (response) {
+                    console.error("error in getting categories");
+                });
 
-    }
-  };
+
+            //get Events data
+            axios.get(urlbase+'events')
+                .then((response) => {
+                    this.eventsAll.push(...response.data.data);
+                    this.updateEventData();
+//                    console.log(response.data.data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+        updated() {
+            if(CBPGridGallery !== undefined) {
+                if(this.events.length !== 0) {
+                    let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+                }
+                console.log(this.events.length)
+            }
+        },
+    };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
