@@ -13,46 +13,46 @@ const Gallery = () => import('@/components/Gallery/Gallery');
 Vue.use(Router);
 
 const technoRouter = new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home,
-    },
-    {
-      path: '/events/:category',
-      name: 'Events',
-      component: EventList
-    },
-    {
-      path: '/team',
-      name: 'Team',
-      component: Team
-    },
-    {
-      path: '/sponsors',
-      name: 'Sponsors',
-      component: Sponsors
-    },
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register
-    },
-    {
-      path: '/gallery',
-      name: 'Gallery',
-      component: Gallery
-    },
-    {
-      path: '*',
-      component: Home
-    }
-  ],
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: Home,
+        },
+        {
+            path: '/events/:category',
+            name: 'Events',
+            component: EventList
+        },
+        {
+            path: '/team',
+            name: 'Team',
+            component: Team
+        },
+        {
+            path: '/sponsors',
+            name: 'Sponsors',
+            component: Sponsors
+        },
+        {
+            path: '/register',
+            name: 'Register',
+            component: Register
+        },
+        {
+            path: '/gallery',
+            name: 'Gallery',
+            component: Gallery
+        },
+        {
+            path: '*',
+            component: Home
+        }
+    ],
 });
 
 Vue.use(VueAnalytics, {
-  id: 'UA-51356287-2',
-  technoRouter
+    id: 'UA-51356287-2',
+    technoRouter
 })
 export default technoRouter;
