@@ -63,12 +63,14 @@
     </section><!-- cd-section -->
 
     <section id="section5" class="cd-section">
-      <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;</p>
+      <register></register>
     </section><!-- cd-section -->
 
     <section id="section6" class="cd-section">
       <contact></contact>
     </section><!-- cd-section -->
+
+    <TsFooter></TsFooter>
   </span>
 </template>
 
@@ -79,15 +81,19 @@
   import Events from '@/components/Home/Events';
   import Pronites from '@/components/Home/Pronites';
   import Contact from '@/components/Home/Contact';
+  import Register from '@/components/Home/Register';
+  import TsFooter from '@/components/Home/TsFooter';
 
   export default {
     name: 'Homepage',
     components: {
+      Register,
       Banner,
       About,
       Events,
       Pronites,
-      Contact
+      Contact,
+      TsFooter
     },
     mounted() {
       let contentSections = document.querySelectorAll('.cd-section'),
@@ -558,5 +564,10 @@
   /* Pronites */
   #section4 {
     padding:0;
+  }
+
+  /* Register */
+  #section5 {
+    padding: 0;
   }
 </style>
