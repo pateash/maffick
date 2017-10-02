@@ -9,46 +9,52 @@ import Sponsors from '@/components/Sponsors/Sponsors';
 const EventList = () => import('@/components/Events/EventList');
 const Register = () => import('@/components/Register/Register');
 const Gallery = () => import('@/components/Gallery/Gallery');
+const Pronites = () => import('@/components/Pronites/Pronites');
 
 Vue.use(Router);
 
 const technoRouter = new Router({
-    routes: [
-        {
-            path: '/',
-            name: 'Home',
-            component: Home,
-        },
-        {
-            path: '/events/:category',
-            name: 'Events',
-            component: EventList
-        },
-        {
-            path: '/team',
-            name: 'Team',
-            component: Team
-        },
-        {
-            path: '/sponsors',
-            name: 'Sponsors',
-            component: Sponsors
-        },
-        {
-            path: '/register',
-            name: 'Register',
-            component: Register
-        },
-        {
-            path: '/gallery',
-            name: 'Gallery',
-            component: Gallery
-        },
-        {
-            path: '*',
-            component: Home
-        }
-    ],
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+    },
+    {
+      path: '/events/:category',
+      name: 'Events',
+      component: EventList
+    },
+    {
+      path: '/team',
+      name: 'Team',
+      component: Team
+    },
+    {
+      path: '/sponsors',
+      name: 'Sponsors',
+      component: Sponsors
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
+    },
+    {
+      path: '/gallery',
+      name: 'Gallery',
+      component: Gallery
+    },
+    {
+      path: '/pronites',
+      name: 'Pronites',
+      component: Pronites
+    },
+    {
+      path: '*',
+      component: Home
+    }
+  ],
 });
 
 Vue.use(VueAnalytics, {
