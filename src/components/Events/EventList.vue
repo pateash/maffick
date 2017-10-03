@@ -119,7 +119,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
   /* General Blueprint Style */
-  @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+  /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+
   @font-face {
     font-family: 'bpicons';
     src:url('../../../static/fonts/bpicons/bpicons.eot');
@@ -139,7 +140,7 @@
   .clearfix:after { clear: both; }
 
   body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
     color: #47a3da;
   }
 
@@ -306,16 +307,16 @@
   }
 
   /* Component */
-  @font-face {
-    font-family: 'fontawesome';
-    src:url('../../../static/fonts/fontawesome/fontawesome.eot?-e43dk9');
-    src:url('../../../static/fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
-    url('../../../static/fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
-    url('../../../static/fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
-    url('../../../static/fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  } /* Made with http://icomoon.io/app */
+  /*@font-face {*/
+    /*font-family: 'fontawesome';*/
+    /*src:url('../../../static/fonts/fontawesome/fontawesome.eot?-e43dk9');*/
+    /*src:url('../../../static/fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),*/
+    /*url('../../../static/fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),*/
+    /*url('../../../static/fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),*/
+    /*url('../../../static/fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+  /*} !* Made with http://icomoon.io/app *!*/
 
   /* General style */
   .grid-gallery ul {

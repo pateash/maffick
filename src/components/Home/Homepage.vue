@@ -210,7 +210,7 @@
 
   body {
     font-size: 100%;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: #3e3947;
     /*background-color: white;*/
   }

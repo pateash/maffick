@@ -43,9 +43,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+  /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);*/
   .tc-team-img {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
     position: relative;
     float: left;
     overflow: hidden;

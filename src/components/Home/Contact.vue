@@ -215,9 +215,9 @@
   }
 
   /* For the contact form */
-  @import url("https://fonts.googleapis.com/css?family=Lato:300,700");
-  @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+  /*@import url("https://fonts.googleapis.com/css?family=Lato:300,700");*/
+  /*@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");*/
+  /*@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");*/
 
   /* Body */
 
@@ -231,7 +231,8 @@
   textarea {
     background: none;
     color: #646464;
-    font-family: "Lato", Helvetica, sans-serif;
+    /*font-family: "Lato", Helvetica, sans-serif;*/
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 15pt;
     font-weight: 300;
     line-height: 1.75em;

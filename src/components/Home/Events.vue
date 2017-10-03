@@ -61,9 +61,9 @@
 
   }
 
-  @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+  /*@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);*/
   figure.tc-event {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
     position: relative;
     display: inline-block;
     margin: 10px 5px;
@@ -191,7 +191,7 @@
   }
   .events-heading h1 {
     font-size: 40px;
-    font-family: 'MerriWeather', serif;
+    font-family: 'Source Sans Pro', serif;
     font-weight: bold;
     color: #E5D4B7;
     margin-bottom: 20px;

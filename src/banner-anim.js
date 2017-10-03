@@ -1,3 +1,7 @@
+import './../static/TweenLite.min';
+import './../static/EasePack.min';
+import './../static/rAF';
+
 export default function Banner() {
 
   var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;

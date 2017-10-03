@@ -38,7 +38,7 @@
     font-weight: 400;
     font-size: 1em;
     line-height: 1.25;
-    font-family: 'Raleway', Calibri, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
   }
 
   /* Header */

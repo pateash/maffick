@@ -28,7 +28,7 @@
     padding: 5%;
   }
   .tc-about-text {
-    font-family: 'MerriWeather', Serif;
+    font-family: 'Source Sans Pro', Serif;
     font-size: 35px;
     font-weight: bold;
     color: #e0e0e0;
@@ -38,60 +38,6 @@
   }
   .someblue {
     color: #00d1b2;
-  }
-  .tc-about-anim {
-     -webkit-animation: blurFadeIn 2s ease-in 0s backwards;
-    -moz-animation: blurFadeIn 1s ease-in 0s backwards;
-    -ms-animation: blurFadeIn 2s ease-in 0s backwards;
-    animation: blurFadeIn 2s ease-in 0s backwards;
-    color: transparent;
-    text-shadow: 0px 0px 1px #fff;
-  }
-  @-webkit-keyframes blurFadeIn{
-    0%{
-      opacity: 0;
-      text-shadow: 0px 0px 40px #fff;
-      -webkit-transform: scale(1.3);
-    }
-    50%{
-      opacity: 0.5;
-      text-shadow: 0px 0px 10px #fff;
-      -webkit-transform: scale(1.1);
-    }
-    100%{
-      opacity: 1;
-      text-shadow: 0px 0px 1px #fff;
-      -webkit-transform: scale(1);
-    }
-  }
-  @-moz-keyframes blurFadeIn{
-    0%{
-      opacity: 0;
-      text-shadow: 0px 0px 40px #fff;
-      -moz-transform: scale(1.3);
-    }
-    100%{
-      opacity: 1;
-      text-shadow: 0px 0px 1px #fff;
-      -moz-transform: scale(1);
-    }
-  }
-  @keyframes blurFadeIn{
-    0%{
-      opacity: 0;
-      text-shadow: 0px 0px 40px #fff;
-      transform: scale(1.3);
-    }
-    50%{
-      opacity: 0.5;
-      text-shadow: 0px 0px 10px #fff;
-      transform: scale(1.1);
-    }
-    100%{
-      opacity: 1;
-      text-shadow: 0px 0px 1px #fff;
-      transform: scale(1);
-    }
   }
 
   @media only screen and (max-width: 500px) {
