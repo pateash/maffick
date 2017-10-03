@@ -20,7 +20,15 @@
   export default {
     name: 'Banner',
     mounted() {
-      BannerAnim();
+      let width = document.documentElement.clientWidth;
+      let height = document.documentElement.clientHeight;
+
+      if(width > 500) {
+        BannerAnim();
+      } else {
+        let lg = document.getElementById('large-header');
+        lg.style.height = height+'px';
+      }
     }
   };
 </script>
