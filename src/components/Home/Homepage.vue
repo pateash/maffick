@@ -570,4 +570,9 @@
   #section5 {
     padding: 0;
   }
+
+  /* COntact */
+  #section6 {
+    min-height: 500px!important;
+  }
 </style>
