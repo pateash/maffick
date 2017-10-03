@@ -3217,6 +3217,7 @@
     min-height: 22em;
     position: relative;
     top: -3.25em;
+    text-align: left;
   }
 
   #banner:after {

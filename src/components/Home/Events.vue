@@ -29,6 +29,11 @@
           <h2><span>EXHIBITIONS</span></h2>
         </figcaption><router-link to="/events/exhibitions"></router-link>
       </figure>
+      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+        <figcaption>
+          <h2><span>PRONITES</span></h2>
+        </figcaption><router-link to="/pronites"></router-link>
+      </figure>
     </div>
   </div>
 

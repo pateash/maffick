@@ -12,7 +12,8 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+  /*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');*/
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
   /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 

@@ -128,22 +128,22 @@
 //        smoothScroll(this.hash);
 //      })
 
-      //open-close navigation on touchevents devices
-      const trigger = document.querySelector('.touchevents .cd-nav-trigger');
+      //open-close navigation on touch devices
+      const trigger = document.querySelector('.touch .cd-nav-trigger');
 //      console.log({ trigger })
       if (trigger) {
         trigger.addEventListener('click', function() {
-          document.querySelector('.touchevents #cd-vertical-nav').classList.toggle('open');
+          document.querySelector('.touch #cd-vertical-nav').classList.toggle('open');
         })
 
       }
 
-      //close navigation on touchevents devices when selectin an elemnt from the list
-      const x = document.querySelector('.touchevents #cd-vertical-nav a');
+      //close navigation on touch devices when selectin an elemnt from the list
+      const x = document.querySelector('.touch #cd-vertical-nav a');
 //      console.log({ x })
       if (x) {
         x.addEventListener('click', function() {
-          document.querySelector('.touchevents #cd-vertical-nav').classList.remove('open');
+          document.querySelector('.touch #cd-vertical-nav').classList.remove('open');
         })
 
       }
@@ -311,12 +311,12 @@
     background: url("../../assets/cd-arrow-bottom.svg") no-repeat center center;
   }
 
-  /* No touchevents devices */
+  /* No touch devices */
   .cd-nav-trigger {
     display: none;
   }
 
-  .no-touchevents #cd-vertical-nav {
+  .no-touch #cd-vertical-nav {
     position: fixed;
     right: 40px;
     top: 50%;
@@ -328,21 +328,21 @@
     transform: translateY(-50%);
     z-index: 2;
   }
-  .no-touchevents #cd-vertical-nav li {
+  .no-touch #cd-vertical-nav li {
     text-align: right;
   }
-  .no-touchevents #cd-vertical-nav a {
+  .no-touch #cd-vertical-nav a {
     display: inline-block;
     /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  .no-touchevents #cd-vertical-nav a:after {
+  .no-touch #cd-vertical-nav a:after {
     content: "";
     display: table;
     clear: both;
   }
-  .no-touchevents #cd-vertical-nav a span {
+  .no-touch #cd-vertical-nav a span {
     float: right;
     display: inline-block;
     -webkit-transform: scale(0.6);
@@ -351,20 +351,20 @@
     -o-transform: scale(0.6);
     transform: scale(0.6);
   }
-  .no-touchevents #cd-vertical-nav a:hover span {
+  .no-touch #cd-vertical-nav a:hover span {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
   }
-  .no-touchevents #cd-vertical-nav a:hover .cd-label {
+  .no-touch #cd-vertical-nav a:hover .cd-label {
     opacity: 1;
   }
-  .no-touchevents #cd-vertical-nav a.is-selected .cd-dot {
+  .no-touch #cd-vertical-nav a.is-selected .cd-dot {
     background-color: white;
   }
-  .no-touchevents #cd-vertical-nav .cd-dot {
+  .no-touch #cd-vertical-nav .cd-dot {
     position: relative;
     /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
     top: 8px;
@@ -381,7 +381,7 @@
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
-  .no-touchevents #cd-vertical-nav .cd-label {
+  .no-touch #cd-vertical-nav .cd-label {
     position: relative;
     margin-right: 10px;
     padding: .4em .5em;
@@ -401,8 +401,8 @@
     text-transform: uppercase;
   }
 
-  /* touchevents devices */
-  .touchevents .cd-nav-trigger {
+  /* touch devices */
+  .touch .cd-nav-trigger {
     display: block;
     z-index: 10001;
     position: fixed;
@@ -413,7 +413,7 @@
     border-radius: 0.25em;
     background: rgba(255, 255, 255, 0.9);
   }
-  .touchevents .cd-nav-trigger span {
+  .touch .cd-nav-trigger span {
     position: absolute;
     height: 4px;
     width: 4px;
@@ -429,7 +429,7 @@
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
   }
-  .touchevents .cd-nav-trigger span::before, .touchevents .cd-nav-trigger span::after {
+  .touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
     content: '';
     height: 100%;
     width: 100%;
@@ -438,14 +438,14 @@
     background-color: inherit;
     border-radius: inherit;
   }
-  .touchevents .cd-nav-trigger span::before {
+  .touch .cd-nav-trigger span::before {
     top: -9px;
   }
-  .touchevents .cd-nav-trigger span::after {
+  .touch .cd-nav-trigger span::after {
     bottom: -9px;
   }
 
-  .touchevents #cd-vertical-nav {
+  .touch #cd-vertical-nav {
     position: fixed;
     z-index: 10000;
     right: 5%;
@@ -454,7 +454,7 @@
     max-width: 400px;
     max-height: 90%;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touchevents;
+    -webkit-overflow-scrolling: touch;
     -webkit-transform-origin: right bottom;
     -moz-transform-origin: right bottom;
     -ms-transform-origin: right bottom;
@@ -474,38 +474,38 @@
     border-radius: 0.25em;
     background-color: rgba(255, 255, 255, 0.9);
   }
-  .touchevents #cd-vertical-nav a {
+  .touch #cd-vertical-nav a {
     display: block;
     padding: 1em;
     border-bottom: 1px solid rgba(62, 57, 71, 0.1);
   }
-  .touchevents #cd-vertical-nav a span:first-child {
+  .touch #cd-vertical-nav a span:first-child {
     display: none;
   }
-  .touchevents #cd-vertical-nav a.is-selected span:last-child {
+  .touch #cd-vertical-nav a.is-selected span:last-child {
     color: #d88683;
   }
-  .touchevents #cd-vertical-nav.open {
+  .touch #cd-vertical-nav.open {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
   }
-  .touchevents #cd-vertical-nav.open + .cd-nav-trigger {
+  .touch #cd-vertical-nav.open + .cd-nav-trigger {
     background-color: transparent;
   }
-  .touchevents #cd-vertical-nav.open + .cd-nav-trigger span {
+  .touch #cd-vertical-nav.open + .cd-nav-trigger span {
     background-color: rgba(62, 57, 71, 0);
   }
-  .touchevents #cd-vertical-nav.open + .cd-nav-trigger span::before, .touchevents #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  .touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
     background-color: #3e3947;
     height: 3px;
     width: 20px;
     border-radius: 0;
     left: -8px;
   }
-  .touchevents #cd-vertical-nav.open + .cd-nav-trigger span::before {
+  .touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -513,7 +513,7 @@
     transform: rotate(45deg);
     top: 1px;
   }
-  .touchevents #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
@@ -521,12 +521,12 @@
     transform: rotate(135deg);
     bottom: 0;
   }
-  .touchevents #cd-vertical-nav li:last-child a {
+  .touch #cd-vertical-nav li:last-child a {
     border-bottom: none;
   }
 
   @media only screen and (min-width: 768px) {
-    .touchevents .cd-nav-trigger, .touchevents #cd-vertical-nav {
+    .touch .cd-nav-trigger, .touch #cd-vertical-nav {
       bottom: 40px;
     }
   }
@@ -574,5 +574,8 @@
   /* COntact */
   #section6 {
     min-height: 500px!important;
+  }
+  span.cd-label {
+    color: #3e3947!important;
   }
 </style>

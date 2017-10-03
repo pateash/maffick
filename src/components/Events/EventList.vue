@@ -3,27 +3,39 @@
     <header class="clearfix">
       <router-link to="/">TECHNO SEARCH'17</router-link>
 
-      <!--Event dropdown-->
+      <div class="ts-category">
 
-      <div class="field">
-
-        <div class="control">
+        <!--Event dropdown-->
+        <div class="style-1">
           <label>Event Category</label>
-          <div class="select">
+          <div class="select-container">
             <select v-model="currentCategory" @change="updateEventData">
               <option :value="category.name" v-for="category in categories">{{category.name}} </option>
             </select>
           </div>
         </div>
+
+        <!--<div class="field">-->
+
+        <!--<div class="control">-->
+        <!--<label>Event Category</label>-->
+        <!--<div class="select">-->
+        <!--<select v-model="currentCategory" @change="updateEventData">-->
+        <!--<option :value="category.name" v-for="category in categories">{{category.name}} </option>-->
+        <!--</select>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--end of dropdown-->
+        <nav>
+          <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
+          <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
+          <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
+          <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
+        </nav>
       </div>
 
-      <!--end of dropdown-->
-      <nav>
-        <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
-        <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-        <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
-        <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
-      </nav>
     </header>
     <div id="grid-gallery" class="grid-gallery">
       <section class="grid-wrap">
@@ -117,9 +129,11 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   /* General Blueprint Style */
   /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
   @font-face {
     font-family: 'bpicons';
@@ -480,6 +494,7 @@
     padding: 3%;
     cursor: pointer;
     font-size: 2.2em;
+    color: #31373a;
   }
 
   .slideshow nav span.nav-prev,
@@ -639,62 +654,96 @@
     /*border: 4px solid #47a3da;*/
   }
 
-  * {
-    box-sizing: border-box;
-    letter-spacing: 0.05rem;
-    outline: 0 none;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
+  div[class^="style"] {
+    margin-bottom: 1rem;
   }
 
   label {
+    line-height: 1.5;
+  }
+
+  /* Select Container : All Styles */
+  .select-container {
     position: relative;
     display: inline-block;
   }
-  label:before {
-    content: '';
-    height: 31px;
-    position: absolute;
-    right: 7px;
-    top: 3px;
-    width: 22px;
-    background: #fff;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    pointer-events: none;
-    display: block;
-  }
-  label:after {
-    content: " ";
-    position: absolute;
-    right: 15px;
-    top: 46%;
-    margin-top: -3px;
-    z-index: 2;
-    pointer-events: none;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6.9px 4px 0 4px;
-    border-color: #aaa transparent transparent transparent;
-    pointer-events: none;
-  }
-  label select {
+
+  /* Select Container : Select : All Styles */
+  .select-container > select {
+    font-size: 1em;
+    padding: .5em 3em .5em .5em;
+    float: right;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #9e9e9e;
+    border-radius: 0;
+    -ms-word-break: normal;
+    word-break: normal;
+    cursor: pointer;
+    /* Hide Browser Default */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0 30px 0 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 3px;
-    line-height: 36px;
-    height: 36px;
-    background: #fff;
-    margin: 0 5px 5px 0;
   }
 
+  /* Style 1 : Down Chevron + Left Border */
+  .style-1 {
+    display: flex;
+    align-items: center;
+  }
+  .style-1 label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .style-1 .select-container:after {
+    position: absolute;
+    content: '\f078';
+    font-family: FontAwesome;
+    color: #9e9e9e;
+    right: 0;
+    padding: .6em .5em;
+    border-left: 1px solid #9e9e9e;
+    pointer-events: none;
+  }
+
+  .select-group {
+    display: flex;
+  }
+
+  .select-group .select-container:not(:last-child) select {
+    border-right: none;
+  }
+
+  .select-group .select-container:not(:first-child) select {
+    border-left: none;
+  }
+
+  .select-group .select-container select::after {
+    content: ' | ';
+    font-size: 2em;
+  }
+
+  /* Browser Overrides */
   select::-ms-expand {
     display: none;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  .ts-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    .ts-category {
+      flex-direction: column;
+    }
   }
 
 

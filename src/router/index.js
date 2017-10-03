@@ -14,6 +14,7 @@ const Pronites = () => import('@/components/Pronites/Pronites');
 Vue.use(Router);
 
 const technoRouter = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

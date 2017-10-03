@@ -1,7 +1,8 @@
 <template>
   <div class="tc-register">
     <p>
-      <button class="btn btn-2 btn-2a">Register</button>
+      <router-link to="/register" class="btn btn-2 btn-2a">Register</router-link>
+      <!--<button class="btn btn-2 btn-2a">Register</button>-->
     </p>
   </div>
 </template>
