@@ -3535,4 +3535,7 @@
     font-size: 30px;
     border: 0;
   }
+  header.major p {
+    font-size: 20px;
+  }
 </style>
