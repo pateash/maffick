@@ -4,32 +4,32 @@
       <h1>More than 50+ EVENTS</h1>
     </div>
     <div class="events-container">
-      <figure class="tc-event red"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event red"><img src="../../assets/Categories/competions.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>COMPETITIONS</span></h2>
         </figcaption><router-link to="/events/competitions"></router-link>
       </figure>
-      <figure class="tc-event green"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event green"><img src="../../assets/Categories/informal.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>INFORMALS</span></h2>
         </figcaption><router-link to="/events/informals"></router-link>
       </figure>
-      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event navy"><img src="../../assets/Categories/workshop.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>WORKSHOPS</span></h2>
         </figcaption><router-link to="/events/workshops"></router-link>
       </figure>
-      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event navy"><img src="../../assets/Categories/lectures.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>LECTURES</span></h2>
         </figcaption><router-link to="/events/lectures"></router-link>
       </figure>
-      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event navy"><img src="../../assets/Categories/exhibitons.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>EXHIBITIONS</span></h2>
         </figcaption><router-link to="/events/exhibitions"></router-link>
       </figure>
-      <figure class="tc-event navy"><img :src="imageUrl" alt="Technosearch"/>
+      <figure class="tc-event navy"><img src="../../assets/Categories/Pronite.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>PRONITES</span></h2>
         </figcaption><router-link to="/pronites"></router-link>

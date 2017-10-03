@@ -1,13 +1,35 @@
 <template>
   <span id="app">
-    <router-view>
-    </router-view>
+    <!--<div class="wrapper">-->
+      <!--<nav class="offcanvas">-->
+        <!--<ul>-->
+          <!--<li><a href="#">item 1</a></li>-->
+          <!--<li><a href="#">item 2</a></li>-->
+          <!--<li><a href="#">item 3</a></li>-->
+          <!--<li><a href="#">item 4</a></li>-->
+        <!--</ul>-->
+      <!--</nav>-->
+      <!--<div class="main">-->
+        <!--<header>-->
+          <!--<a class="hamburger">-->
+            <!--<span class="icon"/>-->
+          <!--</a>-->
+        <!--</header>-->
+        <!--&lt;!&ndash;<section class="content">&ndash;&gt;-->
+        <!--&lt;!&ndash;</section>&ndash;&gt;-->
+            <router-view>
+            </router-view>
+      <!--</div>-->
+    <!--</div>-->
+
   </span>
 </template>
 
 <script>
   export default {
     name: 'app',
+    mounted() {
+    }
   };
 </script>
 
@@ -471,4 +493,5 @@
     text-align: center;
     color: #2c3e50;
   }
+
 </style>

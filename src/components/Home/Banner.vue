@@ -5,8 +5,9 @@
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
           <div class="main-title text-focus-in">
-            <h1 class="">TECHNO <span class="thin">SEARCH</span></h1>
-            <h1 class="dates"><span class="thin">OCTOBER</span> 12-15</h1>
+            <img class="main-title-image" src="../../assets/TS-text-white.png" alt="Technosearch'17">
+            <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
+            <h1 class="dates"><span class="thin">OCTOBER</span> 13-15</h1>
           </div>
         </div>
       </div>
@@ -119,6 +120,7 @@
 
   .main-title .dates {
     font-size: 40px;
+    margin-top: -40px;
   }
 
   .techno .main-title {
@@ -128,6 +130,18 @@
   }
   .main-title .thin {
     font-weight: 200;
+  }
+  .main-title-image {
+    height: 180px;
+  }
+  @media only screen and (max-width : 500px) {
+    .main-title .dates {
+      font-size: 25px;
+      margin-top: -10px;
+    }
+    .main-title-image {
+      height: 75px;
+    }
   }
 
   @media only screen and (max-width : 768px) {
