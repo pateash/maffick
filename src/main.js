@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-import VueAgile from 'vue-agile'
+import VueAgile from 'vue-agile';
 
 Vue.use(VueAgile)
 

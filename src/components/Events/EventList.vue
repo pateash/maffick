@@ -307,16 +307,16 @@
   }
 
   /* Component */
-  /*@font-face {*/
-    /*font-family: 'fontawesome';*/
-    /*src:url('../../../static/fonts/fontawesome/fontawesome.eot?-e43dk9');*/
-    /*src:url('../../../static/fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),*/
-    /*url('../../../static/fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),*/
-    /*url('../../../static/fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),*/
-    /*url('../../../static/fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-  /*} !* Made with http://icomoon.io/app *!*/
+  @font-face {
+    font-family: 'fontawesome';
+    src:url('../../../static/fonts/fontawesome/fontawesome.eot?-e43dk9');
+    src:url('../../../static/fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
+    url('../../../static/fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
+    url('../../../static/fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
+    url('../../../static/fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  } /* Made with http://icomoon.io/app */
 
   /* General style */
   .grid-gallery ul {
@@ -638,5 +638,64 @@
     /*margin: 0 0.1em;*/
     /*border: 4px solid #47a3da;*/
   }
+
+  * {
+    box-sizing: border-box;
+    letter-spacing: 0.05rem;
+    outline: 0 none;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+  }
+  label:before {
+    content: '';
+    height: 31px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    width: 22px;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    pointer-events: none;
+    display: block;
+  }
+  label:after {
+    content: " ";
+    position: absolute;
+    right: 15px;
+    top: 46%;
+    margin-top: -3px;
+    z-index: 2;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.9px 4px 0 4px;
+    border-color: #aaa transparent transparent transparent;
+    pointer-events: none;
+  }
+  label select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 30px 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    line-height: 36px;
+    height: 36px;
+    background: #fff;
+    margin: 0 5px 5px 0;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
 
 </style>
