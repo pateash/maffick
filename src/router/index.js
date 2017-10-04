@@ -21,40 +21,40 @@ const technoRouter = new Router({
       name: 'Home',
       component: Home,
     },
-    // {
-    //   path: '/events/:category',
-    //   name: 'Events',
-    //   component: EventList
-    // },
-    // {
-    //   path: '/team',
-    //   name: 'Team',
-    //   component: Team
-    // },
-    // {
-    //   path: '/sponsors',
-    //   name: 'Sponsors',
-    //   component: Sponsors
-    // },
-    // {
-    //   path: '/register',
-    //   name: 'Register',
-    //   component: Register
-    // },
-    // {
-    //   path: '/gallery',
-    //   name: 'Gallery',
-    //   component: Gallery
-    // },
-    // {
-    //   path: '/pronites',
-    //   name: 'Pronites',
-    //   component: Pronites
-    // },
-    // {
-    //   path: '*',
-    //   component: Home
-    // }
+    {
+      path: '/events/:category',
+      name: 'Events',
+      component: EventList
+    },
+    {
+      path: '/team',
+      name: 'Team',
+      component: Team
+    },
+    {
+      path: '/sponsors',
+      name: 'Sponsors',
+      component: Sponsors
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
+    },
+    {
+      path: '/gallery',
+      name: 'Gallery',
+      component: Gallery
+    },
+    {
+      path: '/pronites',
+      name: 'Pronites',
+      component: Pronites
+    },
+    {
+      path: '*',
+      component: Home
+    }
   ],
 });
 
