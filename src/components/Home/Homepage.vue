@@ -112,9 +112,6 @@
     <section id="section6" class="cd-section">
       <contact></contact>
     </section><!-- cd-section -->
-
-    <TsFooter></TsFooter>
-
   </span>
 </template>
 
@@ -126,7 +123,6 @@
   import Pronites from '@/components/Home/Pronites';
   import Contact from '@/components/Home/Contact';
   import Register from '@/components/Home/Register';
-  import TsFooter from '@/components/Home/TsFooter';
 
 //  import Slideout from '@/components/Slideout'
 
@@ -140,7 +136,6 @@
       Events,
       Pronites,
       Contact,
-      TsFooter
     },
     mounted() {
       let contentSections = document.querySelectorAll('.cd-section'),

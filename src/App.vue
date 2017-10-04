@@ -19,6 +19,7 @@
         <!--&lt;!&ndash;</section>&ndash;&gt;-->
             <router-view>
             </router-view>
+<TsFooter></TsFooter>
       <!--</div>-->
     <!--</div>-->
 
@@ -26,10 +27,15 @@
 </template>
 
 <script>
+
+  import TsFooter from '@/components/Home/TsFooter';
   export default {
     name: 'app',
     mounted() {
-    }
+    },
+      components:{
+    TsFooter
+      }
   };
 </script>
 

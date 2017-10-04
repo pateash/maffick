@@ -83,7 +83,6 @@
     </div>
 
     <!-- Footer -->
-    <ts-footer></ts-footer>
     <!--<footer id="footer">-->
       <!--<div class="inner">-->
         <!--<ul class="icons">-->
@@ -104,12 +103,10 @@
 </template>
 
 <script>
-  import TsFooter from '@/components/Home/TsFooter';
   import Register from '@/components/Home/Register';
   export default {
     name: 'Pronites',
     components: {
-      TsFooter,
       Register
     }
   };
