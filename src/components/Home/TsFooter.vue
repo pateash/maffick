@@ -10,16 +10,23 @@
         <a href='#'><i class="fa fa-instagram fa-2x transition" aria-hidden="true"></i></a>
         <a href='#'><i class="fa fa-codepen fa-2x transition" aria-hidden="true"></i></a>
       </div>
-      <!-- Copy -->
-      <div class='copy'>
-        <p class='upper'>
-          Made With Love <i class="fa fa-heart" aria-hidden="true"></i><br>
-          By Manohar Lakkoju and Ashish Patel
-        </p>
-      </div>
+
     </div>
-    <div class='cr'>
-      <router-link to="/">&copy;TECHNOSEARCH'17</router-link>
+    <div class='footer-logo'>
+      <a href="#section1" id="ts-footer-logo">
+        <img src="../../assets/TS-text-black.png" alt="Technosearch'17">
+      </a>
+
+      <!--<router-link to="/" class="cd-scroll-down">-->
+      <!--</router-link>-->
+      <!--<router-link to="/">&copy;TECHNOSEARCH'17</router-link>-->
+    </div>
+    <!-- Copy -->
+    <div class='copy'>
+      <p class='upper'>
+        Made With <i class="fa fa-heart" aria-hidden="true"></i>
+        By Manohar Lakkoju and Ashish Patel
+      </p>
     </div>
 
 
@@ -28,7 +35,16 @@
 
 <script>
   export default {
-    name: 'TsFooter'
+    name: 'TsFooter',
+    mounted() {
+      let footerlogo = document.getElementById('ts-footer-logo');
+      if(footerlogo) {
+        footerlogo.addEventListener('click', (event) => {
+          event.preventDefault();
+          window.scrollTo(0,0)
+        })
+      }
+    }
   };
 </script>
 
@@ -36,6 +52,7 @@
 <style scoped>
   .footer {
     font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
   }
 
   .transition {
@@ -68,26 +85,26 @@
     font-size:40px;
     padding:0
   }
-  .footer .container .copy{
+  .footer .copy{
     margin:25px 0 0;
     color:#7b77c9
   }
-  .footer .container .copy p i {
+  .footer .copy p i {
     color:#F44336;
     animation:heart 4s infinite
   }
-  @keyframes heart{
-    10%{font-size:20px}
-    20%{font-size:16px}
-    30%{font-size:20px}
-    40%{font-size:16px}
-    50%{font-size:20px}
-    60%{font-size:16px}
-    70%{font-size:20px}
-    80%{font-size:16px}
-    90%{font-size:20px}
-    100%{font-size:20px}
-  }
+  /*@keyframes heart{*/
+    /*10%{font-size:20px}*/
+    /*20%{font-size:16px}*/
+    /*30%{font-size:20px}*/
+    /*40%{font-size:16px}*/
+    /*50%{font-size:20px}*/
+    /*60%{font-size:16px}*/
+    /*70%{font-size:20px}*/
+    /*80%{font-size:16px}*/
+    /*90%{font-size:20px}*/
+    /*100%{font-size:20px}*/
+  /*}*/
   /*-webkit-@keyframes heart {*/
     /*10{font-size:16px}*/
     /*20%{font-size:20px}*/
@@ -103,19 +120,32 @@
 
 
   /* Site */
-  .cr a {
-    display:block;
-    text-decoration:none;
-    width: 20%;
-    margin: 20px 40% 0 40%;
-    font-size: 18px;
-    border-radius: 5px;
-    text-align:center;
-    transition: all 0.6s ease-in-out;
-    color:#7b77c9;
-  }
+  /*.cr a {*/
+    /*display:block;*/
+    /*text-decoration:none;*/
+    /*width: 20%;*/
+    /*margin: 20px 40% 0 40%;*/
+    /*font-size: 18px;*/
+    /*border-radius: 5px;*/
+    /*text-align:center;*/
+    /*transition: all 0.6s ease-in-out;*/
+    /*color:#7b77c9;*/
+  /*}*/
 
-  .cr a:hover {
-    font-size: 20px;
+  /*.cr a:hover {*/
+    /*font-size: 20px;*/
+  /*}*/
+
+  .footer-logo img {
+    height: 100px;
+  }
+  @media screen and (max-width: 500px){
+    .footer-logo img {
+      height: 60px;
+      margin-top: 20px;
+    }
+    .footer {
+      height:250px;
+    }
   }
 </style>

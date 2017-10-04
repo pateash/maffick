@@ -71,39 +71,47 @@
         </article>
       </section>
 
+      <register></register>
       <!-- Two -->
-      <section id="two">
-        <div class="inner">
-          <header class="major">
-            <h2>SHARE</h2>
-          </header>
-        </div>
-      </section>
+      <!--<section id="two">-->
+        <!--<div class="inner">-->
+          <!--<header class="major">-->
+            <!--<h2>SHARE</h2>-->
+          <!--</header>-->
+        <!--</div>-->
+      <!--</section>-->
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <ul class="icons">
-          <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-          <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; Technosearch</li>
-          <!--<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>-->
-        </ul>
-      </div>
-    </footer>
+    <ts-footer></ts-footer>
+    <!--<footer id="footer">-->
+      <!--<div class="inner">-->
+        <!--<ul class="icons">-->
+          <!--<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>-->
+          <!--<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>-->
+          <!--<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>-->
+          <!--<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>-->
+          <!--<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
+        <!--</ul>-->
+        <!--<ul class="copyright">-->
+          <!--<li>&copy; Technosearch</li>-->
+          <!--&lt;!&ndash;<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>&ndash;&gt;-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</footer>-->
 
   </div>
 </template>
 
 <script>
+  import TsFooter from '@/components/Home/TsFooter';
+  import Register from '@/components/Home/Register';
   export default {
-    name: 'Pronites'
+    name: 'Pronites',
+    components: {
+      TsFooter,
+      Register
+    }
   };
 </script>
 

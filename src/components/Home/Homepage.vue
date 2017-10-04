@@ -24,13 +24,13 @@
         <li>
           <a href="#section4" data-number="4">
             <span class="cd-dot"></span>
-            <span class="cd-label">Pronites</span>
+            <span class="cd-label">Gallery</span>
           </a>
         </li>
         <li>
           <a href="#section5" data-number="5">
             <span class="cd-dot"></span>
-            <span class="cd-label">Pricing</span>
+            <span class="cd-label">Register</span>
           </a>
         </li>
         <li>
@@ -72,8 +72,6 @@
     </section><!-- cd-section -->
 
     <TsFooter></TsFooter>
-
-    <slideout></slideout>
 
   </span>
 </template>
@@ -568,7 +566,7 @@
     box-shadow: 0 0 200px rgba(0,0,0,0.4) inset;
   }
 
-  /* Pronites */
+  /* Gallery */
   #section4 {
     padding:0;
   }
@@ -576,11 +574,14 @@
   /* Register */
   #section5 {
     padding: 0;
+    min-height: 0;
   }
 
   /* COntact */
   #section6 {
+    padding: 0;
     min-height: 500px!important;
+    background-color: #2c3e50;
   }
   @media only screen and (max-width: 500px) {
     span.cd-label {

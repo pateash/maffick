@@ -201,9 +201,17 @@
 <style scoped>
   .google-maps {
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
+    /*padding-bottom: 75%; // This is the aspect ratio*/
+    padding-bottom: 30%; // This is the aspect ratio
   height: 0;
     overflow: hidden;
+  }
+  @media screen and (max-width: 500px) {
+    .google-maps {
+      /*padding-bottom: 120%; // This is the aspect ratio*/
+      overflow: visible;
+      margin-bottom: 200px;
+    }
   }
   .google-maps iframe {
     position: absolute;
@@ -222,7 +230,7 @@
   /* Body */
 
   body {
-    background: #fff;
+    background: #2c3e50;
   }
 
   body,
@@ -296,6 +304,9 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
+    padding-top: 80px;
+    padding-bottom: 50px;
   }
 
 
@@ -679,11 +690,19 @@
     padding-top: 22px !important;
   }
 
-  @media (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     .contact-form .submit .user-message {
       float: none !important;
       padding: 0 0 10px !important;
     }
+  }
+
+  .contact-container h2 {
+    color: #fff;
+  }
+  .contact-container .button {
+    border: solid 1px #fff !important;
+    color: #fff !important;
   }
 
 </style>
