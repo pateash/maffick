@@ -43,6 +43,48 @@
     </nav>
     <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
+    <div id="navigator" style="left: -250px;">
+      <ul id="nav">
+        <li class="nav_tab">
+          <router-link to="/">
+             <p>Home  &nbsp;  <i class="fa fa-home"></i></p>
+          </router-link>
+        </li>
+        <li class="nav_tab">
+          <router-link to="/events/competitions">
+             <p>Events  &nbsp;  <i class="fa fa-star-half-o"></i></p>
+          </router-link>
+        </li>
+
+         <li class="nav_tab">
+           <router-link to="/register">
+             <p>Register  &nbsp;  <i class="fa fa-ticket"></i></p>
+           </router-link>
+        </li>
+        <li class="nav_tab">
+           <router-link to="/pronites">
+             <p>Pro Nites&nbsp;  <i class="fa fa-users"></i></p>
+           </router-link>
+        </li>
+        <li class="nav_tab">
+           <router-link to="/#section5">
+             <p>Contact  &nbsp;  <i class="fa fa-at"></i></p>
+           </router-link>
+        </li>
+        <li class="nav_tab">
+           <router-link to="/team">
+             <p>Our Team&nbsp;  <i class="fa fa-users"></i></p>
+           </router-link>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-icon" style="left: 0px;">
+      <div class="line_one"></div>
+      <div class="line_two"></div>
+        <div class="line_three"></div>
+        <!--<img src="wp-content/themes/mugs/images/uparrow.png">      -->
+    </div>
+
     <section id="section1" class="cd-section">
       <!--<h1>Vertical Fixed Navigation</h1>-->
       <banner></banner>
@@ -191,6 +233,36 @@
         event.preventDefault();
         smoothScroll(this.hash);
       }
+
+      let menuIcon = document.querySelector('.menu-icon');
+      let navigator = document.getElementById('navigator');
+      menuIcon.addEventListener('click', function (event) {
+        if(navigator.style.left == "-250px") {
+          navigator.style.left = 0
+
+          menuIcon.style.left = "250px"
+        } else {
+          navigator.style.left = "-250px"
+          menuIcon.style.left = 0
+        }
+        this.classList.toggle('on');
+
+      })
+//      $('.menu-icon').click(function () {
+//        if ($('#navigator').css("left") == "-250px") {
+//          $('#navigator').animate({left: '0px'}, 350);
+//          $('.menu-icon').animate({left: '250px'}, 350);
+//          $('.menu-text').animate({left: '300px'}, 350).empty().text("Close");
+//        }
+//        else  {
+//          $('#navigator').animate({left: '-250px'}, 350);
+//          $(this).animate({left: '0px'}, 350);
+//          $('.menu-text').animate({left: '50px'}, 350).empty().text("Menu");
+//
+//        }
+//      });
+//      $('.menu-icon').click(function () {
+//        $(this).toggleClass("on"); });
     }
   };
 </script>
@@ -587,5 +659,67 @@
     span.cd-label {
       color: #3e3947;
     }
+  }
+
+
+
+  /* For the menu */
+  .menu-icon {
+    width: 150px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    margin: 10px;
+    z-index: 10099;
+    cursor: pointer;
+  }
+  .menu-icon div {
+    width: 40px;
+    height: 5px;
+    background: #FFFFFF;
+    margin: 5px;
+    transition: all 0.35s;
+    border-radius: 2px;
+  }
+
+  #navigator {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: rgba(0, 0, 0,0.7);
+    float: right;
+    z-index: 99999;
+  }
+  #navigator #nav {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  #navigator .nav_tab {
+    width: 250px;
+    height: 40px;
+    display: block;
+  }
+  .nav_tab a p {
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    padding: 11px 11px;
+    text-align: right;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
+  }
+  .nav_tab a p:hover {
+    background: rgba(255,255,255,0.9);
+    color: rgba(0,0,0,1);
+    letter-spacing: 2px;
+    transition: 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    -moz-transition: 0.35s ease;
   }
 </style>

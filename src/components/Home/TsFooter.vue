@@ -14,7 +14,7 @@
     </div>
     <div class='footer-logo'>
       <a href="#section1" id="ts-footer-logo">
-        <img src="../../assets/TS-text-black.png" alt="Technosearch'17">
+        <img src="../../assets/TS-text-white.png" alt="Technosearch'17">
       </a>
 
       <!--<router-link to="/" class="cd-scroll-down">-->
@@ -67,7 +67,7 @@
     height:300px;
     padding:20px 0 25px;
     overflow:hidden;
-    background:#fff;
+    background: #2c3e50;
     text-align: center;
   }
 
