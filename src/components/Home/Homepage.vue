@@ -1,119 +1,119 @@
 <template>
   <span>
 
-    <nav id="cd-vertical-nav">
-      <ul style="list-style: none">
-        <li>
-          <a href="#section1" data-number="1">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Intro</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section2" data-number="2">
-            <span class="cd-dot"></span>
-            <span class="cd-label">About</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section3" data-number="3">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Events</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section4" data-number="4">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section5" data-number="5">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Register</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section6" data-number="6">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+    <!--<nav id="cd-vertical-nav">-->
+      <!--<ul style="list-style: none">-->
+        <!--<li>-->
+          <!--<a href="#section1" data-number="1">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Intro</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section2" data-number="2">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">About</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section3" data-number="3">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Events</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section4" data-number="4">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Gallery</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section5" data-number="5">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Register</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section6" data-number="6">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Contact</span>-->
+          <!--</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</nav>-->
+    <!--<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>-->
 
-    <div id="navigator" style="left: -250px;">
-      <ul id="nav">
-        <li class="nav_tab">
-          <router-link to="/">
-             <p>Home  &nbsp;  <i class="fa fa-home"></i></p>
-          </router-link>
-        </li>
-        <li class="nav_tab">
-          <router-link to="/events/competitions">
-             <p>Events  &nbsp;  <i class="fa fa-star-half-o"></i></p>
-          </router-link>
-        </li>
+    <!--<div id="navigator" style="left: -250px;">-->
+      <!--<ul id="nav">-->
+        <!--<li class="nav_tab">-->
+          <!--<router-link to="/">-->
+             <!--<p>Home  &nbsp;  <i class="fa fa-home"></i></p>-->
+          <!--</router-link>-->
+        <!--</li>-->
+        <!--<li class="nav_tab">-->
+          <!--<router-link to="/events/competitions">-->
+             <!--<p>Events  &nbsp;  <i class="fa fa-star-half-o"></i></p>-->
+          <!--</router-link>-->
+        <!--</li>-->
 
-         <li class="nav_tab">
-           <router-link to="/register">
-             <p>Register  &nbsp;  <i class="fa fa-ticket"></i></p>
-           </router-link>
-        </li>
-        <li class="nav_tab">
-           <router-link to="/pronites">
-             <p>Pro Nites&nbsp;  <i class="fa fa-users"></i></p>
-           </router-link>
-        </li>
-        <li class="nav_tab">
-           <router-link to="/#section5">
-             <p>Contact  &nbsp;  <i class="fa fa-at"></i></p>
-           </router-link>
-        </li>
-        <li class="nav_tab">
-           <router-link to="/team">
-             <p>Our Team&nbsp;  <i class="fa fa-users"></i></p>
-           </router-link>
-        </li>
-      </ul>
-    </div>
-    <div class="menu-icon" style="left: 0px;">
-      <div class="line_one"></div>
-      <div class="line_two"></div>
-        <div class="line_three"></div>
-        <!--<img src="wp-content/themes/mugs/images/uparrow.png">      -->
-    </div>
+         <!--<li class="nav_tab">-->
+           <!--<router-link to="/register">-->
+             <!--<p>Register  &nbsp;  <i class="fa fa-ticket"></i></p>-->
+           <!--</router-link>-->
+        <!--</li>-->
+        <!--<li class="nav_tab">-->
+           <!--<router-link to="/pronites">-->
+             <!--<p>Pro Nites&nbsp;  <i class="fa fa-users"></i></p>-->
+           <!--</router-link>-->
+        <!--</li>-->
+        <!--<li class="nav_tab">-->
+           <!--<router-link to="/#section5">-->
+             <!--<p>Contact  &nbsp;  <i class="fa fa-at"></i></p>-->
+           <!--</router-link>-->
+        <!--</li>-->
+        <!--<li class="nav_tab">-->
+           <!--<router-link to="/team">-->
+             <!--<p>Our Team&nbsp;  <i class="fa fa-users"></i></p>-->
+           <!--</router-link>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="menu-icon" style="left: 0px;">-->
+      <!--<div class="line_one"></div>-->
+      <!--<div class="line_two"></div>-->
+        <!--<div class="line_three"></div>-->
+        <!--&lt;!&ndash;<img src="wp-content/themes/mugs/images/uparrow.png">      &ndash;&gt;-->
+    <!--</div>-->
 
     <section id="section1" class="cd-section">
       <!--<h1>Vertical Fixed Navigation</h1>-->
       <banner></banner>
-      <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
+      <!--<a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>-->
     </section><!-- cd-section -->
 
-    <section id="section2" class="cd-section tc-about-section">
-      <about></about>
-      <a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </section><!-- cd-section -->
+    <!--<section id="section2" class="cd-section tc-about-section">-->
+      <!--<about></about>-->
+      <!--<a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section3" class="cd-section">
-      <events></events>
-      <a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </section><!-- cd-section -->
+    <!--<section id="section3" class="cd-section">-->
+      <!--<events></events>-->
+      <!--<a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section4" class="cd-section">
-      <pronites></pronites>
-    </section><!-- cd-section -->
+    <!--<section id="section4" class="cd-section">-->
+      <!--<pronites></pronites>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section5" class="cd-section">
-      <register></register>
-    </section><!-- cd-section -->
+    <!--<section id="section5" class="cd-section">-->
+      <!--<register></register>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section6" class="cd-section">
-      <contact></contact>
-    </section><!-- cd-section -->
+    <!--<section id="section6" class="cd-section">-->
+      <!--<contact></contact>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <TsFooter></TsFooter>
+    <!--<TsFooter></TsFooter>-->
 
   </span>
 </template>
