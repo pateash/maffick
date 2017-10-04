@@ -527,7 +527,8 @@
     z-index: 10000;
     right: 5%;
     bottom: 30px;
-    width: 90%;
+    /*width: 90%;*/
+    width: 70%;
     max-width: 400px;
     max-height: 90%;
     overflow-y: scroll;
@@ -550,6 +551,9 @@
     transition-duration: 0.2s;
     border-radius: 0.25em;
     background-color: rgba(255, 255, 255, 0.9);
+  }
+  .touch #cd-vertical-nav ul {
+    padding: 0;
   }
   .touch #cd-vertical-nav a {
     display: block;
