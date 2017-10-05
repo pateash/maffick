@@ -190,7 +190,7 @@
 
             //close popup when clicking x or off popup
             contactPopup.addEventListener('click', function(event) {
-                console.log('popup', event)
+//                console.log('popup', event)
                 if (event.target === document.querySelector('.cd-popup-close') || event.target === contactPopup) {
                     event.preventDefault();
                     this.classList.remove('is-visible');

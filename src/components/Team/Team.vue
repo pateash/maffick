@@ -3,12 +3,12 @@
     <header class="clearfix">
       <router-link to="/">TECHNO SEARCH'17</router-link>
     </header>
-    <nav>
-      <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
-      <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-      <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
-      <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
-    </nav>
+      <nav class="ts-team-nav">
+        <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
+        <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
+        <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
+        <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
+      </nav>
 
     <div id="team">
       <h1>Our Team</h1>
@@ -143,12 +143,12 @@
     background: #47a3da;
   }
 
-  .container > header nav {
-    float: right;
+  .ts-team-nav {
+    /*float: right;*/
     text-align: center;
   }
 
-  .container > header nav a {
+  .ts-team-nav a {
     display: inline-block;
     position: relative;
     text-align: left;
@@ -160,11 +160,11 @@
     border: 4px solid #47a3da;
   }
 
-  .container > header nav a > span {
+  .ts-team-nav a > span {
     display: none;
   }
 
-  .container > header nav a:hover:before {
+  .ts-team-nav a:hover:before {
     content: attr(data-info);
     color: #47a3da;
     position: absolute;
@@ -175,7 +175,7 @@
     pointer-events: none;
   }
 
-  .container > header nav a:hover {
+  .ts-team-nav a:hover {
     background: #47a3da;
   }
 
@@ -191,7 +191,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .container > header nav .bp-icon:after {
+  .ts-team-nav .bp-icon:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -201,7 +201,7 @@
     text-indent: 0;
   }
 
-  .container > header nav a:hover:after {
+  .ts-team-nav a:hover:after {
     color: #fff;
   }
 
@@ -224,7 +224,7 @@
   @media screen and (max-width: 55em) {
 
     .container > header h1,
-    .container > header nav {
+    .ts-team-nav {
       float: none;
     }
 
@@ -233,7 +233,7 @@
       text-align: center;
     }
 
-    .container > header nav {
+    .ts-team-nav {
       margin: 0 auto;
     }
 
@@ -248,4 +248,9 @@
     padding: 0;
   }
 
+  .ts-team-nav a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+
+  }
 </style>
