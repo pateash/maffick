@@ -813,7 +813,8 @@
 
   img[lazy=loading] {
     background-color: lightgray;
-    width: 40px;
+    /*width: 40px!important;*/
+    /*margin: auto;*/
   }
 
 
