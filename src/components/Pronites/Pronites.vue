@@ -42,46 +42,52 @@
 
       <!-- One -->
       <section id="one" class="tiles">
-        <article style="background-image: url('https://pbs.twimg.com/profile_images/754638055957495808/LkiGFK7y.jpg');">
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/chaar_hazari_iidew7.jpg');">
           <header class="major">
             <h3><a href="javascript:void(0)" class="link">Chaar Hazari</a></h3>
             <p>Band Night <span class="ts-pro-date">(13 OCT)</span></p>
           </header>
         </article>
-        <article style="background-image: url('https://images.jdmagicbox.com/events/A740673/A740673_gal_20161121104613.jpg');">
-          <header class="major">
-            <h3><a href="javascript:void(0)" class="link">Abhishek Upamanyu</a></h3>
-            <p>Comedy Night <span class="ts-pro-date">(13 OCT)</span></p>
-          </header>
-        </article>
-        <article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/nalayak_kuamrz.jpg');">
           <header class="major">
             <h3><a href="javascript:void(0)" class="link">Nalayak</a></h3>
             <p>Band Night <span class="ts-pro-date">(13 OCT)</span></p>
           </header>
         </article>
-        <article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/laser_i36oio.jpg');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">DJ Carnivore</a></h3>
+            <h3><a href="javascript:void(0)" class="link">Laser Show</a></h3>
+            <p><span class="ts-pro-date">(14 OCT)</span></p>
+          </header>
+        </article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/ninaxmalika_pdpjor.jpg');">
+          <header class="major">
+            <h3><a href="javascript:void(0)" class="link">Nina X Malika</a></h3>
             <p>EDM Night <span class="ts-pro-date">(14 OCT)</span></p>
           </header>
         </article>
-        <article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/zydec_whwvjl.jpg');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">NINNA MALIKA</a></h3>
-            <p>Band Night <span class="ts-pro-date">(14 OCT)</span></p>
+            <h3><a href="javascript:void(0)" class="link">Zydec</a></h3>
+            <p>DJ Night <span class="ts-pro-date">(14 OCT)</span></p>
           </header>
         </article>
-        <article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/carnivore_bc77s1.png');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">LASER SHOW</a></h3>
+            <h3><a href="javascript:void(0)" class="link">DJ Carnivore</a></h3>
+            <p>EDM Night <span class="ts-pro-date">(15 OCT)</span></p>
+          </header>
+        </article>
+        <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/hardy_t6mvdi.jpg');">
+          <header class="major">
+            <h3><a href="javascript:void(0)" class="link">Hardy Sandhu</a></h3>
             <p>Artist Night <span class="ts-pro-date">(15 OCT)</span></p>
           </header>
         </article>
-        <article>
+        <article style="background-image: url('http://www.tntmagazine.com/image.php/media/content/_master/43883/images/getty-fireworks.jpg?file=media%2Fcontent%2F_master%2F43883%2Fimages%2Fgetty-fireworks.jpg&width=450');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">HARDY SANDHU</a></h3>
-            <p>Artist Night <span class="ts-pro-date">(15 OCT)</span></p>
+            <h3><a href="javascript:void(0)" class="link">Cracker Show</a></h3>
+            <p><span class="ts-pro-date">(15 OCT)</span></p>
           </header>
         </article>
       </section>
