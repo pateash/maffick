@@ -98,6 +98,7 @@
             //get categories
             axios.get(urlbase+"categories")
                 .then((response)=> {
+              console.log(response.data.data)
                     this.categories=response.data.data;//last data was part of our api
                 })
                 .catch(function (response) {
@@ -696,6 +697,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     margin-right: 10px;
+    font-weight: bold;
   }
   .style-1 .select-container:after {
     position: absolute;
@@ -703,7 +705,7 @@
     font-family: FontAwesome;
     color: #9e9e9e;
     right: 0;
-    padding: .6em .5em;
+    padding: .4em .5em;
     border-left: 1px solid #9e9e9e;
     pointer-events: none;
   }

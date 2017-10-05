@@ -43,7 +43,7 @@
     </nav>
     <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
 
-    <div id="navigator" style="left: -250px;">
+    <div id="navigator" style="left: -200px;">
       <ul id="nav">
         <li class="nav_tab">
           <router-link to="/">
@@ -232,12 +232,12 @@
       let menuIcon = document.querySelector('.menu-icon');
       let navigator = document.getElementById('navigator');
       menuIcon.addEventListener('click', function (event) {
-        if(navigator.style.left == "-250px") {
+        if(navigator.style.left == "-200px") {
           navigator.style.left = 0
 
-          menuIcon.style.left = "250px"
+          menuIcon.style.left = "200px"
         } else {
-          navigator.style.left = "-250px"
+          navigator.style.left = "-200px"
           menuIcon.style.left = 0
         }
         this.classList.toggle('on');
@@ -672,6 +672,11 @@
     margin: 10px;
     z-index: 10099;
     cursor: pointer;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   .menu-icon div {
     width: 40px;
@@ -683,24 +688,30 @@
   }
 
   #navigator {
-    width: 250px;
+    width: 200px;
     height: 100%;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -200px;
     background: rgba(0, 0, 0,0.7);
     float: right;
     z-index: 99999;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    font-family: 'Source Sans Pro', Serif;
   }
   #navigator #nav {
-    width: 250px;
+    width: 200px;
     height: auto;
     display: block;
     margin: 0;
     padding: 0;
   }
   #navigator .nav_tab {
-    width: 250px;
+    width: 200px;
     height: 40px;
     display: block;
   }

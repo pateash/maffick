@@ -27,8 +27,12 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     padding-top: 60px;
   }
@@ -68,11 +72,12 @@
     text-align: center;
   }
   .two > li img {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
+    margin-top: 0px;
   }
-  .two > li:hover img {
-    margin-top: 30px;
-  }
+  /*.two > li:hover img {*/
+    /*margin-top: 30px;*/
+  /*}*/
   .two > li:hover {
     -moz-box-shadow: 0px 0px 5px 0px rgba(103,85,85,0.25);
     box-shadow: 0px 0px 5px 0px rgba(103,85,85,0.25);
@@ -81,7 +86,8 @@
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    bottom: -400px;
+    /*bottom: -400px;*/
+    bottom: -320px;
   }
   .two > li:hover h3 {
     color: rgba(255,255,255,1);
@@ -102,7 +108,7 @@
     background: #BE2F41;
     display: block;
     position: absolute;
-    bottom: -300px;
+    bottom: -280px;
     left: -125px;
   }
   .two > li span i {
@@ -153,7 +159,7 @@
   }
   .two .social li a:hover {
     opacity: 0.5;
-    margin-top: 0px;
+    margin-top: 80px;
   }
   .two > li:hover .social li a {
     -webkit-animation: social-show 0.5s 1;
@@ -173,7 +179,7 @@
       margin-top: 140px;
     }
     to {
-      margin-top: 0px;
+      margin-top: 80px;
     }
   }
   @-moz-keyframes social-show {
@@ -181,7 +187,7 @@
       margin-top: 140px;
     }
     to {
-      margin-top: 0px;
+      margin-top: 80px;
     }
   }
   @-o-keyframes social-show {
@@ -189,7 +195,7 @@
       margin-top: 140px;
     }
     to {
-      margin-top: 0px;
+      margin-top: 80px;
     }
   }
   @keyframes social-show {
@@ -197,7 +203,7 @@
       margin-top: 140px;
     }
     to {
-      margin-top: 0px;
+      margin-top: 80px;
     }
   }
 </style>
