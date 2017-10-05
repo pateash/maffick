@@ -4,10 +4,15 @@
       <div class="techno-content">
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
+
           <div class="main-title text-focus-in">
             <img class="main-title-image" src="../../assets/TS-text-white.png" alt="Technosearch'17">
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
             <h1 class="dates"><span class="thin">OCTOBER</span> 13-15</h1>
+            <div>
+              <p style="margin-top: 70px;font-size: 20px;">The site will go live in</p>
+              <Countdown deadline="October 06, 2017"></Countdown>
+            </div>
           </div>
         </div>
       </div>
@@ -18,8 +23,10 @@
 <script>
 //  import Tweenlite from ''
   import BannerAnim from '../../banner-anim';
+  import Countdown from '@/components/Home/Countdown';
   export default {
     name: 'Banner',
+    components: { Countdown },
     mounted() {
       let width = document.documentElement.clientWidth;
       let height = document.documentElement.clientHeight;
@@ -149,4 +156,5 @@
       font-size: 3em;
     }
   }
+
 </style>
