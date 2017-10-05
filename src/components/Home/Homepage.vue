@@ -67,9 +67,9 @@
            </router-link>
         </li>
         <li class="nav_tab">
-           <router-link to="/#section5">
+           <a href="javascript:void(0)" id="ts-nav-contact">
              <p>Contact  &nbsp;  <i class="fa fa-at"></i></p>
-           </router-link>
+           </a>
         </li>
         <li class="nav_tab">
            <router-link to="/team">
@@ -241,7 +241,6 @@
           menuIcon.style.left = 0
         }
         this.classList.toggle('on');
-
       })
 //      $('.menu-icon').click(function () {
 //        if ($('#navigator').css("left") == "-250px") {

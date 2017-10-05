@@ -29,9 +29,9 @@
             <textarea v-model='contactDetail.message' name="message" id="message" required></textarea>
           </div>
           <br>
-          <div style="text-align:left">
-            <label for="human" style="font-weight: bold;font-size:1.6em;">I am a human and not a robot. {{num1}}+{{num2}} = </label>
-            <input type="text" id="human" name="human" v-model="num3"/>
+          <div style="text-align:left; display: flex;align-items: center;">
+            <label for="human" style="font-size:1em;">I am a human and not a robot. {{num1}}+{{num2}} = </label>
+            <input style="display:inline;font-size: 1em;margin-left: 10px ;border: 1px solid #9E9E9E!important;border-radius: 4px;width: 60px !important;" type="text" id="human" name="human" v-model="num3"/>
           </div>
           <br>
           <div class="field">
@@ -147,22 +147,46 @@
             /* ------------------------- */
             /* Contact Form Interactions */
             /* ------------------------- */
-            contactBtn.addEventListener('click', function(event) {
-                event.preventDefault();
+            contactBtn.addEventListener('click', openPopup);
 
-                contactBlurb.innerHTML = 'Questions, suggestions, and general comments are all welcome!';
-                contactPopup.classList.add('is-visible');
+            /* FOr the contact btn in menu */
+            const menuNavBtn = document.getElementById('ts-nav-contact');
+            if(menuNavBtn) {
+              menuNavBtn.addEventListener('click', function(event) {
+                openPopup(event);
+                let menuIcon = document.querySelector('.menu-icon');
+                let navigator = document.getElementById('navigator');
+                  if(navigator.style.left == "-200px") {
+                    navigator.style.left = 0
 
-                if (nameInput.value.length != 0) {
-                    nameDiv.classList.add('typing');
-                }
-                if (emailInput.value.length != 0) {
-                    emailDiv.classList.add('typing');
-                }
-                if (messageInput.value.length != 0) {
-                    messageDiv.classList.add('typing');
-                }
-            });
+                    menuIcon.style.left = "200px"
+                  } else {
+                    navigator.style.left = "-200px"
+                    menuIcon.style.left = 0
+                  }
+//                  this.classList.toggle('on');
+              });
+
+            }
+
+            function openPopup(event) {
+              event.preventDefault();
+
+              contactBlurb.innerHTML = 'Questions, suggestions, and general comments are all welcome!';
+              contactPopup.classList.add('is-visible');
+
+              if (nameInput.value.length != 0) {
+                nameDiv.classList.add('typing');
+              }
+              if (emailInput.value.length != 0) {
+                emailDiv.classList.add('typing');
+              }
+              if (messageInput.value.length != 0) {
+                messageDiv.classList.add('typing');
+              }
+
+            }
+            /* For opening contact form */
 
             //close popup when clicking x or off popup
             contactPopup.addEventListener('click', function(event) {
