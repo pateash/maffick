@@ -27,7 +27,7 @@
     <section id="banner" class="major">
       <div class="inner">
         <header class="major">
-          <h1>TechnoSearch'17 Pro Shows & Informals</h1>
+          <h1>TechnoSearch'17 Pro Nights & Informals</h1>
         </header>
         <div class="content ts-desc">
           <p>TECHNOSEARCH'17 IS GOING TO BE MORE EXCITING THAN EVER
@@ -44,7 +44,7 @@
       <section id="one" class="tiles">
         <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/chaar_hazari_iidew7.jpg');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">Chaar Hazari</a></h3>
+            <h3><a href="javascript:void(0)" class="link">Chaar Hazaari</a></h3>
             <p>Band Night <span class="ts-pro-date">(13 OCT)</span></p>
           </header>
         </article>
@@ -62,7 +62,7 @@
         </article>
         <article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/ninaxmalika_pdpjor.jpg');">
           <header class="major">
-            <h3><a href="javascript:void(0)" class="link">Nina X Malika</a></h3>
+            <h3><a href="javascript:void(0)" class="link">Nina & Malika</a></h3>
             <p>EDM Night <span class="ts-pro-date">(14 OCT)</span></p>
           </header>
         </article>

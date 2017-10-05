@@ -29,6 +29,11 @@
         By Manohar Lakkoju and Ashish Patel
       </p>
     </div>
+    <div class='copy'>
+      <p class='upper'>
+        &copy;COPYRIGHTS RESERVED. TECHNOSEARCH'17
+      </p>
+    </div>
 
 
   </div>

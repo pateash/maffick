@@ -6,6 +6,10 @@ import VueAgile from 'vue-agile';
 
 import VueProgressBar from 'vue-progressbar';
 
+import VueLazyload from 'vue-lazyload';
+
+Vue.use(VueLazyload)
+
 
 const options = {
   color: '#bffaf3',
