@@ -6,6 +6,8 @@
       <div class="slide slide--1"></div>
       <div class="slide slide--2"></div>
       <div class="slide slide--3"></div>
+      <div class="slide slide--4"></div>
+      <div class="slide slide--5"></div>
     </agile>
     <!--<agile :infinite="false">-->
       <!--<div class="slide slide&#45;&#45;1"><h3>slide 1</h3></div>-->
@@ -84,10 +86,19 @@
     width: 100%;
   }
   .slide--1 {
-    background-image: url('https://daily.social/wp-content/uploads/2017/03/abhishek-up.jpg');
+    background-image: url('../../assets/Gallery/1.jpg');
   }
   .slide--2 {
-    background-image: url('https://images.unsplash.com/photo-1493514789931-586cb221d7a7?dpr=1&auto=compress,format&fit=crop&w=1951&h=&q=80&cs=tinysrgb&crop=');
+    background-image: url('../../assets/Gallery/2.jpg');
+  }
+  .slide--3 {
+    background-image: url('../../assets/Gallery/3.jpg');
+  }
+  .slide--4 {
+    background-image: url('../../assets/Gallery/4.jpg');
+  }
+  .slide--5 {
+    background-image: url('../../assets/Gallery/5.jpg');
   }
 
 </style>

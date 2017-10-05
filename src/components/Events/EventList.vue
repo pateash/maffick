@@ -49,15 +49,15 @@
                   <h2>Description</h2>
                   <p>{{event.description}}</p>
                 </div>
-                <div>
-                  <h2>Time</h2>
-                  <div v-if="event.event_datatime!='0000-00-00 00:00:00'">
-                    {{getEventDateTime(event)}}
-                  </div>
-                  <div v-else> <!-- just tell simple time-->
-                    13 - 15th October
-                  </div>
-                </div>
+                <!--<div>-->
+                  <!--&lt;!&ndash;<h2>Time</h2>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div v-if="event.event_datatime!='0000-00-00 00:00:00'">&ndash;&gt;-->
+                    <!--&lt;!&ndash;{{getEventDateTime(event)}}&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--<div v-else> &lt;!&ndash; just tell simple time&ndash;&gt;-->
+                    <!--13 - 15th October-->
+                  <!--</div>-->
+                <!--</div>-->
 
                 <div v-if="event.longitude!=0">
                   <h2>Venue</h2>
@@ -107,7 +107,7 @@
 </template>
 
 <script>
-    import moment from 'moment';
+//    import moment from 'moment';
     import CBPGridGallery from './gridGallery';
 
     import axios from 'axios';
@@ -140,9 +140,9 @@
             },
             getEventDateTime(event){
 //                datatime is written in api so we have to use that
-                let datetime=moment(event.event_datatime).format('MMMM Do YYYY, h:mm:ss a')+"  ("
-                datetime= datetime+moment(event.event_datatime).fromNow()+"  )";
-                return datetime;
+//                let datetime=moment(event.event_datatime).format('MMMM Do YYYY, h:mm:ss a')+"  ("
+//                datetime= datetime+moment(event.event_datatime).fromNow()+"  )";
+//                return datetime;
             }
 
         },

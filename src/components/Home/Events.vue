@@ -1,7 +1,7 @@
 <template>
   <div class="events">
     <div class="events-heading">
-      <h1>More than 50+ EVENTS</h1>
+      <h1>More than 30+ Events. Amazing Pro Shows</h1>
     </div>
     <div class="events-container">
       <figure class="tc-event red"><img src="../../assets/Categories/competions.png" alt="Technosearch"/>
@@ -9,26 +9,26 @@
           <h2><span>COMPETITIONS</span></h2>
         </figcaption><router-link to="/events/competitions"></router-link>
       </figure>
-      <figure class="tc-event green"><img src="../../assets/Categories/informal.png" alt="Technosearch"/>
-        <figcaption>
-          <h2><span>INFORMALS</span></h2>
-        </figcaption><router-link to="/events/informals"></router-link>
-      </figure>
-      <figure class="tc-event navy"><img src="../../assets/Categories/workshop.png" alt="Technosearch"/>
-        <figcaption>
-          <h2><span>WORKSHOPS</span></h2>
-        </figcaption><router-link to="/events/workshops"></router-link>
-      </figure>
-      <figure class="tc-event navy"><img src="../../assets/Categories/lectures.png" alt="Technosearch"/>
-        <figcaption>
-          <h2><span>LECTURES</span></h2>
-        </figcaption><router-link to="/events/lectures"></router-link>
-      </figure>
-      <figure class="tc-event navy"><img src="../../assets/Categories/exhibitons.png" alt="Technosearch"/>
-        <figcaption>
-          <h2><span>EXHIBITIONS</span></h2>
-        </figcaption><router-link to="/events/exhibitions"></router-link>
-      </figure>
+      <!--<figure class="tc-event green"><img src="../../assets/Categories/informal.png" alt="Technosearch"/>-->
+        <!--<figcaption>-->
+          <!--<h2><span>INFORMALS</span></h2>-->
+        <!--</figcaption><router-link to="/events/informals"></router-link>-->
+      <!--</figure>-->
+      <!--<figure class="tc-event navy"><img src="../../assets/Categories/workshop.png" alt="Technosearch"/>-->
+        <!--<figcaption>-->
+          <!--<h2><span>WORKSHOPS</span></h2>-->
+        <!--</figcaption><router-link to="/events/workshops"></router-link>-->
+      <!--</figure>-->
+      <!--<figure class="tc-event navy"><img src="../../assets/Categories/lectures.png" alt="Technosearch"/>-->
+        <!--<figcaption>-->
+          <!--<h2><span>LECTURES</span></h2>-->
+        <!--</figcaption><router-link to="/events/lectures"></router-link>-->
+      <!--</figure>-->
+      <!--<figure class="tc-event navy"><img src="../../assets/Categories/exhibitons.png" alt="Technosearch"/>-->
+        <!--<figcaption>-->
+          <!--<h2><span>EXHIBITIONS</span></h2>-->
+        <!--</figcaption><router-link to="/events/exhibitions"></router-link>-->
+      <!--</figure>-->
       <figure class="tc-event navy"><img src="../../assets/Categories/Pronite.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>PRONITES</span></h2>
@@ -58,6 +58,15 @@
     /*background-color: #2c3e50;*/
     /*display: flex;*/
     /*align-items: center;*/
+  }
+  @media screen and (min-width: 500px){
+    .events {
+      /*background-color: #2c3e50;*/
+      /*display: flex;*/
+      /*align-items: center;*/
+      /*justify-content:center;*/
+      /*flex-direction: column;*/
+    }
   }
   .events-heading {
 
@@ -179,8 +188,8 @@
 
   figure.tc-event:hover figcaption,
   figure.tc-event.hover figcaption {
-    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
-    transform: rotate(-45deg) translateY(-50%) scale(0.9);
+    /*-webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);*/
+    /*transform: rotate(-45deg) translateY(-50%) scale(0.9);*/
   }
 
   figure.tc-event:hover figcaption:before,
