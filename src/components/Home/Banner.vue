@@ -9,10 +9,10 @@
             <img class="main-title-image" src="../../assets/TS-text-white.png" alt="Technosearch'17">
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
             <h1 class="dates"><span class="thin">OCTOBER</span> 13-15</h1>
-            <div>
-              <p style="margin-top: 70px;font-size: 20px;">The site will go live in</p>
-              <Countdown deadline="October 06, 2017"></Countdown>
-            </div>
+            <!--<div>-->
+              <!--<p style="margin-top: 70px;font-size: 20px;">The site will go live in</p>-->
+              <!--<Countdown deadline="October 06, 2017"></Countdown>-->
+            <!--</div>-->
           </div>
         </div>
       </div>

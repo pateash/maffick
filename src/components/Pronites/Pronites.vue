@@ -30,9 +30,7 @@
           <h1>TechnoSearch'17 Pro Nights & Informals</h1>
         </header>
         <div class="content ts-desc">
-          <p>TECHNOSEARCH'17 IS GOING TO BE MORE EXCITING THAN EVER
-            AND A LOT OF EXCITING PRO SHOWS, INFORMAL EVENTS,
-            AND WORKSHOPS ARE SET TO HAPPEN.</p>
+          <p>TechnoSearch is all set to celebrate technology with a variety of events and pronites in the quest of searching Technocrats. Technosearch boasts a humungous footfall of more than 15,000 participants from colleges of all educational domains.</p>
         </div>
       </div>
     </section>
