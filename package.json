@@ -17,7 +17,6 @@
     "axios": "^0.16.2",
     "masonry-layout": "^4.2.0",
     "scrollreveal": "^3.3.6",
-    "slideout": "^1.0.1",
     "smooth-scroll": "^12.1.5",
     "vue": "^2.4.2",
     "vue-agile": "^0.2.6",
@@ -25,8 +24,7 @@
     "vue-images-loaded": "^1.1.2",
     "vue-progressbar": "^0.7.3",
     "vue-router": "^2.7.0",
-    "vue-simple-spinner": "^1.2.8",
-    "vue-slideout": "^1.5.1"
+    "vue-simple-spinner": "^1.2.8"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
