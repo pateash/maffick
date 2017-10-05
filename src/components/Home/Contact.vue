@@ -2,51 +2,11 @@
   <div class="tc-contact">
 
     <div class="contact-container">
-      <!--<div class="contact-details">
-        <table>
-          <caption>Statement Summary</caption>
-          <thead>
-          <tr>
-            <th scope="col">Account</th>
-            <th scope="col">Due Date</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Period</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td data-label="Account">Visa - 3412</td>
-            <td data-label="Due Date">04/01/2016</td>
-            <td data-label="Amount">$1,190</td>
-            <td data-label="Period">03/01/2016 - 03/31/2016</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Account">Visa - 6076</td>
-            <td data-label="Due Date">03/01/2016</td>
-            <td data-label="Amount">$2,443</td>
-            <td data-label="Period">02/01/2016 - 02/29/2016</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Account">Corporate AMEX</td>
-            <td data-label="Due Date">03/01/2016</td>
-            <td data-label="Amount">$1,181</td>
-            <td data-label="Period">02/01/2016 - 02/29/2016</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Acount">Visa - 3412</td>
-            <td data-label="Due Date">02/01/2016</td>
-            <td data-label="Amount">$842</td>
-            <td data-label="Period">01/01/2016 - 01/31/2016</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>-->
       <h2>Feel free to get in touch.</h2>
       <ul class="actions">
         <li><a href="javascript:void(0)" id="contact" class="button big">Contact Us</a></li>
       </ul>
     </div>
-
     <div class="cd-popup contact" role="alert">
       <form name="contactform" id="contactform" class="contact-form">
         <div class="cd-popup-container" style="">
@@ -55,28 +15,29 @@
               <i class="fa fa-times" style="pointer-events:none;"></i>
             </a>
           </p>
-
+          <h1>Enter your information</h1>
           <div class="name">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
+            <input v-model='contactDetail.name' type="text" id="name" name="name" required/>
           </div>
           <div class="email">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" />
+            <input v-model='contactDetail.email' type="email" id="email" name="email" required/>
           </div>
           <div class="message">
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea v-model='contactDetail.message' name="message" id="message" required></textarea>
           </div>
           <br>
-          <div style="text-align:left">
-            <input type="checkbox" id="human" name="human" />
-            <label for="human">I am a human and not a robot.</label>
+          <div style="text-align:left; display: flex;align-items: center;">
+            <label for="human" style="font-size:1em;">I am a human and not a robot. {{num1}}+{{num2}} = </label>
+            <input style="display:inline;font-size: 1em;margin-left: 10px ;border: 1px solid #9E9E9E!important;border-radius: 4px;width: 60px !important;" type="text" id="human" name="human" v-model="num3"/>
           </div>
           <br>
-          <div class="submit">
+          <div class="field">
             <p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are all welcome!</p>
-            <input type="submit" name="submit" id="submit" value="Send" />
+            <input @click='submitContact' type="submit" name="submit" id="submit" value="Send" />
+            <!--submit needs to be used other it will not check for captcha -->
           </div>
         </div>
       </form>
@@ -86,7 +47,7 @@
       <div class="cd-popup-container">
         <a href="javascript:void(0)" id="notif-close-btn" class="cd-popup-close cd-close-button"><i class="fa fa-times" style="pointer-events:none;"></i></a>
         <!--<p>-->
-        <h3 id="notification-text">Thanks for getting in touch!</h3>
+        <h3 id="notification-text">{{notificationMessage}}</h3>
         <!--</p>-->
       </div>
     </div>
@@ -98,142 +59,216 @@
 </template>
 
 <script>
-  export default {
-    name: 'Contact',
-    mounted() {
-      // Check for valid email syntax
-      function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-      }
-
-      function closeForm() {
-        document.contactform.name.value = '';
-        document.contactform.email.value = '';
-        document.contactform.message.value = '';
-
-        emailDiv.classList.remove('typing');
-        nameDiv.classList.remove('typing');
-        messageDiv.classList.remove('typing');
-
-        document.querySelector('.cd-popup').classList.remove('is-visible');
-        document.querySelector('.notification').classList.add('is-visible');
-        document.querySelector('#notification-text').innerHTML = "Thanks for contacting us!";
-      }
-
-      /*Variables*/
-      const contactBtn = document.getElementById('contact');
-      const contactPopup = document.querySelector('.cd-popup')
-      const contactBlurb = document.getElementById('contactblurb')
-
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      const nameDiv = document.querySelector('.name');
-      const emailDiv = document.querySelector('.email');
-      const messageDiv = document.querySelector('.message');
-
-      /* ------------------------- */
-      /* Contact Form Interactions */
-      /* ------------------------- */
-      contactBtn.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        contactBlurb.innerHTML = 'Questions, suggestions, and general comments are all welcome!';
-        contactPopup.classList.add('is-visible');
-
-        if (nameInput.value.length != 0) {
-          nameDiv.classList.add('typing');
-        }
-        if (emailInput.value.length != 0) {
-          emailDiv.classList.add('typing');
-        }
-        if (messageInput.value.length != 0) {
-          messageDiv.classList.add('typing');
-        }
-      });
-
-      //close popup when clicking x or off popup
-      contactPopup.addEventListener('click', function(event) {
-        console.log('popup', event)
-        if (event.target === document.querySelector('.cd-popup-close') || event.target === contactPopup) {
-          event.preventDefault();
-          this.classList.remove('is-visible');
-        }
-      });
-
-      //close popup when clicking the esc keyboard button
-      document.addEventListener('keyup', function(event) {
-        if (event.keyCode == '27') {
-          contactPopup.classList.remove('is-visible');
-        }
-      });
-
-      /* ------------------- */
-      /* Contact Form Labels */
-      /* ------------------- */
-      nameInput.addEventListener('keyup', function() {
-        nameDiv.classList.add('typing');
-        if (this.value.length == 0) {
-          nameDiv.classList.remove('typing');
-        }
-      });
-      emailInput.addEventListener('keyup', function() {
-        emailDiv.classList.add('typing');
-        if (this.value.length == 0) {
-          emailDiv.classList.remove('typing');
-        }
-      });
-      messageInput.addEventListener('keyup', function() {
-        messageDiv.classList.add('typing');
-        if (this.value.length == 0) {
-          messageDiv.classList.remove('typing');
-        }
-      });
-
-      /* ----------------- */
-      /* Handle submission */
-      /* ----------------- */
-      document.getElementById('contactform').addEventListener('submit', function(event) {
-        event.preventDefault();
-        console.log(event);
-        var name = nameInput.value;
-        var email = emailInput.value;
-        var message = messageInput.value;
-        var human = document.querySelector('#human:checked').value;
-
-        if (human) {
-          if (validateEmail(email)) {
-            if (name) {
-              if (message) {
-                closeForm();
-              } else {
-                document.getElementById('notification-text').innerHTML = "<strong>Please let us know what you're thinking!</strong>";
-                document.querySelector('.notification').classList.add('is-visible');
-              }
-            } else {
-              document.getElementById('notification-text').innerHTML = '<strong>Please provide a name.</strong>';
-              document.querySelector('.notification').classList.add('is-visible');
+    import axios from 'axios';
+    export default {
+        name: 'Contact',
+        data() {
+            return {
+                contactDetail: {
+                    name: '',
+                    email: '',
+                    message: '',
+                },
+                notificationMessage:'',
+                num1:parseInt(Math.random()*10),
+                num2:parseInt(Math.random()*10),
+                num3:0,
             }
-          } else {
-            document.getElementById('notification-text').innerHTML = '<strong>Please use a valid email address.</strong>';
-            document.querySelector('.notification').classList.add('is-visible');
-          }
-        } else {
-          document.getElementById('notification-text').innerHTML = '<h3><strong><em>Warning: Please prove you are a human and not a robot.</em></strong></h3>';
-          document.querySelector('.notification').classList.add('is-visible');
-        }
+        },
+        methods:{
+            submitContact(){
+                if(this.contactDetail.name=='' || this.contactDetail.email=='' || this.contactDetail.message=='' )
+                {
+
+                    this.notificationMessage='All values are required ...';
+                    document.querySelector('.notification').classList.add('is-visible');
+                    this.num1=parseInt(Math.random()*10);
+                    this.num2=parseInt(Math.random()*10);
+                    return;
+                }
+                //human test
+                if(this.num1+this.num2!=this.num3){
+                    this.notificationMessage='Please Verify you are human ...';
+                    document.querySelector('.notification').classList.add('is-visible');
+                    this.num1=parseInt(Math.random()*10);
+                    this.num2=parseInt(Math.random()*10);
+                    return;
+                }
+                let url='//34.236.39.39/api';
+                axios.post(url+"/contacts",this.contactDetail)
+                    .then((response)=>{
+                        this.notificationMessage='Thanks for submitting ...';
+                        document.querySelector('.notification').classList.add('is-visible');
+                        this.contactDetail.name='';
+                        this.contactDetail.email='';
+                        this.contactDetail.message='';
+                    }).catch((response)=> {
+                    document.querySelector('.notification').classList.add('is-visible');
+                    this.notificationMessage='Sorry, Error in Submitting form, try again..';
+                    console.error(response.data);
+                });
+                this.num1=parseInt(Math.random()*10);
+                this.num2=parseInt(Math.random()*10);
+            }
+        },
+        mounted() {
+            // Check for valid email syntax
+            function validateEmail(email) {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            function closeForm() {
+                document.contactform.name.value = '';
+                document.contactform.email.value = '';
+                document.contactform.message.value = '';
+
+                emailDiv.classList.remove('typing');
+                nameDiv.classList.remove('typing');
+                messageDiv.classList.remove('typing');
+
+                document.querySelector('.cd-popup').classList.remove('is-visible');
+                document.querySelector('.notification').classList.add('is-visible');
+                document.querySelector('#notification-text').innerHTML = this.notificationMessage;
+            }
+
+            /*Variables*/
+            const contactBtn = document.getElementById('contact');
+            const contactPopup = document.querySelector('.cd-popup')
+            const contactBlurb = document.getElementById('contactblurb')
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const nameDiv = document.querySelector('.name');
+            const emailDiv = document.querySelector('.email');
+            const messageDiv = document.querySelector('.message');
+
+            /* ------------------------- */
+            /* Contact Form Interactions */
+            /* ------------------------- */
+            contactBtn.addEventListener('click', openPopup);
+
+            /* FOr the contact btn in menu */
+            const menuNavBtn = document.getElementById('ts-nav-contact');
+            if(menuNavBtn) {
+              menuNavBtn.addEventListener('click', function(event) {
+                openPopup(event);
+                let menuIcon = document.querySelector('.menu-icon');
+                let navigator = document.getElementById('navigator');
+                  if(navigator.style.left == "-200px") {
+                    navigator.style.left = 0
+
+                    menuIcon.style.left = "200px"
+                  } else {
+                    navigator.style.left = "-200px"
+                    menuIcon.style.left = 0
+                  }
+//                  this.classList.toggle('on');
+              });
+
+            }
+
+            function openPopup(event) {
+              event.preventDefault();
+
+              contactBlurb.innerHTML = 'Questions, suggestions, and general comments are all welcome!';
+              contactPopup.classList.add('is-visible');
+
+              if (nameInput.value.length != 0) {
+                nameDiv.classList.add('typing');
+              }
+              if (emailInput.value.length != 0) {
+                emailDiv.classList.add('typing');
+              }
+              if (messageInput.value.length != 0) {
+                messageDiv.classList.add('typing');
+              }
+
+            }
+            /* For opening contact form */
+
+            //close popup when clicking x or off popup
+            contactPopup.addEventListener('click', function(event) {
+//                console.log('popup', event)
+                if (event.target === document.querySelector('.cd-popup-close') || event.target === contactPopup) {
+                    event.preventDefault();
+                    this.classList.remove('is-visible');
+                }
+            });
+
+            //close popup when clicking the esc keyboard button
+            document.addEventListener('keyup', function(event) {
+                if (event.keyCode == '27') {
+                    contactPopup.classList.remove('is-visible');
+                }
+            });
+
+            /* ------------------- */
+            /* Contact Form Labels */
+            /* ------------------- */
+            nameInput.addEventListener('keyup', function() {
+                nameDiv.classList.add('typing');
+                if (this.value.length == 0) {
+                    nameDiv.classList.remove('typing');
+                }
+            });
+            emailInput.addEventListener('keyup', function() {
+                emailDiv.classList.add('typing');
+                if (this.value.length == 0) {
+                    emailDiv.classList.remove('typing');
+                }
+            });
+            messageInput.addEventListener('keyup', function() {
+                messageDiv.classList.add('typing');
+                if (this.value.length == 0) {
+                    messageDiv.classList.remove('typing');
+                }
+            });
+
+            /* ----------------- */
+            /* Handle submission */
+            /* ----------------- */
+            document.getElementById('contactform').addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log(event);
+                var name = nameInput.value;
+                var email = emailInput.value;
+                var message = messageInput.value;
+                var human = document.querySelector('#human:checked').value;
+
+                if (human) {
+                    if (validateEmail(email)) {
+                        if (name) {
+                            if (message) {
+                                closeForm();
+                            } else {
+                                document.getElementById('notification-text').innerHTML = "<strong>Please let us know what you're thinking!</strong>";
+//                                document.querySelector('.notification').classList.add('is-visible');
+                            }
+                        } else {
+                            document.getElementById('notification-text').innerHTML = '<strong>Please provide a name.</strong>';
+//                            document.querySelector('.notification').classList.add('is-visible');
+                        }
+                    } else {
+                        document.getElementById('notification-text').innerHTML = '<strong>Please use a valid email address.</strong>';
+//                        document.querySelector('.notification').classList.add('is-visible');
+                    }
+                } else {
+                    document.getElementById('notification-text').innerHTML = '<h3><strong><em>Warning: Please prove you are a human and not a robot.</em></strong></h3>';
+//                    document.querySelector('.notification').classList.add('is-visible');
+                }
 
 //          return false;
-      });
+            });
 
-      /* For the notification close */
-      document.getElementById('notif-close-btn').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.querySelector('.notification').classList.remove('is-visible');
-      })
-    }
-  };
+            /* For the notification close */
+            document.getElementById('notif-close-btn').addEventListener('click', function (event) {
+                event.preventDefault();
+                document.querySelector('.notification').classList.remove('is-visible');
+            })
+        }
+    };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -748,72 +783,72 @@
 
   /* FOr the contact table */
   /*table {*/
-    /*border: 1px solid #ccc;*/
-    /*border-collapse: collapse;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*width: 100%;*/
-    /*table-layout: fixed;*/
+  /*border: 1px solid #ccc;*/
+  /*border-collapse: collapse;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*width: 100%;*/
+  /*table-layout: fixed;*/
   /*}*/
   /*table caption {*/
-    /*font-size: 1.5em;*/
-    /*margin: .5em 0 .75em;*/
+  /*font-size: 1.5em;*/
+  /*margin: .5em 0 .75em;*/
   /*}*/
   /*table tr {*/
-    /*background: #f8f8f8;*/
-    /*border: 1px solid #ddd;*/
-    /*padding: .35em;*/
+  /*background: #f8f8f8;*/
+  /*border: 1px solid #ddd;*/
+  /*padding: .35em;*/
   /*}*/
   /*table th,*/
   /*table td {*/
-    /*padding: .625em;*/
-    /*text-align: center;*/
+  /*padding: .625em;*/
+  /*text-align: center;*/
   /*}*/
   /*table th {*/
-    /*font-size: .85em;*/
-    /*letter-spacing: .1em;*/
-    /*text-transform: uppercase;*/
+  /*font-size: .85em;*/
+  /*letter-spacing: .1em;*/
+  /*text-transform: uppercase;*/
   /*}*/
   /*@media screen and (max-width: 600px) {*/
-    /*table {*/
-      /*border: 0;*/
-    /*}*/
-    /*table caption {*/
-      /*font-size: 1.3em;*/
-    /*}*/
-    /*table thead {*/
-      /*border: none;*/
-      /*clip: rect(0 0 0 0);*/
-      /*height: 1px;*/
-      /*margin: -1px;*/
-      /*overflow: hidden;*/
-      /*padding: 0;*/
-      /*position: absolute;*/
-      /*width: 1px;*/
-    /*}*/
-    /*table tr {*/
-      /*border-bottom: 3px solid #ddd;*/
-      /*display: block;*/
-      /*margin-bottom: .625em;*/
-    /*}*/
-    /*table td {*/
-      /*border-bottom: 1px solid #ddd;*/
-      /*display: block;*/
-      /*font-size: .8em;*/
-      /*text-align: right;*/
-    /*}*/
-    /*table td:before {*/
-      /*!**/
-      /** aria-label has no advantage, it won't be read inside a table*/
-      /*content: attr(aria-label);*/
-      /**!*/
-      /*content: attr(data-label);*/
-      /*float: left;*/
-      /*font-weight: bold;*/
-      /*text-transform: uppercase;*/
-    /*}*/
-    /*table td:last-child {*/
-      /*border-bottom: 0;*/
-    /*}*/
+  /*table {*/
+  /*border: 0;*/
+  /*}*/
+  /*table caption {*/
+  /*font-size: 1.3em;*/
+  /*}*/
+  /*table thead {*/
+  /*border: none;*/
+  /*clip: rect(0 0 0 0);*/
+  /*height: 1px;*/
+  /*margin: -1px;*/
+  /*overflow: hidden;*/
+  /*padding: 0;*/
+  /*position: absolute;*/
+  /*width: 1px;*/
+  /*}*/
+  /*table tr {*/
+  /*border-bottom: 3px solid #ddd;*/
+  /*display: block;*/
+  /*margin-bottom: .625em;*/
+  /*}*/
+  /*table td {*/
+  /*border-bottom: 1px solid #ddd;*/
+  /*display: block;*/
+  /*font-size: .8em;*/
+  /*text-align: right;*/
+  /*}*/
+  /*table td:before {*/
+  /*!**/
+  /** aria-label has no advantage, it won't be read inside a table*/
+  /*content: attr(aria-label);*/
+  /**!*/
+  /*content: attr(data-label);*/
+  /*float: left;*/
+  /*font-weight: bold;*/
+  /*text-transform: uppercase;*/
+  /*}*/
+  /*table td:last-child {*/
+  /*border-bottom: 0;*/
+  /*}*/
   /*}*/
 </style>

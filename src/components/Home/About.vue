@@ -1,8 +1,8 @@
 <template>
   <div class="tc-about">
     <p class="tc-about-text">
-      The Wait is finally Over! <br>
-      <span class="tc-about-special coral">NIT Bhopal</span> proudly brings you the latest instalment of <br>Central's India's Largest Technical Fest!
+      The Wait Is Finally Over! <br>
+      <span class="tc-about-special coral">NIT Bhopal</span> proudly brings you the latest instalment of <br>Central India's Largest Technical Fest!
       <span class="tc-about-special someblue">TECHNOSEARCH'17</span>
     </p>
   </div>

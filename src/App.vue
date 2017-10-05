@@ -1,34 +1,45 @@
 <template>
   <span id="app">
-    <!--<div class="wrapper">-->
-      <!--<nav class="offcanvas">-->
-        <!--<ul>-->
-          <!--<li><a href="#">item 1</a></li>-->
-          <!--<li><a href="#">item 2</a></li>-->
-          <!--<li><a href="#">item 3</a></li>-->
-          <!--<li><a href="#">item 4</a></li>-->
-        <!--</ul>-->
-      <!--</nav>-->
-      <!--<div class="main">-->
-        <!--<header>-->
-          <!--<a class="hamburger">-->
-            <!--<span class="icon"/>-->
-          <!--</a>-->
-        <!--</header>-->
-        <!--&lt;!&ndash;<section class="content">&ndash;&gt;-->
-        <!--&lt;!&ndash;</section>&ndash;&gt;-->
-            <router-view>
-            </router-view>
-      <!--</div>-->
-    <!--</div>-->
-
+    <router-view>
+    </router-view>
+    <vue-progress-bar></vue-progress-bar>
+    <TsFooter></TsFooter>
   </span>
 </template>
 
 <script>
+
+  import TsFooter from '@/components/Home/TsFooter';
   export default {
     name: 'app',
     mounted() {
+      this.$Progress.finish()
+    },
+    components:{
+      TsFooter
+    },
+    created () {
+      //  [App.vue specific] When App.vue is first loaded start the progress bar
+      this.$Progress.start()
+      //  hook the progress bar to start before we move router-view
+      this.$router.beforeEach((to, from, next) => {
+        //  does the page we want to go to have a meta.progress object
+        if (to.meta.progress !== undefined) {
+          let meta = to.meta.progress
+          // parse meta tags
+          this.$Progress.parseMeta(meta)
+        }
+        //  start the progress bar
+        this.$Progress.start()
+        //  continue to next page
+        next()
+      })
+      //  hook the progress bar to finish after we've finished moving router-view
+      this.$router.afterEach((to, from) => {
+        window.scrollTo(0,0)
+        //  finish the progress bar
+        this.$Progress.finish()
+      })
     }
   };
 </script>

@@ -14,12 +14,12 @@ import './checkout';
         name: 'Register',
         methods: {
           openRegister() {
-            Instamojo.open("https://www.instamojo.com/ashishpatel/technosearch-test/");
+            Instamojo.open("https://www.instamojo.com/technosearch17/technosearch-2k17/");
           }
         },
         mounted(){
             //now open modal component
-             Instamojo.open("https://www.instamojo.com/ashishpatel/technosearch-test/");
+             Instamojo.open("https://www.instamojo.com/technosearch17/technosearch-2k17/");
         }
     };
 </script>

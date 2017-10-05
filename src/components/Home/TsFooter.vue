@@ -4,11 +4,12 @@
     <div class='container text-center'>
       <!--Icons -->
       <div class='icons'>
-        <a href='#'><i class="fa fa-facebook fa-2x transition" aria-hidden="true"></i></a>
+        <a href='https://www.facebook.com/technosearchnitbhopal/'><i class="fa fa-facebook fa-2x transition" aria-hidden="true"></i></a>
         <a href='#'><i class="fa fa-twitter fa-2x transition" aria-hidden="true"></i></a>
-        <a href='#'><i class="fa fa-google fa-2x transition" aria-hidden="true"></i></a>
-        <a href='#'><i class="fa fa-instagram fa-2x transition" aria-hidden="true"></i></a>
-        <a href='#'><i class="fa fa-codepen fa-2x transition" aria-hidden="true"></i></a>
+        <!--<a href='#'><i class="fa fa-google fa-2x transition" aria-hidden="true"></i></a>-->
+        <a href='#'><i class="fa fa-youtube fa-2x transition" aria-hidden="true"></i></a>
+        <!--<a href='#'><i class="fa fa-instagram fa-2x transition" aria-hidden="true"></i></a>-->
+        <!--<a href='#'><i class="fa fa-codepen fa-2x transition" aria-hidden="true"></i></a>-->
       </div>
 
     </div>
@@ -26,6 +27,11 @@
       <p class='upper'>
         Made With <i class="fa fa-heart" aria-hidden="true"></i>
         By Manohar Lakkoju and Ashish Patel
+      </p>
+    </div>
+    <div class='copy'>
+      <p class='upper'>
+        &copy;COPYRIGHTS RESERVED. TECHNOSEARCH'17
       </p>
     </div>
 
