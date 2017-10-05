@@ -2,13 +2,13 @@
   <div class="container">
     <header class="clearfix">
       <router-link to="/">TECHNO SEARCH'17</router-link>
-    </header>
       <nav class="ts-team-nav">
         <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
         <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
         <!--<a href="http://tympanus.net/codrops/?p=18699" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>-->
         <router-link to="/register" class="bp-icon bp-icon-archive" data-info="Register"><span>Register</span></router-link>
       </nav>
+    </header>
 
     <div id="team">
       <h1>Our Team</h1>
