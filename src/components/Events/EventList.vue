@@ -37,7 +37,8 @@
       </div>
 
     </header>
-    <div id="grid-gallery" class="grid-gallery">
+    <spinner v-show="loading" size="large" message="Loading..."></spinner>
+    <div v-show="!loading" id="grid-gallery" class="grid-gallery">
       <section class="grid-wrap">
         <ul class="grid">
           <li class="grid-sizer"></li><!-- for Masonry column width -->
@@ -76,12 +77,17 @@
 <script>
     import CBPGridGallery from './gridGallery';
     import axios from 'axios';
+    import Spinner from 'vue-simple-spinner'
     //  import imagesLoaded from 'vue-images-loaded'
     export default {
         name: 'EventList',
+        components: {
+          Spinner
+        },
         data() {
             return {
                 eventsAll: [],
+                loading: true,
                 events: [],
                 categories:[],
                 currentCategory:this.$route.params.category //will be modeled with dropdown
@@ -89,6 +95,7 @@
         },
         methods:{
             updateEventData(){
+                this.loading = true;
                 this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
             }
         },
@@ -98,7 +105,7 @@
             //get categories
             axios.get(urlbase+"categories")
                 .then((response)=> {
-              console.log(response.data.data)
+//              console.log(response.data.data)
                     this.categories=response.data.data;//last data was part of our api
                 })
                 .catch(function (response) {
@@ -111,6 +118,8 @@
                 .then((response) => {
                     this.eventsAll.push(...response.data.data);
                     this.updateEventData();
+
+                    this.loading= false
 //                    console.log(response.data.data);
                 })
                 .catch(function (error) {
@@ -123,7 +132,8 @@
                 if(this.events.length !== 0) {
                     let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
                 }
-                console.log(this.events.length)
+              this.loading = false
+              console.log(this.events.length)
             }
         },
     };
