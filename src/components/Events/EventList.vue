@@ -6,28 +6,15 @@
       <div class="ts-category">
 
         <!--Event dropdown-->
-        <div class="style-1">
-          <label>Event Category</label>
-          <div class="select-container">
-            <select v-model="currentCategory" @change="updateEventData">
-              <option :value="category.name" v-for="category in categories">{{category.name}} </option>
-            </select>
-          </div>
-        </div>
-
-        <!--<div class="field">-->
-
-        <!--<div class="control">-->
+        <!--<div class="style-1">-->
         <!--<label>Event Category</label>-->
-        <!--<div class="select">-->
+        <!--<div class="select-container">-->
         <!--<select v-model="currentCategory" @change="updateEventData">-->
         <!--<option :value="category.name" v-for="category in categories">{{category.name}} </option>-->
         <!--</select>-->
         <!--</div>-->
         <!--</div>-->
-        <!--</div>-->
 
-        <!--end of dropdown-->
         <nav>
           <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
           <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
@@ -44,7 +31,7 @@
           <li class="grid-sizer"></li><!-- for Masonry column width -->
           <li v-for="event in events" :key="event.id">
             <figure>
-              <img :src="event.avatar_url" alt="img01"/>
+              <img :src="eventImage(event)" alt="img01"/>
               <figcaption><h3>{{event.name}}</h3></figcaption>
             </figure>
           </li>
@@ -54,11 +41,56 @@
         <ul>
           <li v-for="event in events" :key="event.id">
             <figure>
-              <img :src="event.avatar_url" :alt="event.name"/>
+              <h1>{{event.name}}</h1>
+              <img :src="eventImage(event)"  :alt="event.name"/>
               <figcaption>
-                <h3>{{event.name}}</h3>
-                <h2>Description</h2>
-                <p>{{event.description}}</p>
+
+                <div>
+                  <h2>Description</h2>
+                  <p>{{event.description}}</p>
+                </div>
+                <div>
+                  <h2>Time</h2>
+                  <div v-if="event.event_datatime!='0000-00-00 00:00:00'">
+                    {{getEventDateTime(event)}}
+                  </div>
+                  <div v-else> <!-- just tell simple time-->
+                    13 - 15th October
+                  </div>
+                </div>
+
+                <div v-if="event.longitude!=0">
+                  <h2>Venue</h2>
+                  <a :href="getLocation(event)" target="_blank" style="color:blue">See in Google Maps</a>
+                </div>
+
+                <div  v-if="event.problem_statement!='NULL'">
+                  <h2>Problem Statement</h2>
+                  <p>{{event.problem_statement}}</p>
+                </div>
+
+                <div v-if="event.name1!='NULL'">
+                  <!--cordinator1-->
+                  <h2>Cordinator</h2>
+                  <p>{{event.name1}}</p>
+                  <p>{{event.contact1}}</p>
+                  <p>{{event.email1}}</p>
+                  <p>{{event.description1}}</p>
+                </div>
+                <div v-if="event.name2!=''">
+                  <!--cordinator2-->
+                  <h2>Cordinator</h2>
+                  <p>{{event.name1}}</p>
+                  <p>+91-{{event.contact1}}</p>
+                  <p>{{event.email1}}</p>
+                  <p>{{event.description1}}</p>
+                </div>
+
+                <div  v-if="event.name2!=''">
+                  <p>{{event.name2}}</p>
+                </div>
+
+
               </figcaption>
             </figure>
           </li>
@@ -75,7 +107,9 @@
 </template>
 
 <script>
+    import moment from 'moment';
     import CBPGridGallery from './gridGallery';
+
     import axios from 'axios';
     import Spinner from 'vue-simple-spinner'
     //  import imagesLoaded from 'vue-images-loaded'
@@ -97,7 +131,20 @@
             updateEventData(){
                 this.loading = true;
                 this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
+            },
+            eventImage(event){
+                return   "//34.236.39.39/images/events/"+event.slug+'.jpg';
+            },
+            getLocation(event){
+                return "https://www.google.co.in/maps/@"+event.lattitude+","+event.longitude;
+            },
+            getEventDateTime(event){
+//                datatime is written in api so we have to use that
+                let datetime=moment(event.event_datatime).format('MMMM Do YYYY, h:mm:ss a')+"  ("
+                datetime= datetime+moment(event.event_datatime).fromNow()+"  )";
+                return datetime;
             }
+
         },
         created() {
 
@@ -126,7 +173,6 @@
                     console.log(error);
                 });
         },
-
         updated() {
             if(CBPGridGallery !== undefined) {
                 if(this.events.length !== 0) {
