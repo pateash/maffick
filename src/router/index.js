@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import VueAnalytics from 'vue-analytics';
+// import VueAnalytics from 'vue-analytics';
+import ga from 'vue-ga';
 // import Hello from '@/components/Hello';
 import Home from '@/components/Home';
 import Team from '@/components/Team/Team';
@@ -88,10 +89,11 @@ const technoRouter = new Router({
   ],
 });
 
-Vue.use(VueAnalytics, {
-    id: 'UA-107575556-1',
-    technoRouter
-})
+ga(technoRouter, 'UA-107575556-1')
+// Vue.use(VueAnalytics, {
+//     id: 'UA-107575556-1',
+//     technoRouter
+// })
 // Vue.use(VueAnalytics, {
 //     id: 'UA-51356287-2',
 //     technoRouter
