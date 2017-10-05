@@ -20,11 +20,31 @@ const technoRouter = new Router({
       path: '/',
       name: 'Home',
       component: Home,
+      meta: {
+        progress: {
+          func: [
+            {call: 'color', modifier: 'temp', argument: '#ffb000'},
+            {call: 'fail', modifier: 'temp', argument: '#6e0000'},
+            {call: 'location', modifier: 'temp', argument: 'top'},
+            {call: 'transition', modifier: 'temp', argument: {speed: '1.5s', opacity: '0.6s', termination: 400}}
+          ]
+        }
+      }
     },
     {
       path: '/events/:category',
       name: 'Events',
-      component: EventList
+      component: EventList,
+      meta: {
+        progress: {
+          func: [
+            {call: 'color', modifier: 'temp', argument: '#ffb000'},
+            {call: 'fail', modifier: 'temp', argument: '#6e0000'},
+            {call: 'location', modifier: 'temp', argument: 'top'},
+            {call: 'transition', modifier: 'temp', argument: {speed: '1.5s', opacity: '0.6s', termination: 400}}
+          ]
+        }
+      }
     },
     {
       path: '/team',
@@ -49,7 +69,17 @@ const technoRouter = new Router({
     {
       path: '/pronites',
       name: 'Pronites',
-      component: Pronites
+      component: Pronites,
+      meta: {
+        progress: {
+          func: [
+            {call: 'color', modifier: 'temp', argument: '#ffb000'},
+            {call: 'fail', modifier: 'temp', argument: '#6e0000'},
+            {call: 'location', modifier: 'temp', argument: 'top'},
+            {call: 'transition', modifier: 'temp', argument: {speed: '1.5s', opacity: '0.6s', termination: 400}}
+          ]
+        }
+      }
     },
     {
       path: '*',

@@ -1,12 +1,27 @@
 <template>
   <div id="wrapper">
+    <!--<div class='pro-footer-logo'>-->
+      <!--<router-link to="/" id="pro-ts-footer-logo">-->
+        <!--<img src="../../assets/TS-text-white.png" alt="Technosearch'17">-->
+      <!--</router-link>-->
+    <!--</div>-->
 
     <!-- Header -->
     <!--<header class="ts-pronites-nav">-->
       <!--<div class="ts-pronites-logo">-->
-        <!--<router-link to="/">Technosearch'17</router-link>-->
+        <!--<router-link to="/">-->
+          <!--<img src="../../assets/TS-text-white.png" alt="Technosearch'17">-->
+
+        <!--</router-link>-->
       <!--</div>-->
     <!--</header>-->
+    <div class="pro-menu-icon" style="left: 0px;">
+      <router-link to="/">
+        Back To Home
+      </router-link>
+      <!--<i class="fa fa-arrow-left" aria-hidden="true"></i>-->
+      <!--<img src="wp-content/themes/mugs/images/uparrow.png">      -->
+    </div>
 
     <!-- Banner -->
     <section id="banner" class="major">
@@ -3543,5 +3558,26 @@
   }
   header.major p {
     font-size: 20px;
+  }
+
+
+
+
+  /* For the menu */
+  .pro-menu-icon {
+    /*width: 150px;*/
+    /*height: 60px;*/
+    position: absolute;
+    top: 0;
+    left: 0px;
+    margin: 10px;
+    z-index: 10099;
+    cursor: pointer;
+  }
+  .pro-menu-icon a {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
   }
 </style>
