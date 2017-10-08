@@ -31,7 +31,7 @@
           <li class="grid-sizer"></li><!-- for Masonry column width -->
           <li v-for="event in events" :key="event.id">
             <figure>
-              <!--<img v-lazy="eventImage(event)" :alt="event.name"/>-->
+              <img v-lazy="eventImage(event)" :alt="event.name"/>
 
               <!--<img :src="eventImage(event)" alt="img01"/>-->
               <figcaption><h3>{{event.name}}</h3></figcaption>
@@ -131,10 +131,9 @@
                 this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
             },
             eventImage(event){
-//                return   "//34.236.39.39/images/events/"+event.slug+'.jpg';
                 return {
                   src: "//34.236.39.39/images/events/"+event.slug+'.jpg',
-                  loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
+//                  loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
                 }
             },
             getLocation(event){
