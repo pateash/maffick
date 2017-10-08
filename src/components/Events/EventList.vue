@@ -52,6 +52,11 @@
                   <h2>Description</h2>
                   <p>{{event.description}}</p>
                 </div>
+                <div  v-if="event.problem_statement!='NULL'">
+                  <h2>Problem Statement</h2>
+                  <a class='download_button':href="event.problem_statement" target="_blank">View</a>
+                </div>
+
                 <div>
                   <h2>Time</h2>
                   <div v-if="event.event_datatime!='0000-00-00 00:00:00'">
@@ -64,13 +69,9 @@
 
                 <div v-if="event.longitude!=0">
                   <h2>Venue</h2>
-                  <a :href="getLocation(event)" target="_blank" style="color:blue">See in Google Maps</a>
+                  <a class="download_button" :href="getLocation(event)" target="_blank" >See in Google Maps</a>
                 </div>
 
-                <div  v-if="event.problem_statement!='NULL'">
-                  <h2>Problem Statement</h2>
-                  <p>{{event.problem_statement}}</p>
-                </div>
 
                 <div v-if="event.name1!='NULL'">
                   <!--cordinator1-->
@@ -114,7 +115,7 @@
     export default {
         name: 'EventList',
         components: {
-          Spinner
+            Spinner
         },
         data() {
             return {
@@ -132,7 +133,7 @@
             },
             eventImage(event){
                 return {
-                  src: "//34.236.39.39/images/events/"+event.slug+'.jpg',
+                    src: "//34.236.39.39/images/events/"+event.slug+'.jpg',
 //                  loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
                 }
             },
@@ -140,9 +141,8 @@
                 return "https://www.google.co.in/maps/@"+event.lattitude+","+event.longitude;
             },
             getEventDateTime(event){
-                 return format(new Date(event.event_datatime), 'Do MMM YYYY, H:m A');
-            }
-
+                return format(new Date(event.event_datatime), 'Do MMM YYYY, H:m A');
+            },
         },
         created() {
             let urlbase = "http://34.236.39.39/api/";
@@ -175,8 +175,8 @@
                 if(this.events.length !== 0) {
                     let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
                 }
-              this.loading = false
-              console.log(this.events.length)
+                this.loading = false
+                console.log(this.events.length)
             }
         },
     };
@@ -808,4 +808,14 @@
   }
 
 
+  .download_button{
+    margin:20px;
+    padding:3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    background:#7FDFFF;
+    color:white;
+    border-radius: 1em;
+  }
 </style>
