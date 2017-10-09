@@ -77,16 +77,16 @@
                   <!--cordinator1-->
                   <h2>Cordinator 1</h2>
                   <p>{{event.name1}}</p>
-                  <p>+91-{{event.contact1}}</p>
-                  <p>{{event.email1}}</p>
+                  <p v-show="event.contact1!='0'">+91-{{event.contact1}}</p>
+                  <p v-show="event.email1!='NULL@null.com'">{{event.email1}}</p>
                   <p v-show="event.description1!='NULL'">{{event.description1}}</p>
                 </div>
                 <div v-if="event.name2!=''">
                   <!--cordinator2-->
                   <h2>Cordinator 2</h2>
                   <p>{{event.name2}}</p>
-                  <p>+91-{{event.contact2}}</p>
-                  <p>{{event.email2}}</p>
+                  <p v-show="event.contact2!='0'">+91-{{event.contact2}}</p>
+                  <p v-show="event.email2!='NULL@null.com'">{{event.email2}}</p>
                   <p v-show="event.description2!='NULL'">{{event.description2}}</p>
                 </div>
 

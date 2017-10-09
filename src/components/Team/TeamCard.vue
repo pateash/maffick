@@ -1,9 +1,10 @@
 <template>
   <li class="transition">
-    <div class="wrapper"> <img target='_blank' class="image" height='100%' width="100%" :src="memberImageUrl">
+    <div class="wrapper">
+        <img target='_blank' class="image" height='100%' width="100%" v-lazy="memberImageUrl">
       <span class="transition">
       <h3>{{member.name}} <em>{{member.designation}}</em></h3>
-        <a :href="member.facebook_link">
+        <a :href="member.facebook_link" target="_blank">
           <i class="fa fa-facebook"></i>
           </a>
      </span> </div>
@@ -18,7 +19,9 @@
         },
         computed:{
             memberImageUrl(){
-                return '//34.236.39.39/images/team/'+this.member.name.split(" ")[0]+'.jpg';
+                return {
+                    src:'//34.236.39.39/images/team/'+this.member.name.split(" ")[0]+'.jpg',
+                };
             }
         }
     };
@@ -76,7 +79,7 @@
     margin-top: 0px;
   }
   /*.two > li:hover img {*/
-    /*margin-top: 30px;*/
+  /*margin-top: 30px;*/
   /*}*/
   .two > li:hover {
     -moz-box-shadow: 0px 0px 5px 0px rgba(103,85,85,0.25);
