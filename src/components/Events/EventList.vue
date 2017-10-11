@@ -60,7 +60,7 @@
                 <!--specifically for c-bay-->
                 <div  v-if="event.slug=='c-bay'">
                   <h2>Compete Online ( starting 11th October, 7PM )</h2>
-                  <a class='download_button' href="goo.gl/872G66" target="_blank">Participate</a>
+                  <a class='download_button' href="//goo.gl/872G66" target="_blank">Participate</a>
                 </div>
 
                 <div>
