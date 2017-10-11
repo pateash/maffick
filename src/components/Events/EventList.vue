@@ -65,12 +65,12 @@
 
                 <div>
                   <h2>Time</h2>
-                  <div v-if="event.event_datatime!='0000-00-00 00:00:00'">
+                  <p v-if="event.event_datatime!='0000-00-00 00:00:00'">
                     {{getEventDateTime(event)}}
-                  </div>
-                  <div v-else> <!-- just tell simple time-->
+                  </p>
+                  <p v-else> <!-- just tell simple time-->
                     13 - 15th October
-                  </div>
+                  </p>
                 </div>
 
                 <div v-if="event.longitude!=0">
@@ -824,4 +824,16 @@
     color:white;
     border-radius: 1em;
   }
+/*for all paragraphs*/
+  p{
+  background-color:whitesmoke;
+  padding:1em;
+  font-family:ubuntu;
+  font-weight:light;
+  text-align:justify;
+}
+ h2{
+  font-family:ubuntu;
+  font-size:x-larger;
+}
 </style>

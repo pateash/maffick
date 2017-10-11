@@ -10,14 +10,15 @@
         <a href='#'><i class="fa fa-youtube fa-2x transition" aria-hidden="true"></i></a>
         <!--<a href='#'><i class="fa fa-instagram fa-2x transition" aria-hidden="true"></i></a>-->
         <!--<a href='#'><i class="fa fa-codepen fa-2x transition" aria-hidden="true"></i></a>-->
-      </div>
+      </div>  
+
+
 
     </div>
     <div class='footer-logo'>
       <a href="#section1" id="ts-footer-logo">
         <img src="../../assets/TS-text-white.png" alt="Technosearch'17">
       </a>
-
       <!--<router-link to="/" class="cd-scroll-down">-->
       <!--</router-link>-->
       <!--<router-link to="/">&copy;TECHNOSEARCH'17</router-link>-->
