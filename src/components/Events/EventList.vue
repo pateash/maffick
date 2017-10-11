@@ -57,6 +57,12 @@
                   <a class='download_button':href="event.problem_statement" target="_blank">View</a>
                 </div>
 
+                <!--specifically for c-bay-->
+                <div  v-if="event.slug=='c-bay'">
+                  <h2>Compete Online ( starting 11th October, 7PM )</h2>
+                  <a class='download_button' href="goo.gl/872G66" target="_blank">Participate</a>
+                </div>
+
                 <div>
                   <h2>Time</h2>
                   <div v-if="event.event_datatime!='0000-00-00 00:00:00'">
@@ -141,7 +147,7 @@
                 return "https://www.google.co.in/maps/@"+event.lattitude+","+event.longitude;
             },
             getEventDateTime(event){
-                return format(new Date(event.event_datatime), 'Do MMM YYYY, H:m A');
+                return format(new Date(event.event_datatime), 'Do MMM YYYY, h:mm A');
             },
         },
         created() {
