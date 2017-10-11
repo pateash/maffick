@@ -5,15 +5,14 @@
 
       <div class="ts-category">
 
-        <!--Event dropdown-->
-        <!--<div class="style-1">-->
-        <!--<label>Event Category</label>-->
-        <!--<div class="select-container">-->
-        <!--<select v-model="currentCategory" @change="updateEventData">-->
-        <!--<option :value="category.name" v-for="category in categories">{{category.name}} </option>-->
-        <!--</select>-->
-        <!--</div>-->
-        <!--</div>-->
+        <div class="style-1">
+        <label>Event Category</label>
+        <div class="select-container">
+        <select v-model="currentCategory" @change="updateEventData">
+        <option :value="category.name" v-for="category in categories">{{category.name}} </option>
+        </select>
+        </div>
+        </div>
 
         <nav>
           <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
@@ -60,7 +59,7 @@
                 <!--specifically for c-bay-->
                 <div  v-if="event.slug=='c-bay'">
                   <h2>Compete Online ( starting 11th October, 7PM )</h2>
-                  <a class='download_button' href="//goo.gl/872G66" target="_blank">Participate</a>
+                  <a class='download_button' href="//hck.re/cb40opr1" target="_blank">Participate</a>
                 </div>
 
                 <div>
@@ -134,8 +133,10 @@
         },
         methods:{
             updateEventData(){
-                this.loading = true;
+//                this.loading = true;
                 this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
+//
+                this.$router.push('/events/'+this.currentCategory);
             },
             eventImage(event){
                 return {
