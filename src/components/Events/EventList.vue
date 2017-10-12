@@ -47,7 +47,7 @@
               <img v-lazy="eventImage(event)" :alt="event.name"/>
               <figcaption>
 
-                <div>
+                <div v-if="event.description!='NULL'">
                   <h2>Description</h2>
                   <p>{{event.description}}</p>
                 </div>
