@@ -20,7 +20,7 @@
         computed:{
             memberImageUrl(){
                 return {
-                    src:'//18.219.198.220/images/team/'+this.member.name.split(" ")[0]+'.jpg',
+                    src:'http://18.219.198.220/images/team/'+this.member.name.split(" ")[0]+'.jpg',
                 };
             }
         }
