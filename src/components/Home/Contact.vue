@@ -94,7 +94,7 @@
                     this.num2=parseInt(Math.random()*10);
                     return;
                 }
-                let url='//34.236.39.39/api';
+                let url='//18.219.198.220/api';
                 axios.post(url+"/contacts",this.contactDetail)
                     .then((response)=>{
                         this.notificationMessage='Thanks for submitting ...';
