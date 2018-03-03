@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="clearfix">
-      <router-link to="/">TECHNO SEARCH'17</router-link>
+      <router-link to="/">Maffick'18</router-link>
       <nav class="ts-team-nav">
         <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
         <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
@@ -34,12 +34,11 @@
             }
         },
         created() {
-            let url='//34.236.39.39/api/';
+            let url='//my-json-server.typicode.com/ashishpatel0720/vuetifyjs-template/';
             axios.get(url+'team')
                 .then(response=>{
                     console.log(response.data);
-                    let data = response.data.data;
-                    [data[5], data[6]] = [data[6],data[5]]
+                    let data = response.data;
                     this.team = data;
                 })
                 .catch(response=>{

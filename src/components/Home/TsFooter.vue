@@ -4,7 +4,7 @@
     <div class='container text-center'>
       <!--Icons -->
       <div class='icons'>
-        <a href='https://www.facebook.com/technosearchnitbhopal/'><i class="fa fa-facebook fa-2x transition" aria-hidden="true"></i></a>
+        <a href='https://www.facebook.com/mafficknitbhopal/'><i class="fa fa-facebook fa-2x transition" aria-hidden="true"></i></a>
         <a href='#'><i class="fa fa-twitter fa-2x transition" aria-hidden="true"></i></a>
         <!--<a href='#'><i class="fa fa-google fa-2x transition" aria-hidden="true"></i></a>-->
         <a href='#'><i class="fa fa-youtube fa-2x transition" aria-hidden="true"></i></a>
@@ -14,7 +14,7 @@
     </div>
     <div class='footer-logo'>
       <a href="#section1" id="ts-footer-logo">
-        <img src="../../assets/TS-text-white.png" alt="Technosearch'17">
+        <img src="../../assets/TS-text-white.png" alt="Maffick'18">
       </a>
       <!--<router-link to="/" class="cd-scroll-down">-->
       <!--</router-link>-->
@@ -24,12 +24,13 @@
     <div class='copy'>
       <p class='upper'>
         Made With <i class="fa fa-heart" aria-hidden="true"></i>
-        By Manohar Lakkoju and Ashish Patel
+        By <a href="//ashish.live" target="_blank">Ashish Patel</a>
+        and <a href="#">Manohar Lakkoju</a>
       </p>
     </div>
     <div class='copy'>
       <p class='upper'>
-        &copy;COPYRIGHTS RESERVED. TECHNOSEARCH'17
+        &copy;copyright 2018. Maffick'18, All rights reserved.
       </p>
     </div>
 
@@ -151,5 +152,10 @@
     .footer {
       height:250px;
     }
+  }
+  .upper a{
+    color: white;
+    font-weight: bolder;
+    font-size: 1.1em;
   }
 </style>
