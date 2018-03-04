@@ -1,8 +1,12 @@
-# ts-frontend
+# Maffick'18
+NIT Bhopal presents,Maffick'18 central India's largest cultual Festival from March 16-18. 
 
-> A Vue.js project
 
-## Build Setup
+## Project
+this project builds website for the same, hosted at [https://maffick.org](https://maffick.org) 
+
+built using VueJs as SPA with lumen as backend API.
+### Build Setup
 
 ``` bash
 # install dependencies
