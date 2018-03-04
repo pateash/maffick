@@ -4,10 +4,10 @@
       <h1>More than 30+ Events. Amazing Pro Shows</h1>
     </div>
     <div class="events-container">
-      <figure class="tc-event red"><img src="../../assets/Categories/competions.png" alt="Technosearch"/>
+      <figure class="tc-event red"><img src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1520169317/competions.png" alt="Technosearch"/>
         <figcaption>
-          <h2><span>COMPETITIONS</span></h2>
-        </figcaption><router-link to="/events/competitions"></router-link>
+          <h2><span>EVENTS</span></h2>
+        </figcaption><router-link to="/events"></router-link>
       </figure>
       <!--<figure class="tc-event green"><img src="../../assets/Categories/informal.png" alt="Technosearch"/>-->
         <!--<figcaption>-->
@@ -29,7 +29,7 @@
           <!--<h2><span>EXHIBITIONS</span></h2>-->
         <!--</figcaption><router-link to="/events/exhibitions"></router-link>-->
       <!--</figure>-->
-      <figure class="tc-event navy"><img src="../../assets/Categories/Pronite.png" alt="Technosearch"/>
+      <figure class="tc-event navy"><img src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1520169317/Pronite.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>PRONITES</span></h2>
         </figcaption><router-link to="/pronites"></router-link>
