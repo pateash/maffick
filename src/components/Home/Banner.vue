@@ -144,7 +144,7 @@
     margin-top: -10px;
   }
   .main-title-image {
-    height: 185px;
+    height: 165px;
   }
 }
 @media only screen and (max-width : 768px) {
