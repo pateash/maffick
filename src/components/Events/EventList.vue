@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="clearfix">
-      <router-link to="/">TECHNO SEARCH'17</router-link>
+      <router-link to="/">MAFFICK'18</router-link>
 
       <div class="ts-category">
 
@@ -23,7 +23,9 @@
       </div>
 
     </header>
-    <spinner v-show="loading" size="large" message="Loading..."></spinner>
+    <div v-show="loading" style="margin:5em;">
+      <spinner size="large" message="Loading..."></spinner>
+    </div>
     <div v-show="!loading" id="grid-gallery" class="grid-gallery">
       <section class="grid-wrap">
         <ul class="grid">
@@ -31,7 +33,6 @@
           <li v-for="event in events" :key="event.id">
             <figure>
               <img v-lazy="eventImage(event)" :alt="event.name"/>
-
               <!--<img :src="eventImage(event)" alt="img01"/>-->
               <figcaption><h3>{{event.name}}</h3></figcaption>
             </figure>
@@ -140,8 +141,8 @@
             },
             eventImage(event){
                 return {
-                    src: "//34.236.39.39/images/events/"+event.slug+'.jpg',
-//                  loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
+                    src: "http://18.219.198.220/images/events/"+event.slug+'.jpg',
+                    // loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
                 }
             },
             getLocation(event){
@@ -152,7 +153,7 @@
             },
         },
         created() {
-            let urlbase = "http://34.236.39.39/api/";
+            let urlbase = "http://18.219.198.220/api/";
             //get categories
             axios.get(urlbase+"categories")
                 .then((response)=> {
@@ -825,16 +826,16 @@
     color:white;
     border-radius: 1em;
   }
-/*for all paragraphs*/
+  /*for all paragraphs*/
   p{
-  background-color:whitesmoke;
-  padding:1em;
-  font-family:ubuntu;
-  font-weight:light;
-  text-align:justify;
-}
- h2{
-  font-family:ubuntu;
-  font-size:x-larger;
-}
+    background-color:whitesmoke;
+    padding:1em;
+    font-family:ubuntu;
+    font-weight:light;
+    text-align:justify;
+  }
+  h2{
+    font-family:ubuntu;
+    font-size:x-larger;
+  }
 </style>
