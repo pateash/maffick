@@ -50,7 +50,7 @@
           </router-link>
         </li>
         <li class="nav_tab">
-          <router-link to="/events/general">
+          <router-link to="/events/all">
              <p>Events  &nbsp;  <i class="fa fa-star-half-o"></i></p>
           </router-link>
         </li>

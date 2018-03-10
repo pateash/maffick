@@ -136,8 +136,9 @@
         methods:{
             updateEventData(){
 //                this.loading = true;
-                this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
-//
+                if(this.currentCategory!='all') 
+                    this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
+                else this.events = this.eventsAll;
                 this.$router.push('/events/'+this.currentCategory);
             },
             eventImage(event){
