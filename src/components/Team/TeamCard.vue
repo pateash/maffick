@@ -20,7 +20,7 @@
         computed:{
             memberImageUrl(){
                 return {
-                    src:'http://res.cloudinary.com/ashishpatel0720/image/upload/v1520169620/team/'+this.member.name.split(" ")[0]+'.jpg',
+                    src:'http://res.cloudinary.com/ashishpatel0720/image/upload/v1520713373/team/'+this.member.name.split(" ")[0]+'.jpg',
                 };
             }
         }
