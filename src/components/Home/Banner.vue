@@ -7,10 +7,10 @@
           <div class="main-title text-focus-in">
             <img class="main-title-image" src="../../assets/TS-text-white.png" alt="Technosearch'17">
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
-            <h1 class="dates"><span class="thin">March</span> 16 - 18</h1>
+            <h1 class="dates"><span class="thin">March</span> 23 - 25</h1>
             <div>
               <p style="margin-top: 70px;font-size: 20px;">Starting in</p>
-              <Countdown deadline="March 16, 2018"></Countdown>
+              <Countdown deadline="March 23, 2018"></Countdown>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
     padding: 0;
     color: #f9f1e9;
     text-align: center;
-    top: 50%; 
+    top: 50%;
     left: 50%;
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
