@@ -7,7 +7,7 @@
       <figure class="tc-event red"><img src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1520169317/competions.png" alt="Technosearch"/>
         <figcaption>
           <h2><span>EVENTS</span></h2>
-        </figcaption><router-link to="/events/general"></router-link>
+        </figcaption><router-link to="/events/"></router-link>
       </figure>
       <!--<figure class="tc-event green"><img src="../../assets/Categories/informal.png" alt="Technosearch"/>-->
         <!--<figcaption>-->
