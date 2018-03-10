@@ -1,7 +1,7 @@
 <template>
   <div class="events">
     <div class="events-heading">
-      <h1>More than 30+ Events. Amazing Pro Shows</h1>
+      <h1>More than 10+ Events. Amazing Pro Shows</h1>
     </div>
     <div class="events-container">
       <figure class="tc-event red"><img src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1520169317/competions.png" alt="Technosearch"/>
