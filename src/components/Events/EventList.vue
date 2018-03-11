@@ -144,7 +144,7 @@
       },
       eventImage(event) {
         return {
-          src: "http://res.cloudinary.com/ashishpatel0720/image/upload/v1520675591/events/" + event.slug + '-min.jpg',
+          src: "http://res.cloudinary.com/ashishpatel0720/image/upload/v1520794486/events/" + event.slug + '-min.jpg',
           // loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
         }
       },
