@@ -43,7 +43,7 @@
         <ul>
           <li v-for="event in events" :key="event.id">
             <figure>
-              <h1>{{event.name}}</h1>
+              <h1 style="font-family:Comfortaa,cursive,'DejaVu Sans'">{{event.name}}</h1>
               <!--<img :src="eventImage(event)"  :alt="event.name"/>-->
               <img v-lazy="eventImage(event)" :alt="event.name"/>
               <figcaption >
@@ -94,7 +94,7 @@
                   <p>{{event.name2}}</p>
                   <p v-show="event.contact2!='0'">+91-{{event.contact2}}</p>
                   <p v-show="event.email2!='NULL@null.com'">{{event.email2}}</p>
-                  <p v-show="event.description2!='NULL'">{{event.description2}}</p>
+                  <p v-show="event.description2!=''">{{event.description2}}</p>
                 </div>
 
               </figcaption>
@@ -227,6 +227,9 @@
   body {
     font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
     color: #47a3da;
+  }
+  figcaption h2{
+    font-family:Comfortaa,cursive,'DejaVu Sans' !important;
   }
 
   a {
@@ -431,8 +434,13 @@
   }
 
   .grid-gallery figcaption p {
-    margin: 1em 4em;
+    margin: 1em 6em;
     line-height: 1.3em;
+    font-size: 1.1em;
+    color: #765fa0;
+    background-color: aliceblue;
+    box-shadow: -1px 1px 3px 0px;
+
   }
 
   /* Grid style */
