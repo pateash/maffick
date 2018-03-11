@@ -34,7 +34,7 @@
             <figure>
               <img v-lazy="eventImage(event)" :alt="event.name"/>
               <!--<img :src="eventImage(event)" alt="img01"/>-->
-              <figcaption><h3>{{event.name}}</h3></figcaption>
+              <figcaption><h3 style="font-family:Comfortaa,cursive,'DejaVu Sans'">{{event.name}}</h3></figcaption>
             </figure>
           </li>
         </ul>
@@ -46,7 +46,7 @@
               <h1>{{event.name}}</h1>
               <!--<img :src="eventImage(event)"  :alt="event.name"/>-->
               <img v-lazy="eventImage(event)" :alt="event.name"/>
-              <figcaption>
+              <figcaption >
 
                 <div v-if="event.description!='NULL'">
                   <h2>Description</h2>
@@ -154,7 +154,7 @@
       getEventDateTime(event) {
         return format(new Date(event.event_datatime), 'Do MMM YYYY, h:mm A');
       },
-       nl2br(str) {
+      nl2br(str) {
         let s=str.replace(/\r\n/, "<br>");
         return s.replace(/\n/, "<br>");
       }
@@ -204,17 +204,18 @@
   /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
 
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+   @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-  @font-face {
-    font-family: 'bpicons';
-    src:url('../../../static/fonts/bpicons/bpicons.eot');
-    src:url('../../../static/fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),
-    url('../../../static/fonts/bpicons/bpicons.woff') format('woff'),
-    url('../../../static/fonts/bpicons/bpicons.ttf') format('truetype'),
-    url('../../../static/fonts/bpicons/bpicons.svg#bpicons') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  } /* Made with http://icomoon.io/ */
+  /*@font-face {*/
+    /*font-family: 'bpicons';*/
+    /*src:url('../../../static/fonts/bpicons/bpicons.eot');*/
+    /*src:url('../../../static/fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../../../static/fonts/bpicons/bpicons.woff') format('woff'),*/
+    /*url('../../../static/fonts/bpicons/bpicons.ttf') format('truetype'),*/
+    /*url('../../../static/fonts/bpicons/bpicons.svg#bpicons') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+  /*} !* Made with http://icomoon.io/ *!*/
 
   *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
   body, html { font-size: 100%; padding: 0; margin: 0;}
@@ -416,6 +417,12 @@
   .grid-gallery figure img {
     display: block;
     width: 100%;
+    margin: auto;
+  }
+  .slideshow figure img {
+    display: block;
+    width: 80%;
+    margin: auto;
   }
 
   .grid-gallery figcaption h3 {
@@ -424,7 +431,8 @@
   }
 
   .grid-gallery figcaption p {
-    margin: 0;
+    margin: 1em 4em;
+    line-height: 1.3em;
   }
 
   /* Grid style */
@@ -506,11 +514,16 @@
   }
 
   .slideshow li {
-    width: 660px;
-    height: 560px;
+    /*width: 660px;*/
+    /*height: 560px;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    width: 80%;
+    height: 90%;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 47%;
+    left: 36%;
     margin: -280px 0 0 -330px;
     visibility: hidden;
   }
@@ -657,6 +670,10 @@
     /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
     .grid li {
       width: 33.3%;
+    }
+    .grid-gallery figcaption p {
+      margin: 1em 0.3em;
+      line-height: 1.3em;
     }
 
     .slideshow li {

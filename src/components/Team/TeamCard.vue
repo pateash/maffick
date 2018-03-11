@@ -3,7 +3,7 @@
     <div class="wrapper">
         <img target='_blank' class="image" height='100%' width="100%" v-lazy="memberImageUrl">
       <span class="transition">
-      <h3>{{member.name}} <em>{{member.designation}}</em></h3>
+      <h3 style="font-family:Comfortaa,cursive,'DejaVu Sans'">{{member.name}} <em>{{member.designation}}</em></h3>
         <a :href="member.facebook_link" target="_blank">
           <i class="fa fa-facebook"></i>
           </a>

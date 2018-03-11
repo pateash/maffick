@@ -22,7 +22,7 @@
     </div>
     <!-- Copy -->
     <div class='copy'>
-      <p class='upper'>
+      <p class='upper' style="font-family:Comfortaa,cursive,'DejaVu Sans'">
         Made With <i class="fa fa-heart" aria-hidden="true"></i>
         By <a href="//ashish.live" target="_blank">Ashish Patel</a>
         and <a href="#">Manohar Lakkoju</a>

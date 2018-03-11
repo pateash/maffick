@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="clearfix">
-      <router-link to="/">Maffick'18</router-link>
+      <router-link to="/" >Maffick'18</router-link>
       <nav class="ts-team-nav">
         <router-link to="/" class="bp-icon bp-icon-prev" data-info="Home"><span>Home</span></router-link>
         <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a-->
