@@ -93,7 +93,7 @@
                   <h2>Cordinator 2</h2>
                   <p>{{event.name2}}</p>
                   <p v-show="event.contact2!='0'">+91-{{event.contact2}}</p>
-                  <p v-show="event.email2!='NULL@null.com'">{{event.email2}}</p>
+                  <p v-show="event.email2!='NULL@null.com' && event.email2!='' ">{{event.email2}}</p>
                   <p v-show="event.description2!=''">{{event.description2}}</p>
                 </div>
 
