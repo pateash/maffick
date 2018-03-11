@@ -6,12 +6,12 @@
       <div class="ts-category">
 
         <div class="style-1">
-        <label>Event Category</label>
-        <div class="select-container">
-        <select v-model="currentCategory" @change="updateEventData">
-        <option :value="category.name" v-for="category in categories">{{category.name}} </option>
-        </select>
-        </div>
+          <label>Event Category</label>
+          <div class="select-container">
+            <select v-model="currentCategory" @change="updateEventData">
+              <option :value="category.name" v-for="category in categories">{{category.name}} </option>
+            </select>
+          </div>
         </div>
 
         <nav>
@@ -50,11 +50,12 @@
 
                 <div v-if="event.description!='NULL'">
                   <h2>Description</h2>
-                  <p>{{event.description}}</p>
+                  <p v-html="nl2br(event.description)"></p>
                 </div>
                 <div  v-if="event.problem_statement!='NULL'">
                   <h2>Problem Statement</h2>
-                  <a class='download_button':href="event.problem_statement" target="_blank">View</a>
+                  <!--<a class='download_button':href="event.problem_statement" target="_blank">View</a>-->
+                  <p v-html="nl2br(event.problem_statement)"></p>
                 </div>
 
                 <!--specifically for c-bay-->
@@ -113,83 +114,88 @@
 
 
 <script>
-    import CBPGridGallery from './gridGallery';
-    import {format} from 'date-fns';
+  import CBPGridGallery from './gridGallery';
+  import {format} from 'date-fns';
 
-    import axios from 'axios';
-    import Spinner from 'vue-simple-spinner'
-    //  import imagesLoaded from 'vue-images-loaded'
-    export default {
-        name: 'EventList',
-        components: {
-            Spinner
-        },
-        data() {
-            return {
-                eventsAll: [],
-                loading: true,
-                events: [],
-                categories:[],
-                currentCategory:this.$route.params.category //will be modeled with dropdown
-            }
-        },
-        methods:{
-            updateEventData(){
+  import axios from 'axios';
+  import Spinner from 'vue-simple-spinner'
+  //  import imagesLoaded from 'vue-images-loaded'
+  export default {
+    name: 'EventList',
+    components: {
+      Spinner
+    },
+    data() {
+      return {
+        eventsAll: [],
+        loading: true,
+        events: [],
+        categories: [],
+        currentCategory: this.$route.params.category //will be modeled with dropdown
+      }
+    },
+    methods: {
+      updateEventData() {
 //                this.loading = true;
-                if(this.currentCategory!='all') 
-                    this.events=this.eventsAll.filter((event)=>event.category==this.currentCategory);
-                else this.events = this.eventsAll;
-                this.$router.push('/events/'+this.currentCategory);
-            },
-            eventImage(event){
-                return {
-                    src: "http://res.cloudinary.com/ashishpatel0720/image/upload/v1520675591/events/"+event.slug+'-min.jpg',
-                    // loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
-                }
-            },
-            getLocation(event){
-                return "https://www.google.co.in/maps/@"+event.lattitude+","+event.longitude;
-            },
-            getEventDateTime(event){
-                return format(new Date(event.event_datatime), 'Do MMM YYYY, h:mm A');
-            },
-        },
-        created() {
-            let urlbase = "http://18.219.198.220/api/";
-            //get categories
-            axios.get(urlbase+"categories")
-                .then((response)=> {
+        if (this.currentCategory != 'all')
+          this.events = this.eventsAll.filter((event) => event.category == this.currentCategory);
+        else this.events = this.eventsAll;
+        this.$router.push('/events/' + this.currentCategory);
+      },
+      eventImage(event) {
+        return {
+          src: "http://res.cloudinary.com/ashishpatel0720/image/upload/v1520675591/events/" + event.slug + '-min.jpg',
+          // loading: "http://hilongjw.github.io/vue-lazyload/dist/loading-spin.svg"
+        }
+      },
+      getLocation(event) {
+        return "https://www.google.co.in/maps/@" + event.lattitude + "," + event.longitude;
+      },
+      getEventDateTime(event) {
+        return format(new Date(event.event_datatime), 'Do MMM YYYY, h:mm A');
+      },
+       nl2br(str) {
+        let s=str.replace(/\r\n/, "<br>");
+        return s.replace(/\n/, "<br>");
+      }
+    },
+    created() {
+      let urlbase = "http://18.219.198.220/api/";
+      //get categories
+      axios.get(urlbase + "categories")
+        .then((response) => {
 //              console.log(response.data.data)
-                    this.categories=response.data.data;//last data was part of our api
-                })
-                .catch(function (response) {
-                    console.error("error in getting categories");
-                });
+          this.categories = response.data.data;//last data was part of our api
+        })
+        .catch(function (response) {
+          console.error("error in getting categories");
+        });
 
 
-            //get Events data
-            axios.get(urlbase+'events')
-                .then((response) => {
-                    this.eventsAll.push(...response.data.data);
-                    this.updateEventData();
+      //get Events data
+      axios.get(urlbase + 'events')
+        .then((response) => {
+          this.eventsAll.push(...response.data.data);
+          this.updateEventData();
 
-                    this.loading= false
+          this.loading = false
 //                    console.log(response.data.data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        },
-        updated() {
-            if(CBPGridGallery !== undefined) {
-                if(this.events.length !== 0) {
-                    let x = new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-                }
-                this.loading = false
-                console.log(this.events.length)
-            }
-        },
-    };
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    updated() {
+      if (CBPGridGallery !== undefined) {
+        if (this.events.length !== 0) {
+          let x = new CBPGridGallery(document.getElementById('grid-gallery'));
+        }
+        this.loading = false
+        console.log(this.events.length)
+      }
+    },
+
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
