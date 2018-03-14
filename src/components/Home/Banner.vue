@@ -5,7 +5,7 @@
         <div id="large-header" class="large-header">
           <canvas id="techno-canvas"></canvas>
           <div class="main-title text-focus-in">
-            <img class="main-title-image" src="../../assets/TS-text-white.png" alt="Technosearch'17">
+            <img class="main-title-image" src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1521024669/maffick-white-18.png" alt="Technosearch'17">
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
             <h1 class="dates"><span class="thin">March</span> 23 - 25</h1>
             <div>
