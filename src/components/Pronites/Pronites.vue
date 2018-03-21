@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div >
     <!--<div class='pro-footer-logo'>-->
       <!--<router-link to="/" id="pro-ts-footer-logo">-->
         <!--<img src="../../assets/TS-text-white.png" alt="Technosearch'17">-->
@@ -23,106 +23,24 @@
       <!--<img src="wp-content/themes/mugs/images/uparrow.png">      -->
     </div>
 
-    <!-- Banner -->
-    <section id="banner" class="major">
-      <div class="inner">
-        <header class="major">
-          <h1>Maffick'18 Pro Nights & Informals</h1>
-        </header>
-        <!--<div class="content ts-desc">-->
-          <!--<p>Maffick'18 is all set to celebrate with a variety of events and pronites in the quest of searching Technocrats. Technosearch boasts a humungous footfall of more than 15,000 participants from colleges of all educational domains.</p>-->
+    <div id="main" style="background-color: #291316">
+    <img  style="width: 80%;top: 0; overflow: hidden;" src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1521664220/pronite-irrfan.jpg">
+      <register></register>
+      <!-- Two -->
+      <!--<section id="two">-->
+        <!--<div class="inner">-->
+          <!--<header class="major">-->
+            <!--<h2>SHARE</h2>-->
+          <!--</header>-->
         <!--</div>-->
-        <h1 style="text-align: center;color: white;" > COMING SOON ....</h1>
-      </div>
-    </section>
-
-    <!-- Main -->
-    <!--<div id="main">-->
-
-      <!--&lt;!&ndash; One &ndash;&gt;-->
-      <!--<section id="one" class="tiles">-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/chaar_hazari_iidew7.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Chaar Hazaari</a></h3>-->
-            <!--<p>Band Night <span class="ts-pro-date">(13 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/nalayak_kuamrz.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Nalayak</a></h3>-->
-            <!--<p>Band Night <span class="ts-pro-date">(13 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/laser_i36oio.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Laser Show</a></h3>-->
-            <!--<p><span class="ts-pro-date">(14 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/ninaxmalika_pdpjor.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Nina & Malika</a></h3>-->
-            <!--<p>EDM Night <span class="ts-pro-date">(14 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/zydec_whwvjl.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Zydec</a></h3>-->
-            <!--<p>DJ Night <span class="ts-pro-date">(14 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222797/carnivore_bc77s1.png');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">DJ Carnivore</a></h3>-->
-            <!--<p>EDM Night <span class="ts-pro-date">(15 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://res.cloudinary.com/tonystark404/image/upload/v1507222796/hardy_t6mvdi.jpg');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Hardy Sandhu</a></h3>-->
-            <!--<p>Artist Night <span class="ts-pro-date">(15 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
-        <!--<article style="background-image: url('http://www.tntmagazine.com/image.php/media/content/_master/43883/images/getty-fireworks.jpg?file=media%2Fcontent%2F_master%2F43883%2Fimages%2Fgetty-fireworks.jpg&width=450');">-->
-          <!--<header class="major">-->
-            <!--<h3><a href="javascript:void(0)" class="link">Cracker Show</a></h3>-->
-            <!--<p><span class="ts-pro-date">(15 OCT)</span></p>-->
-          <!--</header>-->
-        <!--</article>-->
       <!--</section>-->
-
-      <!--<register></register>-->
-      <!--&lt;!&ndash; Two &ndash;&gt;-->
-      <!--&lt;!&ndash;<section id="two">&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="inner">&ndash;&gt;-->
-          <!--&lt;!&ndash;<header class="major">&ndash;&gt;-->
-            <!--&lt;!&ndash;<h2>SHARE</h2>&ndash;&gt;-->
-          <!--&lt;!&ndash;</header>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--&lt;!&ndash;</section>&ndash;&gt;-->
-    <!--</div>-->
-
-    <!-- Footer -->
-    <!--<footer id="footer">-->
-      <!--<div class="inner">-->
-        <!--<ul class="icons">-->
-          <!--<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>-->
-          <!--<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>-->
-          <!--<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>-->
-          <!--<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>-->
-          <!--<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
-        <!--</ul>-->
-        <!--<ul class="copyright">-->
-          <!--<li>&copy; Technosearch</li>-->
-          <!--&lt;!&ndash;<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>&ndash;&gt;-->
-        <!--</ul>-->
-      <!--</div>-->
-    <!--</footer>-->
-
+    </div>
   </div>
 </template>
 
 <script>
+
+
   import Register from '@/components/Home/Register';
   export default {
     name: 'Pronites',
