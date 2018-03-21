@@ -50,12 +50,12 @@
 
                 <div v-if="event.description!='NULL'">
                   <h2>Description</h2>
-                  <p v-html="nl2br(event.description)"></p>
+                  <p v-html="nl2br(event.description)" style='overflow-x:scroll'></p>
                 </div>
                 <div  v-if="event.problem_statement!='NULL'">
                   <h2>Problem Statement</h2>
                   <!--<a class='download_button':href="event.problem_statement" target="_blank">View</a>-->
-                  <p v-html="nl2br(event.problem_statement)"></p>
+                  <p v-html="nl2br(event.problem_statement)" style='overflow-x:scroll'></p>
                 </div>
 
                 <!--specifically for c-bay-->
