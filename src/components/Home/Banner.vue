@@ -10,7 +10,7 @@
             <h1 class="dates"><span class="thin">March</span> 23 - 25</h1>
             <div>
               <p style="margin-top: 70px;font-size: 20px;">Starting in</p>
-              <Countdown deadline="March 23, 2018"></Countdown>
+              Maffick'18 is live ....
             </div>
           </div>
         </div>
