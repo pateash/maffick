@@ -9,8 +9,8 @@
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
             <h1 class="dates"><span class="thin">March</span> 23 - 25</h1>
             <div>
-              <p style="margin-top: 70px;font-size: 20px;">Starting in</p>
-              Maffick'18 is live ....
+              <p style="margin-top: 70px;font-size: 20px;">Maffick'18 is live....</p>
+            
             </div>
           </div>
         </div>
