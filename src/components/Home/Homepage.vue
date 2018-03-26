@@ -1,46 +1,46 @@
 <template>
   <span>
-    <nav id="cd-vertical-nav">
-      <ul style="list-style: none">
-        <li>
-          <a href="#section1" data-number="1">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Intro</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section2" data-number="2">
-            <span class="cd-dot"></span>
-            <span class="cd-label">About</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section3" data-number="3">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Events</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section4" data-number="4">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section5" data-number="5">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Register</span>
-          </a>
-        </li>
-        <li>
-          <a href="#section6" data-number="6">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+    <!--<nav id="cd-vertical-nav">-->
+      <!--<ul style="list-style: none">-->
+        <!--<li>-->
+          <!--<a href="#section1" data-number="1">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Intro</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section2" data-number="2">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">About</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section3" data-number="3">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Events</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section4" data-number="4">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Gallery</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section5" data-number="5">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Register</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="#section6" data-number="6">-->
+            <!--<span class="cd-dot"></span>-->
+            <!--<span class="cd-label">Contact</span>-->
+          <!--</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</nav>-->
+    <!--<a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>-->
 
     <div id="navigator" style="left: -200px;">
       <ul id="nav">
@@ -90,29 +90,29 @@
       <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
     </section><!-- cd-section -->
 
-    <section id="section2" class="cd-section tc-about-section">
-      <about></about>
-      <a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </section><!-- cd-section -->
+    <!--<section id="section2" class="cd-section tc-about-section">-->
+      <!--<about></about>-->
+      <!--<a href="#section3" class="cd-scroll-down cd-img-replace">scroll down</a>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section3" class="cd-section">
-      <events></events>
-      <!--<a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>-->
-    <!--have to change link to section5-->
-      <a href="#section5" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </section><!-- cd-section -->
+    <!--<section id="section3" class="cd-section">-->
+      <!--<events></events>-->
+      <!--&lt;!&ndash;<a href="#section4" class="cd-scroll-down cd-img-replace">scroll down</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;have to change link to section5&ndash;&gt;-->
+      <!--<a href="#section5" class="cd-scroll-down cd-img-replace">scroll down</a>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
     <!--<section id="section4" class="cd-section">-->
       <!--<pronites></pronites>-->
     <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section5" class="cd-section">
-      <register></register>
-    </section><!-- cd-section -->
+    <!--<section id="section5" class="cd-section">-->
+      <!--<register></register>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
 
-    <section id="section6" class="cd-section">
-      <contact></contact>
-    </section><!-- cd-section -->
+    <!--<section id="section6" class="cd-section">-->
+      <!--<contact></contact>-->
+    <!--</section>&lt;!&ndash; cd-section &ndash;&gt;-->
   </span>
 </template>
 

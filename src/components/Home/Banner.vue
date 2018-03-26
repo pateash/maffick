@@ -7,10 +7,10 @@
           <div class="main-title text-focus-in">
             <img class="main-title-image" src="http://res.cloudinary.com/ashishpatel0720/image/upload/v1521024669/maffick-white-18.png" alt="Technosearch'17">
             <!--<h1 class="">TECHNO <span class="thin">SEARCH</span></h1>-->
-            <h1 class="dates"><span class="thin">March</span> 23 - 25</h1>
+            <!--<h1 class="dates"><span class="thin">March</span> 23 - 25</h1>-->
+            <h1 class="dates">concluded</h1>
             <div>
-              <p style="margin-top: 70px;font-size: 20px;">Maffick'18 is live....</p>
-            
+              <p style="margin-top: 70px;font-size: 20px;">we will be back next year...</p>
             </div>
           </div>
         </div>

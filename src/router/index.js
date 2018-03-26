@@ -32,45 +32,45 @@ const technoRouter = new Router({
                 }
             }
         },
-        {
-            path: '/events',
-            redirect:'/events/all'
-        },
-        {
-            path: '/events/:category',
-            name: 'Events',
-            component: EventList,
-            meta: {
-                progress: {
-                    func: [
-                        {call: 'color', modifier: 'temp', argument: '#ffb000'},
-                        {call: 'fail', modifier: 'temp', argument: '#6e0000'},
-                        {call: 'location', modifier: 'temp', argument: 'top'},
-                        {call: 'transition', modifier: 'temp', argument: {speed: '1.5s', opacity: '0.6s', termination: 400}}
-                    ]
-                }
-            }
-        },
+        // {
+        //     path: '/events',
+        //     redirect:'/events/all'
+        // },
+        // {
+        //     path: '/events/:category',
+        //     name: 'Events',
+        //     component: EventList,
+        //     meta: {
+        //         progress: {
+        //             func: [
+        //                 {call: 'color', modifier: 'temp', argument: '#ffb000'},
+        //                 {call: 'fail', modifier: 'temp', argument: '#6e0000'},
+        //                 {call: 'location', modifier: 'temp', argument: 'top'},
+        //                 {call: 'transition', modifier: 'temp', argument: {speed: '1.5s', opacity: '0.6s', termination: 400}}
+        //             ]
+        //         }
+        //     }
+        // },
         {
             path: '/team',
             name: 'Team',
             component: Team
         },
-        {
-            path: '/sponsors',
-            name: 'Sponsors',
-            component: Sponsors
-        },
-        {
-            path: '/register',
-            name: 'Register',
-            component: Register
-        },
-        {
-            path: '/gallery',
-            name: 'Gallery',
-            component: Gallery
-        },
+        // {
+        //     path: '/sponsors',
+        //     name: 'Sponsors',
+        //     component: Sponsors
+        // },
+        // {
+        //     path: '/register',
+        //     name: 'Register',
+        //     component: Register
+        // },
+        // {
+        //     path: '/gallery',
+        //     name: 'Gallery',
+        //     component: Gallery
+        // },
         {
             path: '/pronites',
             name: 'Pronites',
@@ -88,7 +88,7 @@ const technoRouter = new Router({
         },
         {
             path: '*',
-            component: Home
+            redirect:"/"
         }
     ],
 });
